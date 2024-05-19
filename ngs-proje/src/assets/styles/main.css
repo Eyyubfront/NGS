@@ -1,10 +1,108 @@
-.m{
-display: flex;
-flex-direction: row;
-gap: 40px;
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
 }
-.e{
-    border: 1px solid;
-    height: 100px;
-    width: 300px;
+
+#footer {
+  background-image: url("../images/footerphoto.png");
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+}
+#footer .footer__container {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  justify-content: space-between;
+}
+#footer .footer__container .footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#footer .footer__container .footer__left .footers__lefttext {
+  font-size: 25px;
+  color: #FAFAFA;
+}
+#footer .footer__container .footer__left .footer__icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+#footer .footer__container .footer__center .footer__link {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#footer .footer__container .footer__center .footer__link .linkcolor {
+  text-decoration: none;
+  color: #FAFAFA;
+}
+#footer .footer__container .footer__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#footer .footer__container .footer__right .contacttext {
+  color: #FAFAFA;
+}
+#footer .footer__container .footer__right .footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#footer .footer__container .footer__right .footer__contact .footer__contacticon {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+#footer .footer__container .footer__right .footer__contact .footer__contacticon .footer__mail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  color: #FAFAFA;
+}
+#footer .footer__container .footer__right .footer__contact .footer__contacticon .footer__phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  color: #FAFAFA;
+  margin-left: 9px;
+}
+#footer .footer__container .footer__right .footer__companyname {
+  color: #FAFAFA;
+}
+#footer .footer__container .scroll-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+  display: flex; /* Görünürlüğü sağlamak için */
+  justify-content: center;
+  align-items: center;
+}
+#footer .footer__container .scroll-to-top:hover {
+  background-color: #0056b3;
+}
+
+.App .scroll-to-top {
+  color: #009EE2;
+  border-radius: 31px;
+  border: 1px solid white;
+  padding: 14px;
+  position: absolute;
+  right: 20px;
+  margin-top: 10px;
+  cursor: pointer;
 }
