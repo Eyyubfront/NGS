@@ -2,7 +2,6 @@ import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
-import  "./header.css"
 const Header = () => {
   return (
     <Container>

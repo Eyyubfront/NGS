@@ -194,6 +194,7 @@
 
 #cerfitacion {
   background-color: #F1F1F1;
+  padding: 30px;
 }
 #cerfitacion .cerfitacion__container {
   display: flex;
