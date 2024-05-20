@@ -8,9 +8,10 @@ const Cerfitacion = () => {
             </div>
             <div className="certifacion__buttom">
                 <input className='certifacnumber' type="text" placeholder='Sertifikatın nömrəsi' />
-                <button className='certifaccheckbtn' >
-                    Yoxla
-                </button>
+               
+               <button className='certifactcheck'>
+                Yoxla
+               </button>
             </div>
         </div>
     </div>

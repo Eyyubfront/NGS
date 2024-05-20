@@ -205,6 +205,7 @@
 #cerfitacion .cerfitacion__container .certifacion__top {
   text-align: center;
   color: #009EE2;
+  font-size: 25px;
 }
 #cerfitacion .cerfitacion__container .certifacion__buttom {
   display: flex;
@@ -214,12 +215,16 @@
 }
 #cerfitacion .cerfitacion__container .certifacion__buttom .certifacnumber {
   border: 1px solid #009EE2;
+  width: 200px;
+  padding: 7px;
   border-radius: 15px;
 }
-#cerfitacion .cerfitacion__container .certifacion__buttom .certifacnumber .certifaccheckbtn {
+#cerfitacion .cerfitacion__container .certifacion__buttom .certifactcheck {
   border: 1px solid #009EE2;
   background-color: #009EE2;
-  color: #FAFAFA;
+  color: #F1F1F1;
   text-align: center;
-  border-radius: 10%;
+  border-radius: 35px;
+  padding: 7px;
+  width: 100px;
 }

@@ -9,6 +9,7 @@
         .certifacion__top{
             text-align: center;
             color: #009EE2;
+            font-size: 25px;
         }
         .certifacion__buttom{
             display: flex;
@@ -17,14 +18,18 @@
             align-items: center;
             .certifacnumber{
                 border: 1px solid #009EE2;
+                width: 200px;
+                padding: 7px;
                 border-radius: 15px;
-                .certifaccheckbtn{
-                    border: 1px solid #009EE2;
-                    background-color: #009EE2;
-                    color: #FAFAFA;
-                    text-align: center;
-                    border-radius: 10%;
-                }
+            }
+            .certifactcheck{
+               border: 1px solid #009EE2 ;
+               background-color: #009EE2;
+               color: #F1F1F1;
+               text-align: center;
+               border-radius: 35px;
+               padding: 7px;
+               width: 100px;
             }
         }
     }
