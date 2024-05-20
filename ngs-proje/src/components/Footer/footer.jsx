@@ -6,9 +6,7 @@ import instagram from "../../assets/images/footericon/instagram.png"
 import linkedn from "../../assets/images/footericon/linkedn.png"
 import email from "../../assets/images/footericon/email.png"
 import phone from "../../assets/images/footericon/phone.png"
-
 const Footer = () => {
-   
   return (
     <div id="footer">
         <Container>

@@ -1,0 +1,30 @@
+#cerfitacion{
+    background-color:#F1F1F1;
+    .cerfitacion__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .certifacion__top{
+            text-align: center;
+            color: #009EE2;
+        }
+        .certifacion__buttom{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            .certifacnumber{
+                border: 1px solid #009EE2;
+                border-radius: 15px;
+                .certifaccheckbtn{
+                    border: 1px solid #009EE2;
+                    background-color: #009EE2;
+                    color: #FAFAFA;
+                    text-align: center;
+                    border-radius: 10%;
+                }
+            }
+        }
+    }
+}
