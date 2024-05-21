@@ -23,7 +23,7 @@ const Banner = () => {
               <h2>NGS - Təhlükəsizliyin yeni nəsli!</h2>
               <p>
                 Məqsədimiz yeni nəsil təhlükəsizlik texnologiyaları və
-                metodika ilə müştərilərimizin və əməkdaşlarının
+                metodikası ilə müştərilərimizin və əməkdaşlarının
                 təhlükəsizliyini yüksək səvoyyədə təmin etməkdən ibarətdir.
               </p>
               <button type="button">Ətraflı</button>
