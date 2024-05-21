@@ -1,26 +1,31 @@
-#information{
-    margin-top: 20px;
-    padding: 10px;
-    .information__container{
+#homenews{
+    .homenews__container{
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 40px;
-        .information__left{
+        .homenews__left{
+            .homenewsphoto{
+                width: 500px;
+                height: 300px;
+            }
+        }
+        .homenews__right{
             display: flex;
             flex-direction: column;
             gap: 10px;
-            .information__top{
+            .homenews__top{
                 color:#009EE2;
                 font-weight: bold;
                 font-size: 35px;
             }
-            .information__text{
+            .homenews__text{
                 color: #565656;
+                width: 73%;
             }
-            .informationbtn{
+            .homenewsbtn{
 text-decoration: none;
-                .information__button{
+                .homenews__button{
                     border:1px solid #009EE2;
                     background-color: #009EE2;
                     color: aliceblue;
@@ -30,14 +35,7 @@ text-decoration: none;
                     width: 100px;
                 }
             }
-        }
 
-        
-        .information__right{
-            .informationphoto{
-                width: 500px;
-                height: 300px;
-            }
         }
     }
 }

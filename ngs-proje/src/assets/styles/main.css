@@ -229,33 +229,33 @@
   width: 100px;
 }
 
-#about__information {
+#information {
   margin-top: 20px;
   padding: 10px;
 }
-#about__information .about__container {
+#information .information__container {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 40px;
 }
-#about__information .about__container .about__left {
+#information .information__container .information__left {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-#about__information .about__container .about__left .about__top {
+#information .information__container .information__left .information__top {
   color: #009EE2;
   font-weight: bold;
   font-size: 35px;
 }
-#about__information .about__container .about__left .about__text {
+#information .information__container .information__left .information__text {
   color: #565656;
 }
-#about__information .about__container .about__left .aboutinforbtn {
+#information .information__container .information__left .informationbtn {
   text-decoration: none;
 }
-#about__information .about__container .about__left .aboutinforbtn .about__button {
+#information .information__container .information__left .informationbtn .information__button {
   border: 1px solid #009EE2;
   background-color: #009EE2;
   color: aliceblue;
@@ -264,7 +264,44 @@
   padding: 5px;
   width: 100px;
 }
-#about__information .about__container .about__right .aboutinformationphoto {
+#information .information__container .information__right .informationphoto {
   width: 500px;
   height: 300px;
+}
+
+#homenews .homenews__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+#homenews .homenews__container .homenews__left .homenewsphoto {
+  width: 500px;
+  height: 300px;
+}
+#homenews .homenews__container .homenews__right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#homenews .homenews__container .homenews__right .homenews__top {
+  color: #009EE2;
+  font-weight: bold;
+  font-size: 35px;
+}
+#homenews .homenews__container .homenews__right .homenews__text {
+  color: #565656;
+  width: 73%;
+}
+#homenews .homenews__container .homenews__right .homenewsbtn {
+  text-decoration: none;
+}
+#homenews .homenews__container .homenews__right .homenewsbtn .homenews__button {
+  border: 1px solid #009EE2;
+  background-color: #009EE2;
+  color: aliceblue;
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px;
+  width: 100px;
 }
