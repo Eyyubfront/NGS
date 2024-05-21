@@ -1,22 +1,25 @@
-#header {
+.container {
+  position: relative;
+
+  #header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 2;
     background-color: rgba(35, 35, 35, 0.2);
     width: 100%;
-    //   padding: 18px 0;
-    height: 70px;
-  
+
     .header__left {
       display: flex;
       align-items: center;
       width: 35%;
-  
+
       img {
         width: 96px;
         margin-right: 50px;
       }
-  
+
       .search__input {
         padding: 12px 24px;
         border-radius: 40px;
@@ -25,20 +28,20 @@
         background: transparent;
       }
     }
-  
+
     .header__right {
       display: flex;
       align-items: center;
       width: 60%;
       height: 100%;
-  
+
       ul {
         margin: 0;
         padding: 0;
         display: flex;
         width: 100%;
         justify-content: space-evenly;
-  
+
         .link {
           font-size: 20px;
           font-weight: 500;
@@ -46,16 +49,19 @@
           color: #fafafa;
           transition: 0.6s;
           position: relative;
-  
+          display: flex;
+          align-items: center;
+          height: 70px;
+
           .sub__menu {
             display: flex;
             flex-direction: column;
             position: absolute;
             width: 400px;
-            top: 46px;
+            top: 70px;
             background-color: rgba(35, 35, 35, 0.2);
             display: none;
-  
+
             .sub__link {
               padding: 10px;
               font-size: 20px;
@@ -63,26 +69,26 @@
               text-decoration: none;
               color: #fafafa;
               transition: 0.6s;
-  
+
               &:hover {
                 background-color: #fafafa;
                 color: #009ee2;
               }
             }
           }
-  
+
           &:hover {
             color: #009ee2;
           }
         }
-  
+
         .service {
           &:hover .sub__menu {
             display: flex;
           }
         }
       }
-  
+
       select {
         padding: 4px;
         font-size: 20px;
@@ -91,11 +97,11 @@
         color: #fafafa;
         transition: 0.6s;
         cursor: pointer;
-  
+
         &:hover {
           color: #009ee2;
         }
       }
     }
   }
-  
+}
