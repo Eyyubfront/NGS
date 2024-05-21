@@ -1,0 +1,41 @@
+#about__information{
+    margin-top: 20px;
+    padding: 10px;
+    .about__container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        .about__left{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .about__top{
+                color:#009EE2;
+                font-weight: bold;
+                font-size: 35px;
+            }
+            .about__text{
+                color: #565656;
+            }
+            .aboutinforbtn{
+text-decoration: none;
+                .about__button{
+                    border:1px solid #009EE2;
+                    background-color: #009EE2;
+                    color: aliceblue;
+                    text-align: center;
+                    border-radius: 15px;
+                    padding: 5px;
+                    width: 100px;
+                }
+            }
+        }
+        .about__right{
+            .aboutinformationphoto{
+                width: 500px;
+                height: 300px;
+            }
+        }
+    }
+}
