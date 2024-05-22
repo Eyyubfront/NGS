@@ -1,0 +1,30 @@
+#partners {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px 0;
+
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58.09px;
+    color: #009ee2;
+    margin-bottom: 30px;
+  }
+
+  .swiper {
+    width: 90%;
+
+    .swiper-wrapper {
+
+        .swiper-slide {
+
+            img {
+                width: 150px;
+            }
+        }
+    }
+  }
+}
