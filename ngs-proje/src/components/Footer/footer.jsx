@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from 'react-bootstrap/esm/Container'
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/Logo.png"
 import facebook from "../../assets/images/footericon/facebook.png"
 import instagram from "../../assets/images/footericon/instagram.png"
 import linkedn from "../../assets/images/footericon/linkedn.png"

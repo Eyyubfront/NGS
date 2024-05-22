@@ -5,12 +5,15 @@ import informationphoto from "../../assets/images/homephoto/information.png";
 import homenwsphoto from "../../assets/images/homephoto/homenewsphoto.png";
 import Container from "react-bootstrap/esm/Container";
 import Banner from "../../components/Banner/Banner";
+import Partners from "../../components/Partners/Partners";
+import Training from "../../components/Training/Training";
+import HomeServis from "../../components/Homeservice/Homeservice";
 const Home = () => {
   return (
     <>
       <PageContainer>
-        <Banner />
         <Container>
+        <Banner />
           <div id="information">
             <div className="information__container">
               <div className="information__left">
@@ -34,8 +37,13 @@ const Home = () => {
                 />
               </div>
             </div>
+        
           </div>
+          <Partners/>
+          <Training/>
+
           <div id="homenews">
+   
             <div className="homenews__container">
               <div className="homenews__left">
                 <img className="homenewsphoto" src={homenwsphoto} alt="" />
@@ -55,9 +63,13 @@ const Home = () => {
                 </a>
               </div>
             </div>
+         
           </div>
-        </Container>
+          <HomeServis/>
+         
+     
         <Certifaciton />
+        </Container>
       </PageContainer>
     </>
   );
