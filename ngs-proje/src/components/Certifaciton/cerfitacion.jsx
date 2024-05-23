@@ -7,8 +7,7 @@ const Cerfitacion = () => {
                 <h3>Sertifikatınızı yoxlayın:</h3>
             </div>
             <div className="certifacion__buttom">
-                <input className='certifacnumber' type="text" placeholder='Sertifikatın nömrəsi' />
-               
+                <input className='certifacnumber' type="text" placeholder='Sertifikatın nömrəsi' /> 
                <button className='certifactcheck'>
                 Yoxla
                </button>

@@ -42,10 +42,8 @@ Təhlükəsizliyin yeni nəsli!
             </div>
             <div className="footer__right">
 <div className="footer__contact">
-
     <p className='contacttext'>Əlaqə</p>
     <div className="footer__contacticon">
-
     <div className="footer__mail">
         <img src={email} alt="" />
         <p>ngs.azerbaijan@gmail.com</p>
@@ -58,25 +56,8 @@ Təhlükəsizliyin yeni nəsli!
 </div>
 <p className='footer__companyname'>© 2024 Sayt Binary School tərəfindən hazırlanmışdır.</p>
             </div>
-
-
-
-
-
            </div>
         </Container>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
   )
 }

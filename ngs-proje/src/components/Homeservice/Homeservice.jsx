@@ -5,7 +5,6 @@ const HomeServis = () => {
   return (
     <div id='homeservice'>
         <Container>
-
 <div className="homeservice__container">
     <div className="homeservice__left">
         <div className="homeservice__top">
@@ -25,7 +24,6 @@ const HomeServis = () => {
        </div>
         </div>
     </div>
-
     <div className="homeservice__right">
         <img className='homeservicephoto' src={homeservis} alt="" />
     </div>

@@ -1,13 +1,11 @@
 #homenews{
     margin-top: 20px;
-    padding: 10px;
     .homenews__container{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         gap: 20%;
-        padding: 10px;
         .homenews__left{
             .homenewsphoto{
                 width: 500px;

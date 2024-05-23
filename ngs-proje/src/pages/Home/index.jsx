@@ -3,17 +3,18 @@ import PageContainer from "../../components/PageContainer";
 import Certifaciton from "../../components/Certifaciton/cerfitacion";
 import informationphoto from "../../assets/images/homephoto/information.png";
 import homenwsphoto from "../../assets/images/homephoto/homenewsphoto.png";
-import Container from "react-bootstrap/esm/Container";
+import Container from '@mui/material/Container';
 import Banner from "../../components/Banner/Banner";
 import Partners from "../../components/Partners/Partners";
 import Training from "../../components/Training/Training";
 import HomeServis from "../../components/Homeservice/Homeservice";
+import PageService from "../../components/PageService/PageService";
 const Home = () => {
   return (
     <>
       <PageContainer>
-        <Container>
         <Banner />
+        <Container>
           <div id="information">
             <div className="information__container">
               <div className="information__left">
@@ -39,16 +40,17 @@ const Home = () => {
             </div>
         
           </div>
+          <PageService/>
+        </Container>
           <Partners/>
           <Training/>
+          <Container>
 
           <div id="homenews">
-   
             <div className="homenews__container">
               <div className="homenews__left">
                 <img className="homenewsphoto" src={homenwsphoto} alt="" />
               </div>
-
               <div className="homenews__right">
                 <div className="homenews__top">Xəbərlər</div>
                 <div className="homenews__text">
@@ -63,13 +65,10 @@ const Home = () => {
                 </a>
               </div>
             </div>
-         
           </div>
           <HomeServis/>
-         
-     
+          </Container>
         <Certifaciton />
-        </Container>
       </PageContainer>
     </>
   );

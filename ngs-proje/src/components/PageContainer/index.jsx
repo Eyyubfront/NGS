@@ -33,7 +33,7 @@ const PageContainer = ({children}) => {
    {children}
    
    <div className="App">
-      <div style={{ height: '1200px' }}> 
+      <div style={{ height: '25px' }}> 
       </div>
       {showButton && (
         <button onClick={scrollToTop} className="scroll-to-top">
