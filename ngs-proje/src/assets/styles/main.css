@@ -621,7 +621,8 @@
   display: block;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #banner .swiper .swiper-slide .slide__content {
   position: relative;
@@ -810,4 +811,4 @@
 }
 #training .training__content button:hover {
   background-color: #28bdfd;
-}
+}/*# sourceMappingURL=main.css.map */
