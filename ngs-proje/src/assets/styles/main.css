@@ -13,60 +13,59 @@
 }
 #footer .footer__container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 30px;
+}
+#footer .footer__container .footer__top {
+  display: flex;
+  flex-direction: row;
+  align-items: center !important;
   justify-content: space-between;
 }
-#footer .footer__container .footer__left {
+#footer .footer__container .footer__top .footer__left {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
-#footer .footer__container .footer__left .footers__lefttext {
+#footer .footer__container .footer__top .footer__left .footers__lefttext {
   font-size: 25px;
   color: #FAFAFA;
 }
-#footer .footer__container .footer__left .footer__icon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-}
-#footer .footer__container .footer__center .footer__link {
+#footer .footer__container .footer__top .footer__center .footer__link {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-#footer .footer__container .footer__center .footer__link .linkcolor {
+#footer .footer__container .footer__top .footer__center .footer__link .linkcolor {
   text-decoration: none;
   color: #FAFAFA;
 }
-#footer .footer__container .footer__right {
+#footer .footer__container .footer__top .footer__right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#footer .footer__container .footer__right .contacttext {
+#footer .footer__container .footer__top .footer__right .contacttext {
   color: #FAFAFA;
 }
-#footer .footer__container .footer__right .footer__contact {
+#footer .footer__container .footer__top .footer__right .footer__contact {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-#footer .footer__container .footer__right .footer__contact .footer__contacticon {
+#footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon {
   display: flex;
   gap: 10px;
   flex-direction: column;
 }
-#footer .footer__container .footer__right .footer__contact .footer__contacticon .footer__mail {
+#footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon .footer__mail {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 5px;
   color: #FAFAFA;
 }
-#footer .footer__container .footer__right .footer__contact .footer__contacticon .footer__phone {
+#footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon .footer__phone {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -74,38 +73,315 @@
   color: #FAFAFA;
   margin-left: 9px;
 }
-#footer .footer__container .footer__right .footer__companyname {
+#footer .footer__container .footer__top .footer__right .footer__companyname {
   color: #FAFAFA;
 }
-#footer .footer__container .scroll-to-top {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 20px;
-  z-index: 1000;
-  display: flex; /* Görünürlüğü sağlamak için */
-  justify-content: center;
+#footer .footer__container .footer__buttom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
-#footer .footer__container .scroll-to-top:hover {
-  background-color: #0056b3;
+#footer .footer__container .footer__buttom .footer__icon {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+#footer .footer__container .footer__buttom .footer__companyname {
+  color: #FAFAFA;
 }
 
+@media screen and (max-width: 1200px) {
+  #footer {
+    background-image: url("../images/footerphoto.png");
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-size: cover;
+  }
+  #footer .footer__container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  #footer .footer__container .footer__top {
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: space-between;
+  }
+  #footer .footer__container .footer__top .footer__left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #footer .footer__container .footer__top .footer__left .footers__lefttext {
+    font-size: 25px;
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__center .footer__link {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #footer .footer__container .footer__top .footer__center .footer__link .linkcolor {
+    text-decoration: none;
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #footer .footer__container .footer__top .footer__right .contacttext {
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon .footer__mail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon .footer__phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    color: #FAFAFA;
+    margin-left: 9px;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__companyname {
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__buttom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #footer .footer__container .footer__buttom .footer__icon {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+  #footer .footer__container .footer__buttom .footer__companyname {
+    color: #FAFAFA;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #footer {
+    background-image: url("../images/footerphoto.png");
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-size: cover;
+  }
+  #footer .footer__container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  #footer .footer__container .footer__top {
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: space-between;
+  }
+  #footer .footer__container .footer__top .footer__left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #footer .footer__container .footer__top .footer__left .footers__lefttext {
+    font-size: 25px;
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__center .footer__link {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #footer .footer__container .footer__top .footer__center .footer__link .linkcolor {
+    text-decoration: none;
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #footer .footer__container .footer__top .footer__right .contacttext {
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon .footer__mail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon .footer__phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    color: #FAFAFA;
+    margin-left: 9px;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__companyname {
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__buttom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #footer .footer__container .footer__buttom .footer__icon {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+  #footer .footer__container .footer__buttom .footer__companyname {
+    color: #FAFAFA;
+  }
+}
+@media screen and (max-width: 575px) {
+  #footer {
+    background-image: url("../images/footerphoto.png");
+    width: 100%;
+    height: 96vh;
+    overflow: hidden;
+    background-size: cover;
+  }
+  #footer .footer__container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  #footer .footer__container .footer__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+    gap: 20px;
+  }
+  #footer .footer__container .footer__top .footer__left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #footer .footer__container .footer__top .footer__left .footers__lefttext {
+    font-size: 25px;
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__center .footer__link {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #footer .footer__container .footer__top .footer__center .footer__link .linkcolor {
+    text-decoration: none;
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #footer .footer__container .footer__top .footer__right .contacttext {
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon .footer__mail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__contact .footer__contacticon .footer__phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    color: #FAFAFA;
+    margin-left: 9px;
+  }
+  #footer .footer__container .footer__top .footer__right .footer__companyname {
+    color: #FAFAFA;
+  }
+  #footer .footer__container .footer__buttom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  #footer .footer__container .footer__buttom .footer__icon {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+  #footer .footer__container .footer__buttom .footer__companyname {
+    color: #FAFAFA;
+  }
+}
 .App .scroll-to-top {
+  position: fixed;
+  bottom: 32%;
+  right: 50px;
+  background-color: white;
   color: #009EE2;
-  border-radius: 31px;
-  border: 1px solid white;
-  padding: 14px;
-  position: absolute;
-  right: 20px;
-  margin-top: 10px;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
   cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.App .scroll-to-top:hover {
+  background-color: #005f99;
 }
 
 .container {
@@ -388,6 +664,193 @@
   width: 100px;
 }
 
+@media screen and (max-width: 1200px) {
+  #homeservice {
+    margin-top: 20px;
+  }
+  #homeservice .homeservice__container {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    margin-left: 1%;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicename {
+    width: 44%;
+    font-weight: bold;
+    font-size: 37px;
+    color: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicetext {
+    width: 58%;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input {
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputs {
+    width: 250px;
+    padding: 7px;
+    border-radius: 9px;
+    border: 1px solid #009EE2;
+    background-color: white;
+    color: grey;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputs:focus {
+    border-color: #009EE2;
+    outline: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage {
+    border: 1px solid #009EE2;
+    background-color: white;
+    color: grey;
+    width: 263px;
+    height: 100px;
+    padding: 5x;
+    border-radius: 9px;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage:focus {
+    border-color: #009EE2;
+    outline: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
+    text-decoration: none;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref .sendhomeservicebtn {
+    border-radius: 15px;
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    width: 255px;
+    padding: 5px;
+  }
+  #homeservice .homeservice__container .homeservice__right .homeservicephoto {
+    width: 386px;
+    height: 371px;
+    margin-top: 75px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #homeservice {
+    margin-top: 20px;
+  }
+  #homeservice .homeservice__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicename {
+    width: 100%;
+    font-weight: bold;
+    font-size: 37px;
+    color: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicetext {
+    width: 58%;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input {
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputs {
+    width: 100%;
+    padding: 7px;
+    border-radius: 9px;
+    border: 1px solid #009EE2;
+    background-color: white;
+    color: grey;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputs:focus {
+    border-color: #009EE2;
+    outline: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage {
+    border: 1px solid #009EE2;
+    background-color: white;
+    color: grey;
+    width: 100%;
+    height: 100px;
+    border-radius: 9px;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage:focus {
+    border-color: #009EE2;
+    outline: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
+    text-decoration: none;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref .sendhomeservicebtn {
+    border-radius: 15px;
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    width: 255px;
+    padding: 5px;
+  }
+  #homeservice .homeservice__container .homeservice__right {
+    width: 100%;
+  }
+  #homeservice .homeservice__container .homeservice__right .homeservicephoto {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  #cerfitacion {
+    background-color: #F1F1F1;
+    padding: 30px;
+    margin-top: 20px;
+  }
+  #cerfitacion .cerfitacion__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #cerfitacion .cerfitacion__container .certifacion__top {
+    text-align: center;
+    color: #009EE2;
+    font-size: 25px;
+  }
+  #cerfitacion .cerfitacion__container .certifacion__buttom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+  #cerfitacion .cerfitacion__container .certifacion__buttom .certifacnumber {
+    border: 1px solid #009EE2;
+    width: 100%;
+    padding: 7px;
+    border-radius: 15px;
+  }
+  #cerfitacion .cerfitacion__container .certifacion__buttom .certifactcheck {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: #F1F1F1;
+    text-align: center;
+    border-radius: 35px;
+    padding: 7px;
+    width: 100%;
+  }
+}
 #information {
   margin-top: 20px;
 }
@@ -427,7 +890,7 @@
   height: 300px;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   #information {
     margin-top: 20px;
   }
@@ -467,6 +930,96 @@
     height: 300px;
   }
 }
+@media screen and (max-width: 1000px) {
+  #information {
+    margin-top: 20px;
+  }
+  #information .information__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+  }
+  #information .information__container .information__left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  #information .information__container .information__left .information__top {
+    color: #009EE2;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  #information .information__container .information__left .information__text {
+    color: #565656;
+  }
+  #information .information__container .information__left .informationbtn {
+    text-decoration: none;
+  }
+  #information .information__container .information__left .informationbtn .information__button {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100px;
+  }
+  #information .information__container .information__right {
+    width: 100%;
+  }
+  #information .information__container .information__right .informationphoto {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  #information {
+    margin-top: 20px;
+  }
+  #information .information__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+  }
+  #information .information__container .information__left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #information .information__container .information__left .information__top {
+    color: #009EE2;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  #information .information__container .information__left .information__text {
+    width: 51%;
+    font-size: 15px;
+    color: #565656;
+  }
+  #information .information__container .information__left .informationbtn {
+    text-decoration: none;
+  }
+  #information .information__container .information__left .informationbtn .information__button {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100px;
+  }
+  #information .information__container .information__right {
+    padding: 5px;
+  }
+  #information .information__container .information__right .informationphoto {
+    width: 100%;
+  }
+}
 #homenews {
   margin-top: 20px;
 }
@@ -493,7 +1046,7 @@
 }
 #homenews .homenews__container .homenews__right .homenews__text {
   color: #565656;
-  width: 73%;
+  width: 100%;
 }
 #homenews .homenews__container .homenews__right .homenewsbtn {
   text-decoration: none;
@@ -508,6 +1061,147 @@
   width: 100px;
 }
 
+@media screen and (max-width: 1200px) {
+  #homenews {
+    margin-top: 20px;
+  }
+  #homenews .homenews__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20%;
+  }
+  #homenews .homenews__container .homenews__left .homenewsphoto {
+    width: 500px;
+    height: 300px;
+  }
+  #homenews .homenews__container .homenews__right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #homenews .homenews__container .homenews__right .homenews__top {
+    color: #009EE2;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  #homenews .homenews__container .homenews__right .homenews__text {
+    color: #565656;
+    width: 73%;
+  }
+  #homenews .homenews__container .homenews__right .homenewsbtn {
+    text-decoration: none;
+  }
+  #homenews .homenews__container .homenews__right .homenewsbtn .homenews__button {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #homenews {
+    margin-top: 20px;
+  }
+  #homenews .homenews__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #homenews .homenews__right {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    order: 1;
+    text-align: center;
+  }
+  #homenews .homenews__right .homenews__top {
+    color: #009EE2;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+  }
+  #homenews .homenews__right .homenews__text {
+    color: #565656;
+    width: 55% !important;
+    text-align: center;
+  }
+  #homenews .homenews__right .homenewsbtn {
+    text-decoration: none;
+  }
+  #homenews .homenews__right .homenewsbtn .homenews__button {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100px;
+  }
+  #homenews .homenews__left {
+    order: 2;
+    width: 100%;
+  }
+  #homenews .homenews__left .homenewsphoto {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 575px) {
+  #homenews {
+    margin-top: 20px;
+  }
+  #homenews .homenews__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #homenews .homenews__right {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    order: 1;
+    text-align: center;
+  }
+  #homenews .homenews__right .homenews__top {
+    color: #009EE2;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+  }
+  #homenews .homenews__right .homenews__text {
+    color: #565656;
+    width: 55% !important;
+    text-align: center;
+  }
+  #homenews .homenews__right .homenewsbtn {
+    text-decoration: none;
+  }
+  #homenews .homenews__right .homenewsbtn .homenews__button {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100px;
+  }
+  #homenews .homenews__left {
+    order: 2;
+  }
+  #homenews .homenews__left .homenewsphoto {
+    width: 100% !important;
+  }
+}
 #pageservice {
   margin-top: 40px;
 }
@@ -516,6 +1210,12 @@
   flex-direction: column;
   justify-content: center;
   gap: 30px;
+}
+#pageservice .pageservice__container .pageservicenames {
+  color: #009EE2;
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
 }
 #pageservice .pageservice__container .pageservice__top {
   display: flex;
@@ -746,6 +1446,500 @@
   border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
 }
 
+@media screen and (max-width: 1000px) {
+  #pageservice {
+    margin-top: 40px;
+  }
+  #pageservice .pageservice__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+  #pageservice .pageservice__container .pageservicenames {
+    color: #009EE2;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardone {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageserviceone.png");
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardone .card__text {
+    position: relative;
+    padding: 20px;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    font-weight: bold;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardone .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardtwo {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageservicetwo.png");
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardtwo .card__text {
+    position: relative;
+    padding: 20px;
+    font-weight: bold;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardtwo .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardthree {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageservicethree.png");
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardthree .card__text {
+    position: relative;
+    padding: 20px;
+    font-weight: bold;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardthree .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+  #pageservice .pageservice__container .pageservice__buttom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfoor {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageservicefoor.png");
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text {
+    position: relative;
+    padding: 20px;
+    font-weight: bold;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfive {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageservicefive.png");
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text {
+    position: relative;
+    padding: 20px;
+    font-weight: bold;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardsix {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageservicesix.png");
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text {
+    position: relative;
+    padding: 20px;
+    font-weight: bold;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+}
+@media screen and (max-width: 575px) {
+  #pageservice {
+    margin-top: 40px;
+  }
+  #pageservice .pageservice__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+  #pageservice .pageservice__container .pageservicenames {
+    color: #009EE2;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardone {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageserviceone.png");
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardone .card__text {
+    position: relative;
+    padding: 20px;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    font-weight: bold;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardone .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardtwo {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageservicetwo.png");
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardtwo .card__text {
+    position: relative;
+    padding: 20px;
+    font-weight: bold;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardtwo .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardthree {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageservicethree.png");
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardthree .card__text {
+    position: relative;
+    padding: 20px;
+    font-weight: bold;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__top .pageservice__cardthree .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+  #pageservice .pageservice__container .pageservice__buttom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfoor {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageservicefoor.png");
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text {
+    position: relative;
+    padding: 20px;
+    font-weight: bold;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfive {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageservicefive.png");
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text {
+    position: relative;
+    padding: 20px;
+    font-weight: bold;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardsix {
+    border: 1px solid #D9D9D9;
+    height: 234px;
+    border-radius: 3%;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../images/homephoto/pageservicesix.png");
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text {
+    position: relative;
+    padding: 20px;
+    font-weight: bold;
+    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
+    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+    z-index: 1; /* Metnin üstte görünmesini sağlar */
+    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
+    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    top: 70%;
+    text-align: center;
+    height: 35px;
+  }
+  #pageservice .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  }
+}
 #banner {
   position: relative;
   height: 750px;
@@ -868,14 +2062,22 @@
   background-color: white;
   color: grey;
 }
+#homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputs:focus {
+  border-color: #009EE2;
+  outline: #009EE2;
+}
 #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage {
-  border-radius: 9px;
   border: 1px solid #009EE2;
   background-color: white;
   color: grey;
-  width: 253px;
+  width: 263px;
   height: 100px;
-  padding: 7px;
+  padding: 5x;
+  border-radius: 9px;
+}
+#homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage:focus {
+  border-color: #009EE2;
+  outline: #009EE2;
 }
 #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
   text-decoration: none;
@@ -895,6 +2097,225 @@
   margin-top: 75px;
 }
 
+@media screen and (max-width: 1200px) {
+  #homeservice {
+    margin-top: 20px;
+  }
+  #homeservice .homeservice__container {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    margin-left: 1%;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicename {
+    width: 44%;
+    font-weight: bold;
+    font-size: 37px;
+    color: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicetext {
+    width: 58%;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input {
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputs {
+    width: 250px;
+    padding: 7px;
+    border-radius: 9px;
+    border: 1px solid #009EE2;
+    background-color: white;
+    color: grey;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputs:focus {
+    border-color: #009EE2;
+    outline: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage {
+    border: 1px solid #009EE2;
+    background-color: white;
+    color: grey;
+    width: 263px;
+    height: 100px;
+    padding: 5x;
+    border-radius: 9px;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage:focus {
+    border-color: #009EE2;
+    outline: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
+    text-decoration: none;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref .sendhomeservicebtn {
+    border-radius: 15px;
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    width: 255px;
+    padding: 5px;
+  }
+  #homeservice .homeservice__container .homeservice__right .homeservicephoto {
+    width: 386px;
+    height: 371px;
+    margin-top: 75px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #homeservice {
+    margin-top: 20px;
+  }
+  #homeservice .homeservice__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicename {
+    width: 100%;
+    font-weight: bold;
+    font-size: 37px;
+    color: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicetext {
+    width: 58%;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input {
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputs {
+    width: 100%;
+    padding: 7px;
+    border-radius: 9px;
+    border: 1px solid #009EE2;
+    background-color: white;
+    color: grey;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputs:focus {
+    border-color: #009EE2;
+    outline: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage {
+    border: 1px solid #009EE2;
+    background-color: white;
+    color: grey;
+    width: 100%;
+    height: 100px;
+    border-radius: 9px;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage:focus {
+    border-color: #009EE2;
+    outline: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
+    text-decoration: none;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref .sendhomeservicebtn {
+    border-radius: 15px;
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    width: 255px;
+    padding: 5px;
+  }
+  #homeservice .homeservice__container .homeservice__right {
+    width: 100%;
+  }
+  #homeservice .homeservice__container .homeservice__right .homeservicephoto {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  #homeservice {
+    margin-top: 20px;
+  }
+  #homeservice .homeservice__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicename {
+    width: 100%;
+    font-weight: bold;
+    font-size: 37px;
+    color: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicetext {
+    width: 58%;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input {
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputs {
+    width: 250px;
+    padding: 7px;
+    border-radius: 9px;
+    border: 1px solid #009EE2;
+    background-color: white;
+    color: grey;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputs:focus {
+    border-color: #009EE2;
+    outline: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage {
+    border: 1px solid #009EE2;
+    background-color: white;
+    color: grey;
+    width: 263px;
+    height: 100px;
+    padding: 5x;
+    border-radius: 9px;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage:focus {
+    border-color: #009EE2;
+    outline: #009EE2;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
+    text-decoration: none;
+  }
+  #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref .sendhomeservicebtn {
+    border-radius: 15px;
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    width: 255px;
+    padding: 5px;
+  }
+  #homeservice .homeservice__container .homeservice__right .homeservicephoto {
+    width: 100%;
+  }
+}
 #partners {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   display: flex;

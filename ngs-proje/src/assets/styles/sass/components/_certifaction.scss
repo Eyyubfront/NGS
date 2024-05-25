@@ -35,3 +35,213 @@
         }
     }
 }
+
+
+@media screen and (max-width: 1200px) {
+    #homeservice{
+        margin-top: 20px;
+        .homeservice__container{
+            display: flex;
+            flex-direction: row;
+            gap: 10%;
+            margin-left: 1%;
+            .homeservice__left{
+                .homeservice__top{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .homeservicename{
+                        width: 44%;
+                        font-weight: bold;
+                        font-size: 37px;
+                        color: #009EE2;
+                    }
+                    .homeservicetext{
+                        width: 58%;
+                    }
+                    .homeservice__input {
+                        flex-direction: column;
+                        display: flex;
+                        gap: 5px;
+                      
+                        .homeservicinputs { 
+                          width: 250px;
+                          padding: 7px;
+                          border-radius: 9px;
+                          border: 1px solid #009EE2;
+                          background-color: white;
+                          color: grey;
+                      
+                          &:focus {
+                           border-color: #009EE2;
+                           outline: #009EE2;
+                          }
+                        }
+                      
+                        .homeservicinputsmesage { 
+                            border: 1px solid #009EE2;
+                            background-color: white;
+                            color: grey;
+                          width: 263px;
+                          height: 100px;
+                          padding: 5x;
+                          border-radius: 9px;
+                          
+                          &:focus {
+                            border-color: #009EE2;
+                            outline: #009EE2;
+                           }
+                        }
+                      }
+                    .homeservice__button{
+                        .servicelinkhref{
+                            text-decoration: none;
+                            .sendhomeservicebtn{
+                                border-radius: 15px;
+                                border:1px solid #009EE2;
+                                background-color: #009EE2;
+                                color: aliceblue;
+                                text-align: center;
+                                width: 255px;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+            .homeservice__right{
+                .homeservicephoto{
+                    width: 386px;
+                    height: 371px;
+                    margin-top: 75px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #homeservice{
+        margin-top: 20px;
+        .homeservice__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .homeservice__left{
+                .homeservice__top{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    align-items: center;
+                    .homeservicename{
+                        width: 100%;
+                        font-weight: bold;
+                        font-size: 37px;
+                        color: #009EE2;
+                    }
+                    .homeservicetext{
+                        width: 58%;
+                    }
+                    .homeservice__input {
+                        flex-direction: column;
+                        display: flex;
+                        gap: 10px;
+                      width: 100%;
+                      align-items: center;
+                        .homeservicinputs { 
+                            width: 100%;
+                          padding: 7px;
+                          border-radius: 9px;
+                          border: 1px solid #009EE2;
+                          background-color: white;
+                          color: grey;
+                      
+                          &:focus {
+                           border-color: #009EE2;
+                           outline: #009EE2;
+                          }
+                        }
+                      
+                        .homeservicinputsmesage { 
+                            border: 1px solid #009EE2;
+                            background-color: white;
+                            color: grey;
+                            width: 100%;
+                          height: 100px;
+                          border-radius: 9px;
+                          
+                          &:focus {
+                            border-color: #009EE2;
+                            outline: #009EE2;
+                           }
+                        }
+                      }
+                    .homeservice__button{
+                        .servicelinkhref{
+                            text-decoration: none;
+                            .sendhomeservicebtn{
+                                border-radius: 15px;
+                                border:1px solid #009EE2;
+                                background-color: #009EE2;
+                                color: aliceblue;
+                                text-align: center;
+                                width: 255px;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+            .homeservice__right{
+                width: 100%;
+                .homeservicephoto{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #cerfitacion{
+        background-color:#F1F1F1;
+        padding: 30px;
+        margin-top: 20px;
+        .cerfitacion__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            .certifacion__top{
+                text-align: center;
+                color: #009EE2;
+                font-size: 25px;
+            }
+            .certifacion__buttom{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+                width: 100%;
+                .certifacnumber{
+                    border: 1px solid #009EE2;
+                    width: 100%;
+                    padding: 7px;
+                    border-radius: 15px;
+                }
+                .certifactcheck{
+                   border: 1px solid #009EE2 ;
+                   background-color: #009EE2;
+                   color: #F1F1F1;
+                   text-align: center;
+                   border-radius: 35px;
+                   padding: 7px;
+                   width: 100%;
+                   
+                }
+            }
+        }
+    }
+    
+}
