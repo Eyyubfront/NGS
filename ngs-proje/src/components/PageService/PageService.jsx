@@ -3,6 +3,7 @@ const PageService = () => {
     return (
         <div id='pageservice'>
             <div className="pageservice__container">
+                    <p className='pageservicenames'>Xidmətlərimiz</p>
                 <div className="pageservice__top">
                     <div className="pageservice__cardone">
                         <div className="card__text">

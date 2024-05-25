@@ -1,8 +1,8 @@
-import React from 'react'
-import Header from '../Header/header'
-import Footer from '../Footer/footer'
-import  { useState, useEffect } from 'react';
-const PageContainer = ({children}) => {
+import React, { useState, useEffect } from 'react';
+import Header from '../Header/header';
+import Footer from '../Footer/footer';
+
+const PageContainer = ({ children }) => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -27,23 +27,22 @@ const PageContainer = ({children}) => {
       behavior: 'smooth'
     });
   };
-  return (
-   <>
-   <Header/>
-   {children}
-   
-   <div className="App">
-      <div style={{ height: '25px' }}> 
-      </div>
-      {showButton && (
-        <button onClick={scrollToTop} className="scroll-to-top">
-          ⬆️
-        </button>
-      )}
-    </div>
-   <Footer/>
-   </>
-  )
-}
 
-export default PageContainer
+  return (
+    <>
+      <Header />
+      {children}
+      <div className="App">
+        <div style={{ height: '25px' }}></div>
+        {showButton && (
+          <button onClick={scrollToTop} className="scroll-to-top">
+            ⬆️
+          </button>
+        )}
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default PageContainer;
