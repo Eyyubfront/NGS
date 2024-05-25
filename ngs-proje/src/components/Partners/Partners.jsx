@@ -66,49 +66,6 @@ const Partners = () => {
           <img src={hilay} className="slide__img" alt="swiper" />
         </SwiperSlide>
       </Swiper>
-
-      {/* <Swiper
-        slidesPerView={6}
-        loop={true}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-          },
-          640: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 4,
-          },
-          1444: {
-            slidesPerView: 6,
-          },
-        }}
-      >
-        <SwiperSlide>
-          <img src={group} className="slide__img" alt="swiper" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={binary} className="slide__img" alt="swiper" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={hilay} className="slide__img" alt="swiper" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={group} className="slide__img" alt="swiper" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={binary} className="slide__img" alt="swiper" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={hilay} className="slide__img" alt="swiper" />
-        </SwiperSlide>
-      </Swiper> */}
     </div>
   );
 };
