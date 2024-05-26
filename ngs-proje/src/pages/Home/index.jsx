@@ -9,6 +9,7 @@ import Partners from "../../components/Partners/Partners";
 import Training from "../../components/Training/Training";
 import HomeServis from "../../components/Homeservice/Homeservice";
 import PageService from "../../components/PageService/PageService";
+
 const Home = () => {
   useEffect(() => {
     const handleResize = () => {
@@ -22,7 +23,8 @@ const Home = () => {
     window.addEventListener('resize', handleResize);
     handleResize();
     return () => window.removeEventListener('resize', handleResize);
-}, []);
+  }, []);
+
   return (
     <>
       <PageContainer>
@@ -47,13 +49,12 @@ const Home = () => {
                 />
               </div>
             </div>
-        
           </div>
-          <PageService/>
+          <PageService />
         </Container>
-          <Partners/>
-          <Training/>
-          <Container>
+        <Partners />
+        <Training />
+        <Container>
           <div id="homenews">
             <div className="homenews__container">
               <div className="homenews__left">
@@ -69,8 +70,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <HomeServis/>
-          </Container>
+          <HomeServis />
+        </Container>
         <Certifaciton />
       </PageContainer>
     </>

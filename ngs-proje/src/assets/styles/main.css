@@ -391,7 +391,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
+  position: fixed; /* Sayfanın üstünde sabit bir pozisyon */
+  top: 0; /* Sayfanın üstüne sabitlenmesini sağlar */
+  left: 0;
   z-index: 2;
   background-color: rgba(35, 35, 35, 0.2);
   width: 100%;
@@ -495,10 +497,12 @@
 }
 @keyframes slide-in-bottom {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -607,10 +611,12 @@
 
 @keyframes slide-in-top {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -1212,238 +1218,52 @@
   gap: 30px;
 }
 #pageservice .pageservice__container .pageservicenames {
-  color: #009EE2;
+  color: #009ee2;
   text-align: center;
   font-weight: bold;
   font-size: 35px;
 }
-#pageservice .pageservice__container .pageservice__top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-#pageservice .pageservice__container .pageservice__top .pageservice__cardone {
-  border: 1px solid #D9D9D9;
-  height: 234px;
-  border-radius: 3%;
-  position: relative;
-  background-position: center;
-  width: 288px;
-  background-size: cover;
-  background-image: url("../images/homephoto/pageserviceone.png");
-}
-#pageservice .pageservice__container .pageservice__top .pageservice__cardone .card__text {
-  position: relative;
-  padding: 20px;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
-  top: 70%;
-  font-weight: bold;
-  text-align: center;
-  height: 35px;
-}
-#pageservice .pageservice__container .pageservice__top .pageservice__cardone .card__text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-  filter: blur(10px);
-  z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-}
-#pageservice .pageservice__container .pageservice__top .pageservice__cardtwo {
-  border: 1px solid #D9D9D9;
-  height: 234px;
-  border-radius: 3%;
-  position: relative;
-  background-position: center;
-  width: 288px;
-  background-size: cover;
-  background-image: url("../images/homephoto/pageservicetwo.png");
-}
-#pageservice .pageservice__container .pageservice__top .pageservice__cardtwo .card__text {
-  position: relative;
-  padding: 20px;
-  font-weight: bold;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
-  top: 70%;
-  text-align: center;
-  height: 35px;
-}
-#pageservice .pageservice__container .pageservice__top .pageservice__cardtwo .card__text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-  filter: blur(10px);
-  z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-}
-#pageservice .pageservice__container .pageservice__top .pageservice__cardthree {
-  border: 1px solid #D9D9D9;
-  height: 234px;
-  border-radius: 3%;
-  position: relative;
-  background-position: center;
-  width: 288px;
-  background-size: cover;
-  background-image: url("../images/homephoto/pageservicethree.png");
-}
-#pageservice .pageservice__container .pageservice__top .pageservice__cardthree .card__text {
-  position: relative;
-  padding: 20px;
-  font-weight: bold;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
-  top: 70%;
-  text-align: center;
-  height: 35px;
-}
-#pageservice .pageservice__container .pageservice__top .pageservice__cardthree .card__text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-  filter: blur(10px);
-  z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-}
+#pageservice .pageservice__container .pageservice__top,
 #pageservice .pageservice__container .pageservice__buttom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#pageservice .pageservice__container .pageservice__buttom .pageservice__cardfoor {
-  border: 1px solid #D9D9D9;
+#pageservice .pageservice__container .pageservice__card {
+  border: 1px solid #d9d9d9;
   height: 234px;
   border-radius: 3%;
   position: relative;
   background-position: center;
   width: 288px;
   background-size: cover;
-  background-image: url("../images/homephoto/pageservicefoor.png");
 }
-#pageservice .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text {
+#pageservice .pageservice__container .pageservice__card .card__text {
   position: relative;
   padding: 20px;
   font-weight: bold;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
+  color: white;
+  background: rgba(35, 35, 35, 0.3);
+  border-radius: 10px;
+  z-index: 1;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   top: 70%;
   text-align: center;
   height: 35px;
 }
-#pageservice .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text::before {
+#pageservice .pageservice__container .pageservice__card .card__text::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+  background: rgba(35, 35, 35, 0.3);
   filter: blur(10px);
   z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-}
-#pageservice .pageservice__container .pageservice__buttom .pageservice__cardfive {
-  border: 1px solid #D9D9D9;
-  height: 234px;
-  border-radius: 3%;
-  position: relative;
-  background-position: center;
-  width: 288px;
-  background-size: cover;
-  background-image: url("../images/homephoto/pageservicefive.png");
-}
-#pageservice .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text {
-  position: relative;
-  padding: 20px;
-  font-weight: bold;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
-  top: 70%;
-  text-align: center;
-  height: 35px;
-}
-#pageservice .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-  filter: blur(10px);
-  z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-}
-#pageservice .pageservice__container .pageservice__buttom .pageservice__cardsix {
-  border: 1px solid #D9D9D9;
-  height: 234px;
-  border-radius: 3%;
-  position: relative;
-  background-position: center;
-  width: 288px;
-  background-size: cover;
-  background-image: url("../images/homephoto/pageservicesix.png");
-}
-#pageservice .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text {
-  position: relative;
-  padding: 20px;
-  font-weight: bold;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
-  top: 70%;
-  text-align: center;
-  height: 35px;
-}
-#pageservice .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-  filter: blur(10px);
-  z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1941,7 +1761,7 @@
   }
 }
 #servicesection {
-  margin-top: 30px;
+  margin-top: 80px;
 }
 #servicesection .pageservice__container {
   display: flex;
@@ -2965,8 +2785,7 @@
   display: block;
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #banner .swiper .swiper-slide .slide__content {
   position: relative;
@@ -3382,4 +3201,4 @@
 }
 #training .training__content button:hover {
   background-color: #28bdfd;
-}/*# sourceMappingURL=main.css.map */
+}

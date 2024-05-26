@@ -1,253 +1,65 @@
-#pageservice{
+#pageservice {
     margin-top: 40px;
-    .pageservice__container{
+    .pageservice__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+  
+      .pageservicenames {
+        color: #009ee2;
+        text-align: center;
+        font-weight: bold;
+        font-size: 35px;
+      }
+  
+      .pageservice__top,
+      .pageservice__buttom {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 30px;
-        .pageservicenames{
-            color: #009EE2;
-            text-align: center;
-            font-weight: bold;
-            font-size: 35px;
-        }
-        .pageservice__top{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            .pageservice__cardone{
-                border: 1px solid #D9D9D9;
-                height: 234px;
-                border-radius: 3%;
-                position: relative;
-                background-position: center;
-                width: 288px;
-                background-size: cover;
-                background-image: url("../images/homephoto/pageserviceone.png");
-                .card__text {
-                    position: relative;
-                    padding: 20px;
-                    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-                    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-                    border-radius: 10px; /* Köşeleri yuvarlamak için */
-                    z-index: 1; /* Metnin üstte görünmesini sağlar */
-                    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-                    -webkit-backdrop-filter: blur(2px); /* Safari için */
-                top: 70%;
-                font-weight: bold;
-                text-align: center;
-                height: 35px;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-                        filter: blur(10px);
-                        z-index: -1;
-                        border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-                    }
-                }
-            }
-            .pageservice__cardtwo{
-                border: 1px solid #D9D9D9;
-                height: 234px;
-                border-radius: 3%;
-                position: relative;
-                background-position: center;
-                width: 288px;
-                background-size: cover;
-                background-image: url("../images/homephoto/pageservicetwo.png");
-                .card__text {
-                    position: relative;
-                    padding: 20px;
-                    font-weight: bold;
-                    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-                    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-                    border-radius: 10px; /* Köşeleri yuvarlamak için */
-                    z-index: 1; /* Metnin üstte görünmesini sağlar */
-                    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-                    -webkit-backdrop-filter: blur(2px); /* Safari için */
-                top: 70%;
-                text-align: center;
-                height: 35px;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-                        filter: blur(10px);
-                        z-index: -1;
-                        border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-                    }
-                }
-            }
-            .pageservice__cardthree{
-                border: 1px solid #D9D9D9;
-                height: 234px;
-                border-radius: 3%;
-                position: relative;
-                background-position: center;
-                width: 288px;
-                background-size: cover;
-                background-image: url("../images/homephoto/pageservicethree.png");
-                .card__text {
-                    position: relative;
-                    padding: 20px;
-                    font-weight: bold;
-                    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-                    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-                    border-radius: 10px; /* Köşeleri yuvarlamak için */
-                    z-index: 1; /* Metnin üstte görünmesini sağlar */
-                    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-                    -webkit-backdrop-filter: blur(2px); /* Safari için */
-                top: 70%;
-                text-align: center;
-                height: 35px;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-                        filter: blur(10px);
-                        z-index: -1;
-                        border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-                    }
-                }
-            }
-           
-        }
-.pageservice__buttom{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    .pageservice__cardfoor{
-        border: 1px solid #D9D9D9;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      .pageservice__card {
+        border: 1px solid #d9d9d9;
         height: 234px;
         border-radius: 3%;
         position: relative;
         background-position: center;
         width: 288px;
         background-size: cover;
-        background-image: url("../images/homephoto/pageservicefoor.png");
+  
         .card__text {
-            position: relative;
-            padding: 20px;
-            font-weight: bold;
-            color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-            background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-            border-radius: 10px; /* Köşeleri yuvarlamak için */
-            z-index: 1; /* Metnin üstte görünmesini sağlar */
-            backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-            -webkit-backdrop-filter: blur(2px); /* Safari için */
-        top: 70%;
-        text-align: center;
-        height: 35px;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-                filter: blur(10px);
-                z-index: -1;
-                border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-            }
+          position: relative;
+          padding: 20px;
+          font-weight: bold;
+          color: white;
+          background: rgba(35, 35, 35, 0.3);
+          border-radius: 10px;
+          z-index: 1;
+          backdrop-filter: blur(2px);
+          -webkit-backdrop-filter: blur(2px);
+          top: 70%;
+          text-align: center;
+          height: 35px;
+  
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(35, 35, 35, 0.3);
+            filter: blur(10px);
+            z-index: -1;
+            border-radius: 10px;
+          }
         }
+      }
     }
-    .pageservice__cardfive{
-        border: 1px solid #D9D9D9;
-        height: 234px;
-        border-radius: 3%;
-        position: relative;
-        background-position: center;
-        width: 288px;
-        background-size: cover;
-        background-image: url("../images/homephoto/pageservicefive.png");
-        .card__text {
-            position: relative;
-            padding: 20px;
-            font-weight: bold;
-            color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-            background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-            border-radius: 10px; /* Köşeleri yuvarlamak için */
-            z-index: 1; /* Metnin üstte görünmesini sağlar */
-            backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-            -webkit-backdrop-filter: blur(2px); /* Safari için */
-        top: 70%;
-        text-align: center;
-        height: 35px;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-                filter: blur(10px);
-                z-index: -1;
-                border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-            }
-        }
-    }
-    .pageservice__cardsix{
-        border: 1px solid #D9D9D9;
-        height: 234px;
-        border-radius: 3%;
-        position: relative;
-        background-position: center;
-        width: 288px;
-        background-size: cover;
-        background-image: url("../images/homephoto/pageservicesix.png");
-        .card__text {
-            position: relative;
-            padding: 20px;
-            font-weight: bold;
-            color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-            background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-            border-radius: 10px; /* Köşeleri yuvarlamak için */
-            z-index: 1; /* Metnin üstte görünmesini sağlar */
-            backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-            -webkit-backdrop-filter: blur(2px); /* Safari için */
-        top: 70%;
-        text-align: center;
-        height: 35px;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-                filter: blur(10px);
-                z-index: -1;
-                border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-            }
-        }
-    }
-}
-
-
-    }
-}
-
-
-
+  }
 @media screen and (max-width: 1000px) {
     #pageservice{
         margin-top: 40px;

@@ -4,7 +4,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
+    position: fixed; /* Sayfanın üstünde sabit bir pozisyon */
+    top: 0; /* Sayfanın üstüne sabitlenmesini sağlar */
+    left: 0;
     z-index: 2;
     background-color: rgba(35, 35, 35, 0.2);
     width: 100%;
