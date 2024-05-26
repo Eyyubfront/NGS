@@ -389,7 +389,7 @@
 }
 .container #header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   z-index: 2;
@@ -399,13 +399,24 @@
   backdrop-filter: blur(8px);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
+.container #header .hamburger__open {
+  display: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.container #header .hamburger__open .open__icon {
+  width: 40px;
+  height: 40px;
+  color: #fafafa;
+}
 .container #header .header__left {
   display: flex;
   align-items: center;
   width: 35%;
 }
 .container #header .header__left img {
-  width: 96px;
+  width: 85px;
   margin-right: 50px;
 }
 .container #header .header__left .search__input {
@@ -478,7 +489,143 @@
 .container #header .header__right select:hover {
   color: #009ee2;
 }
+.container .deleteClass {
+  display: none;
+  animation: slide-in-bottom 0.3s ease;
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.container .hamburger__container {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background: rgba(35, 35, 35, 0.4);
+  position: fixed;
+  z-index: 3;
+  height: 100%;
+  animation: slide-in-top 0.3s ease;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.container .hamburger__container .hamburger__head {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .hamburger__container .hamburger__head .hamburger__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 60%;
+}
+.container .hamburger__container .hamburger__head .hamburger__right .hamburger__search {
+  display: none;
+  padding: 12px 24px;
+  border-radius: 40px;
+  border: 1px solid rgb(250, 250, 250);
+  width: 100%;
+  background: transparent;
+  color: #fafafa;
+  animation: bounce-in 0.6s ease;
+}
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.container .hamburger__container .hamburger__head .hamburger__right button {
+  background: transparent;
+  border: 0;
+}
+.container .hamburger__container .hamburger__head .hamburger__right button .close__icon {
+  color: #fafafa;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.container .hamburger__container .hamburger__head .hamburger__right button .close__search {
+  display: none;
+  color: #fafafa;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.container .hamburger__container .hamburger__head .hamburger__right button .search__icon {
+  color: #fafafa;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.container .hamburger__container .hamburger__menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  font-size: 28px;
+}
+.container .hamburger__container .hamburger__menu .language {
+  padding: 4px;
+  font-size: 28px;
+  background: transparent;
+  border: 0;
+  color: #fafafa;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.container .hamburger__container .hamburger__menu .language:hover {
+  color: #009ee2;
+}
+.container .hamburger__container .hamburger__menu li {
+  list-style: none;
+  padding: 15px 0;
+}
+.container .hamburger__container .hamburger__menu li .hamburger__link {
+  text-decoration: none;
+  color: #fafafa;
+}
 
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .container #header .header__right {
+    display: none;
+  }
+  .container #header .header__left .search__input {
+    display: none;
+  }
+  .container #header .hamburger__open {
+    display: block;
+  }
+}
 #cerfitacion {
   background-color: #F1F1F1;
   padding: 30px;
@@ -2818,7 +2965,8 @@
   display: block;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #banner .swiper .swiper-slide .slide__content {
   position: relative;
@@ -3234,4 +3382,4 @@
 }
 #training .training__content button:hover {
   background-color: #28bdfd;
-}
+}/*# sourceMappingURL=main.css.map */
