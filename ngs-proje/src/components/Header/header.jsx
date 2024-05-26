@@ -15,7 +15,7 @@ const Header = () => {
             <Link className="link" to="/">
               Haqqımızda
             </Link>
-            <Link className="link service" to="/">
+            <Link className="link service" to="/servicesection">
               Xidmətlər
               <ul className="sub__menu">
                 <Link to="/" className="sub__link">Sənədlərin hazırlanması</Link>
