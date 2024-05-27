@@ -44,7 +44,7 @@ const Header = () => {
         </div>
         <div className="header__right">
           <ul>
-            <Link className="link" to="/">
+            <Link className="link" to="/AboutUs">
               Haqqımızda
             </Link>
             <Link className="link service" to="/servicesection">
