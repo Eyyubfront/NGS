@@ -79,7 +79,7 @@ const Header = () => {
             <Link className="link" to="/">
               Təlimlər
             </Link>
-            <Link className="link" to="/">
+            <Link className="link" to="/contact">
               Əlaqə
             </Link>
           </ul>

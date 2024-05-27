@@ -391,8 +391,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: fixed; /* Sayfanın üstünde sabit bir pozisyon */
-  top: 0; /* Sayfanın üstüne sabitlenmesini sağlar */
+  position: fixed;
+  top: 0;
   left: 0;
   z-index: 2;
   background-color: rgba(35, 35, 35, 0.2);
@@ -497,10 +497,12 @@
 }
 @keyframes slide-in-bottom {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -610,10 +612,12 @@
 
 @keyframes slide-in-top {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -2765,7 +2769,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 #aboutUs .about__head {
   display: flex;
@@ -2868,10 +2871,385 @@
     font-size: 20px;
   }
 }
+#contact {
+  margin-top: 70px;
+}
+#contact .contact__container {
+  display: flex;
+  flex-direction: column;
+}
+#contact .contact__container .contact__top {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+#contact .contact__container .contact__top .contact__topname {
+  color: #009EE2;
+  font-weight: bold;
+  font-size: 30px;
+}
+#contact .contact__container .contact__top .contact__toptext {
+  width: 50%;
+}
+#contact .contact__container .contact__buttom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+#contact .contact__container .contact__buttom .contact__left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__phone {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkindname {
+  color: #009EE2;
+  font-size: 20px;
+  font-weight: 100;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkinds {
+  color: #565656;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__mail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkindname {
+  color: #009EE2;
+  font-size: 20px;
+  font-weight: 100;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkinds {
+  color: #565656;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__watch {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkindname {
+  color: #009EE2;
+  font-size: 20px;
+  font-weight: 100;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkinds {
+  color: #565656;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__location {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__location .contactkindname {
+  color: #009EE2;
+  font-size: 20px;
+  font-weight: 100;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__location .contactkinds {
+  color: #565656;
+}
+#contact .contact__container .contact__buttom .contact__right .mapphoto {
+  max-width: 400px;
+}
+
+@media screen and (max-width: 1200px) {
+  #contact {
+    margin-top: 70px;
+  }
+  #contact .contact__container {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact .contact__container .contact__top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  #contact .contact__container .contact__top .contact__topname {
+    color: #009EE2;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  #contact .contact__container .contact__top .contact__toptext {
+    width: 50%;
+  }
+  #contact .contact__container .contact__buttom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  #contact .contact__container .contact__buttom .contact__left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__phone {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__mail {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__watch {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__location {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__location .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__location .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__right .mapphoto {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #contact {
+    margin-top: 70px;
+  }
+  #contact .contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact .contact__container .contact__top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+  }
+  #contact .contact__container .contact__top .contact__topname {
+    color: #009EE2;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  #contact .contact__container .contact__top .contact__toptext {
+    width: 80%;
+    text-align: center;
+  }
+  #contact .contact__container .contact__buttom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  #contact .contact__container .contact__buttom .contact__left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__phone {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__mail {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__watch {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__location {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__location .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__location .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__right {
+    margin-top: 20px;
+    width: 100% !important;
+  }
+  #contact .contact__container .contact__buttom .contact__right .mapphoto {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 575px) {
+  #contact {
+    margin-top: 70px;
+  }
+  #contact .contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact .contact__container .contact__top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+  }
+  #contact .contact__container .contact__top .contact__topname {
+    color: #009EE2;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  #contact .contact__container .contact__top .contact__toptext {
+    width: 80%;
+    text-align: center;
+  }
+  #contact .contact__container .contact__buttom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  #contact .contact__container .contact__buttom .contact__left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__phone {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__mail {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__watch {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__location {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__location .contactkindname {
+    color: #009EE2;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  #contact .contact__container .contact__buttom .contact__left .conatct__location .contactkinds {
+    color: #565656;
+  }
+  #contact .contact__container .contact__buttom .contact__right {
+    margin-top: 20px;
+  }
+  #contact .contact__container .contact__buttom .contact__right .mapphoto {
+    max-width: 400px;
+  }
+}
 #banner {
   position: relative;
   height: 750px;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 #banner .swiper {
   width: 100%;
@@ -2890,8 +3268,7 @@
   display: block;
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #banner .swiper .swiper-slide .slide__content {
   position: relative;
@@ -2918,13 +3295,11 @@
   z-index: 2;
 }
 #banner .swiper .swiper-slide .slide__content .slide__description h2 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 58.09px;
 }
 #banner .swiper .swiper-slide .slide__content .slide__description p {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
@@ -3307,4 +3682,4 @@
 }
 #training .training__content button:hover {
   background-color: #28bdfd;
-}/*# sourceMappingURL=main.css.map */
+}

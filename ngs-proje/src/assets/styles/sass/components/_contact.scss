@@ -1,0 +1,385 @@
+#contact{
+    margin-top: 70px;
+    .contact__container{
+        display: flex;
+        flex-direction: column;
+.contact__top{
+    display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        .contact__topname{
+            color: #009EE2;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .contact__toptext{
+            width: 50%;
+        }
+}
+.contact__buttom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+.contact__left{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .conatct__phone{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .contactkindname{
+            color: #009EE2;
+            font-size: 20px;
+            font-weight: 100;
+        }
+        .contactkinds{
+            color: #565656;
+        }
+    }
+    .conatct__mail{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .contactkindname{
+            color: #009EE2;
+            font-size: 20px;
+            font-weight: 100;
+        }
+        .contactkinds{
+            color: #565656;
+        }
+    }
+    .conatct__watch{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .contactkindname{
+            color: #009EE2;
+            font-size: 20px;
+            font-weight: 100;
+        }
+        .contactkinds{
+            color: #565656;
+        }
+    }
+    .conatct__location{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .contactkindname{
+            color: #009EE2;
+            font-size: 20px;
+            font-weight: 100;
+        }
+        .contactkinds{
+            color: #565656;
+        }
+    }
+}
+    .contact__right{
+        .mapphoto{
+            max-width: 400px;
+        }
+    }
+}
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #contact{
+        margin-top: 70px;
+        .contact__container{
+            display: flex;
+            flex-direction: column;
+    .contact__top{
+        display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            .contact__topname{
+                color: #009EE2;
+                font-weight: bold;
+                font-size: 30px;
+            }
+            .contact__toptext{
+                width: 50%;
+            }
+    }
+    .contact__buttom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    .contact__left{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .conatct__phone{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+        .conatct__mail{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+        .conatct__watch{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+        .conatct__location{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+    }
+        .contact__right{
+            .mapphoto{
+                max-width: 400px;
+            }
+        }
+    }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    #contact{
+        margin-top: 70px;
+        .contact__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    .contact__top{
+        display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+            align-items: center;
+            .contact__topname{
+                color: #009EE2;
+                font-weight: bold;
+                font-size: 30px;
+            }
+            .contact__toptext{
+                width: 80%;
+                text-align: center;
+            }
+    }
+    .contact__buttom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    .contact__left{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .conatct__phone{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+        .conatct__mail{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+        .conatct__watch{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+        .conatct__location{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+    }
+        .contact__right{
+            margin-top: 20px;
+            width: 100% !important;
+            .mapphoto{
+              width: 100% !important;
+            }
+        }
+    }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #contact{
+        margin-top: 70px;
+        .contact__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    .contact__top{
+        display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+            align-items: center;
+            .contact__topname{
+                color: #009EE2;
+                font-weight: bold;
+                font-size: 30px;
+            }
+            .contact__toptext{
+                width: 80%;
+                text-align: center;
+            }
+    }
+    .contact__buttom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    .contact__left{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .conatct__phone{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+        .conatct__mail{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+        .conatct__watch{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+        .conatct__location{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .contactkindname{
+                color: #009EE2;
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .contactkinds{
+                color: #565656;
+            }
+        }
+    }
+        .contact__right{
+            margin-top: 20px;
+            .mapphoto{
+                max-width: 400px;
+            }
+        }
+    }
+        }
+    }
+    
+    
+}
