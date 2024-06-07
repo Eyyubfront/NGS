@@ -1,0 +1,412 @@
+#traningpages {
+    margin-top: 4%;
+
+    .traning__top {
+        .framesphoto {
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+
+        .traningphoots__text {
+            position: absolute;
+            top: 141px;
+            text-align: center;
+            width: 96%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: white;
+            align-items: center;
+
+            .toptraningsnames {
+                font-weight: bold;
+                font-size: 32px;
+            }
+
+            .traningreportext {
+                width: 50%;
+                text-align: center;
+            }
+        }
+    }
+
+    .traning__container {
+        .traning__containernames {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            color: #009EE2;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    #traningpages {
+        margin-top: 4%;
+
+        .traning__top {
+            .framesphoto {
+                width: 100%;
+                height: 300px;
+                position: relative;
+            }
+
+            .traningphoots__text {
+                position: absolute;
+                top: 141px;
+                text-align: center;
+                width: 96%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                color: white;
+                align-items: center;
+
+                .toptraningsnames {
+                    font-weight: bold;
+                    font-size: 32px;
+                }
+
+                .traningreportext {
+                    width: 50%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .traning__container {
+            .traning__containernames {
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                color: #009EE2;
+            }
+
+            .traning_listallcards {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .traning__list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .list__card {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        .date__namescard {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 30px;
+
+                            .traning__date {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+
+                                .date-picker-button {
+
+                                    background-color: white;
+                                    border: 1px solid #ccc;
+                                    padding: 5px 10px;
+                                    cursor: pointer;
+                                }
+
+                                .date-picker-button:focus {
+                                    outline: none;
+                                }
+
+                                .calendar-icon {
+                                    margin-right: 5px;
+                                }
+
+                                .traning__date {
+                                    display: flex;
+                                    align-items: center;
+                                }
+
+                                .datewathc {
+                                    margin-left: 10px;
+                                }
+
+                            }
+                        }
+
+                        .listshref {
+                            text-decoration: none;
+
+                            .list__btn {
+                                border: 1px solid #009EE2;
+                                background-color: #009EE2;
+                                color: aliceblue;
+                                text-align: center;
+                                border-radius: 12px;
+                                padding: 10px;
+                                width: 100px;
+                            }
+                        }
+                    }
+
+                    .traning__botomline {
+                        border: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #traningpages {
+        margin-top: 4%;
+    
+        .traning__top {
+            .framesphoto {
+                width: 100%;
+                height: 300px;
+                position: relative;
+            }
+    
+            .traningphoots__text {
+                position: absolute;
+                top: 141px;
+                text-align: center;
+                width: 96%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                color: white;
+                align-items: center;
+    
+                .toptraningsnames {
+                    font-weight: bold;
+                    font-size: 32px;
+                }
+    
+                .traningreportext {
+                    width: 50%;
+                    text-align: center;
+                }
+            }
+        }
+    
+        .traning__container {
+            .traning__containernames {
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                color: #009EE2;
+            }
+    
+            .traning_listallcards {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+    
+                .traning__list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+    
+                    .list__card {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .date__namescard {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 30px;
+    
+                            .traning__date {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+    
+                                .date-picker-button {
+    
+                                    background-color: white;
+                                    border: 1px solid #ccc;
+                                    padding: 5px 10px;
+                                    cursor: pointer;
+                                }
+    
+                                .date-picker-button:focus {
+                                    outline: none;
+                                }
+    
+                                .calendar-icon {
+                                    margin-right: 5px;
+                                }
+    
+                                .traning__date {
+                                    display: flex;
+                                    align-items: center;
+                                }
+    
+                                .datewathc {
+                                    margin-left: 10px;
+                                }
+    
+                            }
+                        }
+    
+                        .listshref {
+                            text-decoration: none;
+    
+                            .list__btn {
+                                border: 1px solid #009EE2;
+                                background-color: #009EE2;
+                                color: aliceblue;
+                                text-align: center;
+                                border-radius: 12px;
+                                padding: 10px;
+                                width: 100px;
+                            }
+                        }
+                    }
+    
+                    .traning__botomline {
+                        border: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 575px) {
+    #traningpages {
+        margin-top: 4%;
+
+        .traning__top {
+            .framesphoto {
+                width: 100%;
+                height: 300px;
+                position: relative;
+            }
+
+            .traningphoots__text {
+                position: absolute;
+                top: 141px;
+                text-align: center;
+                width: 96%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                color: white;
+                align-items: center;
+
+                .toptraningsnames {
+                    font-weight: bold;
+                    font-size: 32px;
+                }
+
+                .traningreportext {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .traning__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+margin-top: 15px;
+            .traning__containernames {
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                color: #009EE2;
+            }
+
+            .traning_listallcards {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                .traning__list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .list__card {
+                        display: flex;
+                        align-items: flex-end;
+                        flex-direction: initial;
+
+
+                        .publicstexts {
+                            margin-bottom: 10px;
+                        }
+
+                        .date__namescard {
+
+                            display: flex;
+                            flex-direction: column-reverse;
+                            align-items: flex-start;
+                            gap: 4px;
+
+
+                            .traning__date {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+
+                                .date-picker-button {
+                                    background-color: white;
+                                    border: 1px solid #ccc;
+                                    padding: 5px 10px;
+                                    cursor: pointer;
+                                }
+
+                                .date-picker-button:focus {
+                                    outline: none;
+                                }
+
+                                .calendar-icon {
+                                    margin-right: 5px;
+                                }
+
+                                .datewathc {
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+
+                        .listshref {
+                            text-decoration: none;
+
+                            .list__btn {
+                                border: 1px solid #009EE2;
+                                background-color: #009EE2;
+                                color: aliceblue;
+                                text-align: center;
+                                border-radius: 12px;
+                                padding: 10px;
+                                width: 100px;
+                            }
+                        }
+                    }
+
+                    .traning__botomline {
+                        border: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+    }
+}
