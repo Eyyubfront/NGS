@@ -76,7 +76,7 @@ const Header = () => {
             <Link className="link" to="/">
               Blog
             </Link>
-            <Link className="link" to="/">
+            <Link className="link" to="/traningpages">
               Təlimlər
             </Link>
             <Link className="link" to="/contact">

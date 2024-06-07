@@ -1,0 +1,336 @@
+#traning__allcontainers{
+    .traning_listallcards {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .traning__list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .list__card {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .date__namescard {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 30px;
+
+                    .traning__date {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        .date-picker-button {
+
+                            background-color: white;
+                            border: 1px solid #ccc;
+                            padding: 5px 10px;
+                            cursor: pointer;
+                        }
+
+                        .date-picker-button:focus {
+                            outline: none;
+                        }
+
+                        .calendar-icon {
+                            margin-right: 5px;
+                        }
+
+                        .traning__date {
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .datewathc {
+                            margin-left: 10px;
+                        }
+
+                    }
+                }
+
+                .listshref {
+                    text-decoration: none;
+
+                    .list__btn {
+                        border: 1px solid #009EE2;
+                        background-color: #009EE2;
+                        color: aliceblue;
+                        text-align: center;
+                        border-radius: 12px;
+                        padding: 10px;
+                        width: 100px;
+                    }
+                }
+            }
+
+            .traning__botomline {
+                border: 1px solid #ccc;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    #traning__allcontainers {
+        .traning_listallcards {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .traning__list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .list__card {
+            display: flex;
+            flex-direction: column;
+            align-items: end !important;
+        }
+
+        .date__namescard {
+            display: flex;
+            flex-direction: column-reverse !important;
+            align-items: flex-start !important;
+            gap: 2px !important;
+        }
+
+        .publicstexts {
+            align-self: flex-start;
+            margin-bottom: 10px; /* Adds some space below the title */
+        }
+
+        .traning__date {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .date-picker-button {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .date-picker-button:focus {
+            outline: none;
+        }
+
+        .calendar-icon {
+            margin-right: 5px;
+        }
+
+        .datewathc {
+            margin-left: 10px;
+        }
+
+        .traning__date-and-link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .listshref {
+            text-decoration: none;
+        }
+
+        .list__btn {
+            border: 1px solid #009EE2;
+            background-color: #009EE2;
+            color: aliceblue;
+            text-align: center;
+            border-radius: 12px;
+            padding: 10px;
+            width: 100px;
+        }
+
+        .traning__botomline {
+            border: 1px solid #ccc;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #traning__allcontainers {
+        .traning_listallcards {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .traning__list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .list__card {
+            display: flex;
+            flex-direction: column;
+            align-items: end !important;
+        }
+
+        .date__namescard {
+            display: flex;
+            flex-direction: column-reverse !important;
+            align-items: flex-start !important;
+            gap: 2px !important;
+        }
+
+        .publicstexts {
+            align-self: flex-start;
+            margin-bottom: 10px; /* Adds some space below the title */
+        }
+
+        .traning__date {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .date-picker-button {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .date-picker-button:focus {
+            outline: none;
+        }
+
+        .calendar-icon {
+            margin-right: 5px;
+        }
+
+        .datewathc {
+            margin-left: 10px;
+        }
+
+        .traning__date-and-link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .listshref {
+            text-decoration: none;
+        }
+
+        .list__btn {
+            border: 1px solid #009EE2;
+            background-color: #009EE2;
+            color: aliceblue;
+            text-align: center;
+            border-radius: 12px;
+            padding: 10px;
+            width: 100px;
+        }
+
+        .traning__botomline {
+            border: 1px solid #ccc;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #traning__allcontainers {
+        .traning_listallcards {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .traning__list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .list__card {
+            display: flex;
+            flex-direction: column;
+            align-items: end !important;
+        }
+
+        .date__namescard {
+            display: flex;
+            flex-direction: column-reverse !important;
+            align-items: flex-start !important;
+            gap: 2px !important;
+        }
+
+        .publicstexts {
+            align-self: flex-start;
+            margin-bottom: 10px; /* Adds some space below the title */
+        }
+
+        .traning__date {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .date-picker-button {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .date-picker-button:focus {
+            outline: none;
+        }
+
+        .calendar-icon {
+            margin-right: 5px;
+        }
+
+        .datewathc {
+            margin-left: 10px;
+        }
+
+        .traning__date-and-link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .listshref {
+            text-decoration: none;
+        }
+
+        .list__btn {
+            border: 1px solid #009EE2;
+            background-color: #009EE2;
+            color: aliceblue;
+            text-align: center;
+            border-radius: 12px;
+            padding: 10px;
+            width: 100px;
+        }
+
+        .traning__botomline {
+            border: 1px solid #ccc;
+        }
+    }
+}
