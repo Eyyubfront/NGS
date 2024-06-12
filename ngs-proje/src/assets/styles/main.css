@@ -3554,6 +3554,278 @@
   background-color: #009ee2;
 }
 
+#traning__allcontainers .traning_listallcards {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#traning__allcontainers .traning_listallcards .traning__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#traning__allcontainers .traning_listallcards .traning__list .list__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#traning__allcontainers .traning_listallcards .traning__list .list__card .date__namescard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+#traning__allcontainers .traning_listallcards .traning__list .list__card .date__namescard .traning__date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#traning__allcontainers .traning_listallcards .traning__list .list__card .date__namescard .traning__date .date-picker-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+#traning__allcontainers .traning_listallcards .traning__list .list__card .date__namescard .traning__date .date-picker-button:focus {
+  outline: none;
+}
+#traning__allcontainers .traning_listallcards .traning__list .list__card .date__namescard .traning__date .calendar-icon {
+  margin-right: 5px;
+}
+#traning__allcontainers .traning_listallcards .traning__list .list__card .date__namescard .traning__date .traning__date {
+  display: flex;
+  align-items: center;
+}
+#traning__allcontainers .traning_listallcards .traning__list .list__card .date__namescard .traning__date .datewathc {
+  margin-left: 10px;
+}
+#traning__allcontainers .traning_listallcards .traning__list .list__card .listshref {
+  text-decoration: none;
+}
+#traning__allcontainers .traning_listallcards .traning__list .list__card .listshref .list__btn {
+  border: 1px solid #009EE2;
+  background-color: #009EE2;
+  color: aliceblue;
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px;
+  width: 100px;
+}
+#traning__allcontainers .traning_listallcards .traning__list .traning__botomline {
+  border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 1200px) {
+  #traning__allcontainers .traning_listallcards {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traning__allcontainers .traning__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traning__allcontainers .list__card {
+    display: flex;
+    flex-direction: column;
+    align-items: end !important;
+  }
+  #traning__allcontainers .date__namescard {
+    display: flex;
+    flex-direction: column-reverse !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+  }
+  #traning__allcontainers .publicstexts {
+    align-self: flex-start;
+    margin-bottom: 10px; /* Adds some space below the title */
+  }
+  #traning__allcontainers .traning__date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #traning__allcontainers .date-picker-button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  #traning__allcontainers .date-picker-button:focus {
+    outline: none;
+  }
+  #traning__allcontainers .calendar-icon {
+    margin-right: 5px;
+  }
+  #traning__allcontainers .datewathc {
+    margin-left: 10px;
+  }
+  #traning__allcontainers .traning__date-and-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #traning__allcontainers .listshref {
+    text-decoration: none;
+  }
+  #traning__allcontainers .list__btn {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100px;
+  }
+  #traning__allcontainers .traning__botomline {
+    border: 1px solid #ccc;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #traning__allcontainers .traning_listallcards {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traning__allcontainers .traning__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traning__allcontainers .list__card {
+    display: flex;
+    flex-direction: column;
+    align-items: end !important;
+  }
+  #traning__allcontainers .date__namescard {
+    display: flex;
+    flex-direction: column-reverse !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+  }
+  #traning__allcontainers .publicstexts {
+    align-self: flex-start;
+    margin-bottom: 10px; /* Adds some space below the title */
+  }
+  #traning__allcontainers .traning__date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #traning__allcontainers .date-picker-button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  #traning__allcontainers .date-picker-button:focus {
+    outline: none;
+  }
+  #traning__allcontainers .calendar-icon {
+    margin-right: 5px;
+  }
+  #traning__allcontainers .datewathc {
+    margin-left: 10px;
+  }
+  #traning__allcontainers .traning__date-and-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #traning__allcontainers .listshref {
+    text-decoration: none;
+  }
+  #traning__allcontainers .list__btn {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100px;
+  }
+  #traning__allcontainers .traning__botomline {
+    border: 1px solid #ccc;
+  }
+}
+@media screen and (max-width: 575px) {
+  #traning__allcontainers .traning_listallcards {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traning__allcontainers .traning__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traning__allcontainers .list__card {
+    display: flex;
+    flex-direction: column;
+    align-items: end !important;
+  }
+  #traning__allcontainers .date__namescard {
+    display: flex;
+    flex-direction: column-reverse !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+  }
+  #traning__allcontainers .publicstexts {
+    align-self: flex-start;
+    margin-bottom: 10px; /* Adds some space below the title */
+  }
+  #traning__allcontainers .traning__date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #traning__allcontainers .date-picker-button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  #traning__allcontainers .date-picker-button:focus {
+    outline: none;
+  }
+  #traning__allcontainers .calendar-icon {
+    margin-right: 5px;
+  }
+  #traning__allcontainers .datewathc {
+    margin-left: 10px;
+  }
+  #traning__allcontainers .traning__date-and-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #traning__allcontainers .listshref {
+    text-decoration: none;
+  }
+  #traning__allcontainers .list__btn {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100px;
+  }
+  #traning__allcontainers .traning__botomline {
+    border: 1px solid #ccc;
+  }
+}
 #homeservice {
   margin-top: 20px;
 }
@@ -3866,6 +4138,276 @@
   width: 150px;
 }
 
+#Traningsid .traningid__top .traningidphoto {
+  width: 100%;
+}
+#Traningsid .traningid__center {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  gap: 15px;
+}
+#Traningsid .traningid__center .traningid__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#Traningsid .traningid__center .traningid__left .traningidsnames {
+  color: #009EE2;
+}
+#Traningsid .traningid__center .traningid__left .traningidsname {
+  width: 95%;
+}
+#Traningsid .traningid__center .rightline {
+  border: 1px solid gray;
+  height: 150px;
+  width: 0px;
+}
+#Traningsid .traningid__center .traningid__right {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+#Traningsid .traningid__center .traningid__right .right__map,
+#Traningsid .traningid__center .traningid__right .right__date,
+#Traningsid .traningid__center .traningid__right .right__clock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+#Traningsid .traningid__center .traningid__right .traningbtn {
+  text-decoration: none;
+  padding: 5px;
+  border: 1px solid #009EE2;
+  background-color: #009EE2;
+  border-radius: 11px;
+  text-align: center;
+  color: aliceblue;
+  width: 150px;
+}
+#Traningsid .moretraningsname {
+  text-align: center;
+  margin-top: 30px;
+}
+#Traningsid .moretraningsname .moretraningsnames {
+  color: #009EE2;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  #Traningsid {
+    margin-top: 20%;
+  }
+  #Traningsid .traningid__top .traningidphoto {
+    width: 100%;
+  }
+  #Traningsid .traningid__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    gap: 15px;
+  }
+  #Traningsid .traningid__center .traningid__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #Traningsid .traningid__center .traningid__left .traningidsnames {
+    color: #009EE2;
+    width: 100%;
+  }
+  #Traningsid .traningid__center .traningid__left .traningidsname {
+    width: 100%;
+  }
+  #Traningsid .traningid__center .rightline {
+    border: 1px solid #858585;
+    height: 0px;
+    width: 100%;
+  }
+  #Traningsid .traningid__center .traningid__right {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  #Traningsid .traningid__center .traningid__right .right__map,
+  #Traningsid .traningid__center .traningid__right .right__date,
+  #Traningsid .traningid__center .traningid__right .right__clock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  #Traningsid .traningid__center .traningid__right .right__map .calendar-icon,
+  #Traningsid .traningid__center .traningid__right .right__date .calendar-icon,
+  #Traningsid .traningid__center .traningid__right .right__clock .calendar-icon {
+    font-size: 17px;
+  }
+  #Traningsid .traningid__center .traningid__right .traningbtn {
+    margin: auto;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    border-radius: 11px;
+    text-align: center;
+    color: aliceblue;
+    width: 100%;
+  }
+  #Traningsid .moretraningsname {
+    text-align: center;
+    margin-top: 30px;
+  }
+  #Traningsid .moretraningsname .moretraningsnames {
+    color: #009EE2;
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #Traningsid {
+    margin-top: 20%;
+  }
+  #Traningsid .traningid__top .traningidphoto {
+    width: 100%;
+  }
+  #Traningsid .traningid__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    gap: 15px;
+  }
+  #Traningsid .traningid__center .traningid__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #Traningsid .traningid__center .traningid__left .traningidsnames {
+    color: #009EE2;
+    width: 100%;
+  }
+  #Traningsid .traningid__center .traningid__left .traningidsname {
+    width: 100%;
+  }
+  #Traningsid .traningid__center .rightline {
+    border: 1px solid #858585;
+    height: 0px;
+    width: 100%;
+  }
+  #Traningsid .traningid__center .traningid__right {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  #Traningsid .traningid__center .traningid__right .right__map,
+  #Traningsid .traningid__center .traningid__right .right__date,
+  #Traningsid .traningid__center .traningid__right .right__clock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  #Traningsid .traningid__center .traningid__right .right__map .calendar-icon,
+  #Traningsid .traningid__center .traningid__right .right__date .calendar-icon,
+  #Traningsid .traningid__center .traningid__right .right__clock .calendar-icon {
+    font-size: 17px !important;
+  }
+  #Traningsid .traningid__center .traningid__right .traningbtn {
+    margin: auto;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    border-radius: 11px;
+    text-align: center;
+    color: aliceblue;
+    width: 100%;
+  }
+  #Traningsid .moretraningsname {
+    text-align: center;
+    margin-top: 30px;
+  }
+  #Traningsid .moretraningsname .moretraningsnames {
+    color: #009EE2;
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 575px) {
+  #Traningsid {
+    margin-top: 20%;
+  }
+  #Traningsid .traningid__top .traningidphoto {
+    width: 100%;
+  }
+  #Traningsid .traningid__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    gap: 15px;
+  }
+  #Traningsid .traningid__center .traningid__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #Traningsid .traningid__center .traningid__left .traningidsnames {
+    color: #009EE2;
+    width: 100%;
+  }
+  #Traningsid .traningid__center .traningid__left .traningidsname {
+    width: 100%;
+  }
+  #Traningsid .traningid__center .rightline {
+    border: 1px solid #858585;
+    height: 0px;
+    width: 100%;
+  }
+  #Traningsid .traningid__center .traningid__right {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  #Traningsid .traningid__center .traningid__right .right__map,
+  #Traningsid .traningid__center .traningid__right .right__date,
+  #Traningsid .traningid__center .traningid__right .right__clock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  #Traningsid .traningid__center .traningid__right .right__map .calendar-icon,
+  #Traningsid .traningid__center .traningid__right .right__date .calendar-icon,
+  #Traningsid .traningid__center .traningid__right .right__clock .calendar-icon {
+    font-size: 17px;
+  }
+  #Traningsid .traningid__center .traningid__right .traningbtn {
+    margin: auto;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    border-radius: 11px;
+    text-align: center;
+    color: aliceblue;
+    width: 100%;
+  }
+  #Traningsid .moretraningsname {
+    text-align: center;
+    margin-top: 30px;
+  }
+  #Traningsid .moretraningsname .moretraningsnames {
+    color: #009EE2;
+    font-size: 30px;
+  }
+}
 #training {
   background-image: url("../../assets/images/Frame.png");
   background-repeat: no-repeat;

@@ -1,0 +1,283 @@
+#Traningsid{
+    .traningid__top{
+        .traningidphoto{
+            width: 100%;
+        }
+    }
+    .traningid__center{
+        display: flex;
+        flex-direction: row;
+   
+        margin-top: 30px;
+        gap: 15px;
+        .traningid__left{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .traningidsnames{
+                color: #009EE2;
+            }
+            .traningidsname{
+                width: 95%;
+            }
+        }
+        .rightline{
+            border: 1px solid gray;
+            height: 150px;
+            width: 0px;
+        }
+        .traningid__right{
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            .right__map,
+            .right__date,
+            .right__clock{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+            }
+            .traningbtn{
+                text-decoration: none;
+                padding: 5px;
+                border:1px solid #009EE2;
+                background-color: #009EE2;
+                border-radius: 11px;
+                text-align: center;
+                color: aliceblue;
+                width: 150px;
+            }
+        }
+    }
+    .moretraningsname{
+        text-align: center;
+        margin-top: 30px;
+       .moretraningsnames{
+        color: #009EE2;
+        font-size: 30px;
+       }
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    #Traningsid{
+        margin-top: 20%;
+         .traningid__top{
+             .traningidphoto{
+                 width: 100%;
+             }
+         }
+         .traningid__center{
+             display: flex;
+             flex-direction: column;
+        align-items: center;
+        text-align: center;
+             margin-top: 30px;
+             gap: 15px;
+             .traningid__left{
+                 display: flex;
+                 flex-direction: column;
+                 align-items: flex-start;
+                 .traningidsnames{
+                     color: #009EE2;
+                     width: 100%;
+                 }
+                 .traningidsname{
+                     width: 100%;
+                 }
+             }
+             .rightline{
+                 border: 1px solid #858585;
+                 height: 0px;
+                 width: 100%;
+             }
+             .traningid__right{
+                 display: flex;
+                 gap: 15px;
+                 margin-top: 10px;
+                 flex-direction: column;
+                 .right__map,
+                 .right__date,
+                 .right__clock{
+                     display: flex;
+                     flex-direction: row;
+                     align-items: center;
+                     gap: 10px;
+                     .calendar-icon{
+                         font-size: 17px;
+                     }
+                 }
+                 .traningbtn{
+                     margin: auto;
+                    
+                     text-decoration: none;
+                     padding: 5px;
+                     border:1px solid #009EE2;
+                     background-color: #009EE2;
+                     border-radius: 11px;
+                     text-align: center;
+                     color: aliceblue;
+                     width: 100%;
+                 }
+             }
+         }
+         .moretraningsname{
+             text-align: center;
+             margin-top: 30px;
+            .moretraningsnames{
+             color: #009EE2;
+             font-size: 30px;
+            }
+         }
+     }
+}
+
+@media screen and (max-width: 1000px) {
+    #Traningsid{
+        margin-top: 20%;
+         .traningid__top{
+             .traningidphoto{
+                 width: 100%;
+             }
+         }
+         .traningid__center{
+             display: flex;
+             flex-direction: column;
+        align-items: center;
+        text-align: center;
+             margin-top: 30px;
+             gap: 15px;
+             .traningid__left{
+                 display: flex;
+                 flex-direction: column;
+                 align-items: flex-start;
+                 .traningidsnames{
+                     color: #009EE2;
+                     width: 100%;
+                 }
+                 .traningidsname{
+                     width: 100%;
+                 }
+             }
+             .rightline{
+                 border: 1px solid #858585;
+                 height: 0px;
+                 width: 100%;
+             }
+             .traningid__right{
+                 display: flex;
+                 gap: 15px;
+                 margin-top: 10px;
+                 flex-direction: column;
+                 .right__map,
+                 .right__date,
+                 .right__clock{
+                     display: flex;
+                     flex-direction: row;
+                     align-items: center;
+                     gap: 10px;
+                     .calendar-icon{
+                         font-size: 17px !important;
+                     }
+                 }
+                 .traningbtn{
+                     margin: auto;
+                    
+                     text-decoration: none;
+                     padding: 5px;
+                     border:1px solid #009EE2;
+                     background-color: #009EE2;
+                     border-radius: 11px;
+                     text-align: center;
+                     color: aliceblue;
+                     width: 100%;
+                 }
+             }
+         }
+         .moretraningsname{
+             text-align: center;
+             margin-top: 30px;
+            .moretraningsnames{
+             color: #009EE2;
+             font-size: 30px;
+            }
+         }
+     }
+}
+
+@media screen and (max-width: 575px) {
+    #Traningsid{
+       margin-top: 20%;
+        .traningid__top{
+            .traningidphoto{
+                width: 100%;
+            }
+        }
+        .traningid__center{
+            display: flex;
+            flex-direction: column;
+       align-items: center;
+       text-align: center;
+            margin-top: 30px;
+            gap: 15px;
+            .traningid__left{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                .traningidsnames{
+                    color: #009EE2;
+                    width: 100%;
+                }
+                .traningidsname{
+                    width: 100%;
+                }
+            }
+            .rightline{
+                border: 1px solid #858585;
+                height: 0px;
+                width: 100%;
+            }
+            .traningid__right{
+                display: flex;
+                gap: 15px;
+                margin-top: 10px;
+                flex-direction: column;
+                .right__map,
+                .right__date,
+                .right__clock{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                    .calendar-icon{
+                        font-size: 17px;
+                    }
+                }
+                .traningbtn{
+                    margin: auto;
+                   
+                    text-decoration: none;
+                    padding: 5px;
+                    border:1px solid #009EE2;
+                    background-color: #009EE2;
+                    border-radius: 11px;
+                    text-align: center;
+                    color: aliceblue;
+                    width: 100%;
+                }
+            }
+        }
+        .moretraningsname{
+            text-align: center;
+            margin-top: 30px;
+           .moretraningsnames{
+            color: #009EE2;
+            font-size: 30px;
+           }
+        }
+    }
+    
+}
