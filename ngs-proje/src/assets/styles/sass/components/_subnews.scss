@@ -1,0 +1,140 @@
+#subNews {
+  margin: 100px 0 0 0;
+
+  .subNews__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-family: Inter;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 58.09px;
+      color: #009ee2;
+    }
+
+    p {
+      font-family: Inter;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24.2px;
+      width: 50%;
+      color: #565656;
+    }
+  }
+
+  .subNews__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 60px 10px 0 10px;
+    font-family: Inter;
+
+    img {
+      width: 447px;
+      height: 447px;
+      border-radius: 16px;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 33.6px;
+      width: 50%;
+
+      span {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 44.8px;
+        color: #009ee2;
+      }
+    }
+
+    .bottom__par {
+      width: 85%;
+    }
+  }
+
+  .subNews__body {
+    margin: 60px 15px;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58.09px;
+      color: #009ee2;
+      text-align: center;
+    }
+
+    .box__container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+
+      .news__box {
+        width: 430px;
+        height: 430px;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 16px;
+        }
+
+        .box__content {
+          position: absolute;
+          bottom: 0;
+          font-family: Inter;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 38.73px;
+          letter-spacing: 0.02em;
+          text-align: center;
+          color: #fafafa;
+          display: flex;
+          justify-content: center;
+          background-color: rgba(35, 35, 35, 0.2);
+          -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+          padding: 30px;
+
+          h2 {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #subNews {
+    .subNews__head {
+      h1 {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 43.57px;
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24.2px;
+      }
+    }
+
+    .subNews__content {
+      img {
+        width: 95%;
+      }
+
+      p {
+        width: 85%;
+      }
+    }
+  }
+}

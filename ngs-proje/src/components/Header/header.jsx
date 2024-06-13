@@ -70,7 +70,7 @@ const Header = () => {
                 </Link>
               </ul>
             </Link>
-            <Link className="link" to="/">
+            <Link className="link" to="/news">
               Xəbərlər
             </Link>
             <Link className="link" to="/blogs">

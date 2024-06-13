@@ -5,6 +5,7 @@ import Servicesection from "../pages/Servicesection/Servicesection";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Contact from "../pages/Contact/Contact";
 import Blogs from "../pages/Blogs/Blogs";
+import News from "../pages/News/News";
 import Traningpages from "../pages/Traningpages/Traningpages"
 import Traningsid from "../pages/Traningsid/Traningsid"
 const Routing = () => {
@@ -16,6 +17,7 @@ const Routing = () => {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/news" element={<News />} />
         <Route path="/traningpages" element={<Traningpages />} />
         <Route path="/traningids" element={<Traningsid />} />
       </Routes>
