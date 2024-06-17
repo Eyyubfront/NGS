@@ -497,10 +497,12 @@
 }
 @keyframes slide-in-bottom {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -610,10 +612,12 @@
 
 @keyframes slide-in-top {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -1776,13 +1780,15 @@
   width: 50%;
   margin: auto;
 }
-#servicesection .pageservice__container .pageservice__top {
+#servicesection .pageservice__container .pageservice__top,
+#servicesection .pageservice__container .pageservice__bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#servicesection .pageservice__container .pageservice__top .pageservice__cardone {
+#servicesection .pageservice__container .pageservice__top .pageservice__card,
+#servicesection .pageservice__container .pageservice__bottom .pageservice__card {
   border: 1px solid #D9D9D9;
   height: 234px;
   border-radius: 3%;
@@ -1790,224 +1796,39 @@
   background-position: center;
   width: 288px;
   background-size: cover;
-  background-image: url("../images/homephoto/pageserviceone.png");
 }
-#servicesection .pageservice__container .pageservice__top .pageservice__cardone .card__text {
+#servicesection .pageservice__container .pageservice__top .pageservice__card .card__text,
+#servicesection .pageservice__container .pageservice__bottom .pageservice__card .card__text {
   position: relative;
   padding: 20px;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
-  top: 70%;
   font-weight: bold;
+  color: white;
+  background: rgba(35, 35, 35, 0.3);
+  border-radius: 10px;
+  z-index: 1;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  top: 70%;
   text-align: center;
   height: 35px;
 }
-#servicesection .pageservice__container .pageservice__top .pageservice__cardone .card__text::before {
+#servicesection .pageservice__container .pageservice__top .pageservice__card .card__text::before,
+#servicesection .pageservice__container .pageservice__bottom .pageservice__card .card__text::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+  background: rgba(35, 35, 35, 0.3);
   filter: blur(10px);
   z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-}
-#servicesection .pageservice__container .pageservice__top .pageservice__cardtwo {
-  border: 1px solid #D9D9D9;
-  height: 234px;
-  border-radius: 3%;
-  position: relative;
-  background-position: center;
-  width: 288px;
-  background-size: cover;
-  background-image: url("../images/homephoto/pageservicetwo.png");
-}
-#servicesection .pageservice__container .pageservice__top .pageservice__cardtwo .card__text {
-  position: relative;
-  padding: 20px;
-  font-weight: bold;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
-  top: 70%;
-  text-align: center;
-  height: 35px;
-}
-#servicesection .pageservice__container .pageservice__top .pageservice__cardtwo .card__text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-  filter: blur(10px);
-  z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-}
-#servicesection .pageservice__container .pageservice__top .pageservice__cardthree {
-  border: 1px solid #D9D9D9;
-  height: 234px;
-  border-radius: 3%;
-  position: relative;
-  background-position: center;
-  width: 288px;
-  background-size: cover;
-  background-image: url("../images/homephoto/pageservicethree.png");
-}
-#servicesection .pageservice__container .pageservice__top .pageservice__cardthree .card__text {
-  position: relative;
-  padding: 20px;
-  font-weight: bold;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
-  top: 70%;
-  text-align: center;
-  height: 35px;
-}
-#servicesection .pageservice__container .pageservice__top .pageservice__cardthree .card__text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-  filter: blur(10px);
-  z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-}
-#servicesection .pageservice__container .pageservice__buttom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-#servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor {
-  border: 1px solid #D9D9D9;
-  height: 234px;
-  border-radius: 3%;
-  position: relative;
-  background-position: center;
-  width: 288px;
-  background-size: cover;
-  background-image: url("../images/homephoto/pageservicefoor.png");
-}
-#servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text {
-  position: relative;
-  padding: 20px;
-  font-weight: bold;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
-  top: 70%;
-  text-align: center;
-  height: 35px;
-}
-#servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-  filter: blur(10px);
-  z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-}
-#servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive {
-  border: 1px solid #D9D9D9;
-  height: 234px;
-  border-radius: 3%;
-  position: relative;
-  background-position: center;
-  width: 288px;
-  background-size: cover;
-  background-image: url("../images/homephoto/pageservicefive.png");
-}
-#servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text {
-  position: relative;
-  padding: 20px;
-  font-weight: bold;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
-  top: 70%;
-  text-align: center;
-  height: 35px;
-}
-#servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-  filter: blur(10px);
-  z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-}
-#servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix {
-  border: 1px solid #D9D9D9;
-  height: 234px;
-  border-radius: 3%;
-  position: relative;
-  background-position: center;
-  width: 288px;
-  background-size: cover;
-  background-image: url("../images/homephoto/pageservicesix.png");
-}
-#servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text {
-  position: relative;
-  padding: 20px;
-  font-weight: bold;
-  color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-  background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-  border-radius: 10px; /* Köşeleri yuvarlamak için */
-  z-index: 1; /* Metnin üstte görünmesini sağlar */
-  backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-  -webkit-backdrop-filter: blur(2px); /* Safari için */
-  top: 70%;
-  text-align: center;
-  height: 35px;
-}
-#servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-  filter: blur(10px);
-  z-index: -1;
-  border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 1200px) {
   #servicesection {
-    margin-top: 20px;
+    margin-top: 80px;
   }
   #servicesection .pageservice__container {
     display: flex;
@@ -2022,20 +1843,20 @@
     font-size: 35px;
   }
   #servicesection .pageservice__container .pageservicenamesbutom {
-    width: 50%;
+    width: 100%;
+    text-align: center;
     margin: auto;
   }
-  #servicesection .pageservice__container .pageservicenamesbutom {
-    width: 50%;
-    margin: auto;
-  }
-  #servicesection .pageservice__container .pageservice__top {
+  #servicesection .pageservice__container .pageservice__top,
+  #servicesection .pageservice__container .pageservice__bottom {
     display: flex;
     flex-direction: row;
+    gap: 15px;
     justify-content: space-between;
     align-items: center;
   }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardone {
+  #servicesection .pageservice__container .pageservice__top .pageservice__card,
+  #servicesection .pageservice__container .pageservice__bottom .pageservice__card {
     border: 1px solid #D9D9D9;
     height: 234px;
     border-radius: 3%;
@@ -2043,224 +1864,39 @@
     background-position: center;
     width: 288px;
     background-size: cover;
-    background-image: url("../images/homephoto/pageserviceone.png");
   }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardone .card__text {
+  #servicesection .pageservice__container .pageservice__top .pageservice__card .card__text,
+  #servicesection .pageservice__container .pageservice__bottom .pageservice__card .card__text {
     position: relative;
     padding: 20px;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
     font-weight: bold;
+    color: white;
+    background: rgba(35, 35, 35, 0.3);
+    border-radius: 10px;
+    z-index: 1;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    top: 70%;
     text-align: center;
     height: 35px;
   }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardone .card__text::before {
+  #servicesection .pageservice__container .pageservice__top .pageservice__card .card__text::before,
+  #servicesection .pageservice__container .pageservice__bottom .pageservice__card .card__text::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    background: rgba(35, 35, 35, 0.3);
     filter: blur(10px);
     z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardtwo {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 288px;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicetwo.png");
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardtwo .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardtwo .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardthree {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 288px;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicethree.png");
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardthree .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardthree .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__buttom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 288px;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicefoor.png");
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 288px;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicefive.png");
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 288px;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicesix.png");
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+    border-radius: 10px;
   }
 }
 @media screen and (max-width: 1000px) {
   #servicesection {
-    margin-top: 40px;
+    margin-top: 80px;
   }
   #servicesection .pageservice__container {
     display: flex;
@@ -2276,241 +1912,59 @@
   }
   #servicesection .pageservice__container .pageservicenamesbutom {
     width: 100%;
+    text-align: center;
     margin: auto;
   }
-  #servicesection .pageservice__container .pageservice__top {
+  #servicesection .pageservice__container .pageservice__top,
+  #servicesection .pageservice__container .pageservice__bottom {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    justify-content: center;
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardone {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageserviceone.png");
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardone .card__text {
-    position: relative;
-    padding: 20px;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    font-weight: bold;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardone .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardtwo {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicetwo.png");
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardtwo .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardtwo .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardthree {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicethree.png");
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardthree .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardthree .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__buttom {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-between;
     align-items: center;
   }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor {
+  #servicesection .pageservice__container .pageservice__top .pageservice__card,
+  #servicesection .pageservice__container .pageservice__bottom .pageservice__card {
     border: 1px solid #D9D9D9;
     height: 234px;
     border-radius: 3%;
     position: relative;
     background-position: center;
-    width: 100%;
+    width: 288px;
     background-size: cover;
-    background-image: url("../images/homephoto/pageservicefoor.png");
   }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text {
+  #servicesection .pageservice__container .pageservice__top .pageservice__card .card__text,
+  #servicesection .pageservice__container .pageservice__bottom .pageservice__card .card__text {
     position: relative;
     padding: 20px;
     font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
+    color: white;
+    background: rgba(35, 35, 35, 0.3);
+    border-radius: 10px;
+    z-index: 1;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     top: 70%;
     text-align: center;
     height: 35px;
   }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text::before {
+  #servicesection .pageservice__container .pageservice__top .pageservice__card .card__text::before,
+  #servicesection .pageservice__container .pageservice__bottom .pageservice__card .card__text::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    background: rgba(35, 35, 35, 0.3);
     filter: blur(10px);
     z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicefive.png");
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicesix.png");
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+    border-radius: 10px;
   }
 }
 @media screen and (max-width: 575px) {
   #servicesection {
-    margin-top: 40px;
+    margin-top: 80px;
   }
   #servicesection .pageservice__container {
     display: flex;
@@ -2527,237 +1981,53 @@
   #servicesection .pageservice__container .pageservicenamesbutom {
     width: 100%;
     text-align: center;
+    margin: auto;
   }
-  #servicesection .pageservice__container .pageservice__top {
+  #servicesection .pageservice__container .pageservice__top,
+  #servicesection .pageservice__container .pageservice__bottom {
     display: flex;
     flex-direction: column;
+    gap: 15px;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    justify-content: center;
-    width: 100%;
   }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardone {
+  #servicesection .pageservice__container .pageservice__top .pageservice__card,
+  #servicesection .pageservice__container .pageservice__bottom .pageservice__card {
     border: 1px solid #D9D9D9;
     height: 234px;
     border-radius: 3%;
     position: relative;
     background-position: center;
-    width: 100%;
+    width: 288px;
     background-size: cover;
-    background-image: url("../images/homephoto/pageserviceone.png");
   }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardone .card__text {
+  #servicesection .pageservice__container .pageservice__top .pageservice__card .card__text,
+  #servicesection .pageservice__container .pageservice__bottom .pageservice__card .card__text {
     position: relative;
     padding: 20px;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
     font-weight: bold;
+    color: white;
+    background: rgba(35, 35, 35, 0.3);
+    border-radius: 10px;
+    z-index: 1;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    top: 70%;
     text-align: center;
     height: 35px;
   }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardone .card__text::before {
+  #servicesection .pageservice__container .pageservice__top .pageservice__card .card__text::before,
+  #servicesection .pageservice__container .pageservice__bottom .pageservice__card .card__text::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
+    background: rgba(35, 35, 35, 0.3);
     filter: blur(10px);
     z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardtwo {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicetwo.png");
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardtwo .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardtwo .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardthree {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicethree.png");
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardthree .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__top .pageservice__cardthree .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__buttom {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    width: 100%;
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicefoor.png");
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfoor .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicefive.png");
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardfive .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix {
-    border: 1px solid #D9D9D9;
-    height: 234px;
-    border-radius: 3%;
-    position: relative;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../images/homephoto/pageservicesix.png");
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text {
-    position: relative;
-    padding: 20px;
-    font-weight: bold;
-    color: white; /* Metin rengini ihtiyaçlarınıza göre ayarlayın */
-    background: rgba(35, 35, 35, 0.3); /* #232323 renginin %30 opaklığı */
-    border-radius: 10px; /* Köşeleri yuvarlamak için */
-    z-index: 1; /* Metnin üstte görünmesini sağlar */
-    backdrop-filter: blur(2px); /* Arka planı bulanıklaştırmak için */
-    -webkit-backdrop-filter: blur(2px); /* Safari için */
-    top: 70%;
-    text-align: center;
-    height: 35px;
-  }
-  #servicesection .pageservice__container .pageservice__buttom .pageservice__cardsix .card__text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(35, 35, 35, 0.3); /* Aynı arka plan rengi */
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px; /* Arka planın köşeleri de yuvarlanmalı */
+    border-radius: 10px;
   }
 }
 #aboutUs {
@@ -3492,8 +2762,7 @@
   display: block;
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #banner .swiper .swiper-slide .slide__content {
   position: relative;
@@ -4449,4 +3718,459 @@
 }
 #training .training__content button:hover {
   background-color: #28bdfd;
-}/*# sourceMappingURL=main.css.map */
+}
+
+#traningpages {
+  margin-top: 4%;
+}
+#traningpages .traning__top .framesphoto {
+  width: 100% !important;
+  height: 300px;
+  position: relative;
+}
+#traningpages .traning__top .traningphoots__text {
+  position: absolute;
+  top: 141px;
+  text-align: center;
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  align-items: center;
+}
+#traningpages .traning__top .traningphoots__text .toptraningsnames {
+  font-weight: bold;
+  font-size: 32px;
+}
+#traningpages .traning__top .traningphoots__text .traningreportext {
+  width: 50%;
+  text-align: center;
+}
+#traningpages .traning__container .traning__containernames {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  color: #009EE2;
+}
+
+@media screen and (max-width: 1200px) {
+  #traningpages {
+    margin-top: 4%;
+  }
+  #traningpages .traning__top .framesphoto {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  #traningpages .traning__top .traningphoots__text {
+    position: absolute;
+    top: 141px;
+    text-align: center;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    align-items: center;
+  }
+  #traningpages .traning__top .traningphoots__text .toptraningsnames {
+    font-weight: bold;
+    font-size: 32px;
+  }
+  #traningpages .traning__top .traningphoots__text .traningreportext {
+    width: 50%;
+    text-align: center;
+  }
+  #traningpages .traning__container .traning__containernames {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    color: #009EE2;
+  }
+  #traningpages .traning__container .traning_listallcards {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .date-picker-button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .date-picker-button:focus {
+    outline: none;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .calendar-icon {
+    margin-right: 5px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .traning__date {
+    display: flex;
+    align-items: center;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .datewathc {
+    margin-left: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .listshref {
+    text-decoration: none;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .listshref .list__btn {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .traning__botomline {
+    border: 1px solid #ccc;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #traningpages {
+    margin-top: 4%;
+  }
+  #traningpages .traning__top .framesphoto {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  #traningpages .traning__top .traningphoots__text {
+    position: absolute;
+    top: 141px;
+    text-align: center;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    align-items: center;
+  }
+  #traningpages .traning__top .traningphoots__text .toptraningsnames {
+    font-weight: bold;
+    font-size: 32px;
+  }
+  #traningpages .traning__top .traningphoots__text .traningreportext {
+    width: 50%;
+    text-align: center;
+  }
+  #traningpages .traning__container .traning__containernames {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    color: #009EE2;
+  }
+  #traningpages .traning__container .traning_listallcards {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .date-picker-button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .date-picker-button:focus {
+    outline: none;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .calendar-icon {
+    margin-right: 5px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .traning__date {
+    display: flex;
+    align-items: center;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .datewathc {
+    margin-left: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .listshref {
+    text-decoration: none;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .listshref .list__btn {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .traning__botomline {
+    border: 1px solid #ccc;
+  }
+}
+@media screen and (max-width: 575px) {
+  #traningpages {
+    margin-top: 4%;
+  }
+  #traningpages .traning__top .framesphoto {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  #traningpages .traning__top .traningphoots__text {
+    position: absolute;
+    top: 141px;
+    text-align: center;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    align-items: center;
+  }
+  #traningpages .traning__top .traningphoots__text .toptraningsnames {
+    font-weight: bold;
+    font-size: 32px;
+  }
+  #traningpages .traning__top .traningphoots__text .traningreportext {
+    width: 100%;
+    text-align: center;
+  }
+  #traningpages .traning__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+  }
+  #traningpages .traning__container .traning__containernames {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    color: #009EE2;
+  }
+  #traningpages .traning__container .traning_listallcards {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: initial;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .publicstexts {
+    margin-bottom: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .date-picker-button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .date-picker-button:focus {
+    outline: none;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .calendar-icon {
+    margin-right: 5px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .datewathc {
+    margin-left: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .listshref {
+    text-decoration: none;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .listshref .list__btn {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .traning__botomline {
+    border: 1px solid #ccc;
+  }
+}
+#servicesub .servicesub__top .servicesubphoto {
+  width: 100%;
+  filter: brightness(70%) contrast(90%);
+}
+#servicesub .servicesub__top .servicesubhoots__text {
+  position: absolute;
+  top: 141px;
+  text-align: center;
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  align-items: center;
+}
+#servicesub .servicesub__top .servicesubhoots__text .servicesubnames {
+  font-weight: bold;
+  font-size: 32px;
+}
+#servicesub .servicesub__top .servicesubhoots__text .servicesubreportext {
+  width: 50%;
+  text-align: center;
+}
+#servicesub .servicesub__buttom .listboxes .listdata {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  #servicesub .servicesub__top .servicesubphoto {
+    width: 100%;
+    height: 250px !important;
+    filter: brightness(70%) contrast(90%);
+  }
+  #servicesub .servicesub__top .servicesubhoots__text {
+    position: absolute;
+    top: 81px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    align-items: center;
+  }
+  #servicesub .servicesub__top .servicesubhoots__text .servicesubnames {
+    font-weight: bold;
+    font-size: 32px;
+  }
+  #servicesub .servicesub__top .servicesubhoots__text .servicesubreportext {
+    width: 100%;
+    text-align: center;
+  }
+  #servicesub .servicesub__buttom .listboxes .listdata {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #servicesub .servicesub__top .servicesubphoto {
+    width: 100%;
+    height: 250px !important;
+    filter: brightness(70%) contrast(90%);
+  }
+  #servicesub .servicesub__top .servicesubhoots__text {
+    position: absolute;
+    top: 81px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    align-items: center;
+  }
+  #servicesub .servicesub__top .servicesubhoots__text .servicesubnames {
+    font-weight: bold;
+    font-size: 32px;
+  }
+  #servicesub .servicesub__top .servicesubhoots__text .servicesubreportext {
+    width: 100%;
+    text-align: center;
+  }
+  #servicesub .servicesub__buttom .listboxes .listdata {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 575px) {
+  #servicesub .servicesub__top .servicesubphoto {
+    width: 100%;
+    height: 150px !important;
+    filter: brightness(70%) contrast(90%);
+  }
+  #servicesub .servicesub__top .servicesubhoots__text {
+    position: absolute;
+    top: 41px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    align-items: center;
+  }
+  #servicesub .servicesub__top .servicesubhoots__text .servicesubnames {
+    font-weight: bold;
+    font-size: 32px;
+  }
+  #servicesub .servicesub__top .servicesubhoots__text .servicesubreportext {
+    width: 100%;
+    text-align: center;
+  }
+  #servicesub .servicesub__buttom .listboxes .listdata {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
