@@ -8,7 +8,8 @@ import Banner from "../../components/Banner/Banner";
 import Partners from "../../components/Partners/Partners";
 import Training from "../../components/Training/Training";
 import HomeServis from "../../components/Homeservice/Homeservice";
-import PageService from "../../components/PageService/PageService";
+import Servicesection from '../Servicesection/Servicesection';
+import Servicesections from '../../components/Servicesections/Servicesections';
 
 const Home = () => {
   useEffect(() => {
@@ -50,7 +51,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <PageService />
+          <Servicesections showDescription={false} />
         </Container>
         <Partners />
         <Training />

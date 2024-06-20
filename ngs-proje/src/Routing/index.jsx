@@ -9,7 +9,7 @@ import News from "../pages/News/News";
 import Traningpages from "../pages/Traningpages/Traningpages";
 import Traningsid from "../pages/Traningsid/Traningsid";
 import Servicesub from '../pages/Servicesub/Servicesub';
-
+import Servicesubinfo from '../pages/Servicesubinfo/Servicesubinfo';
 
 const Routing = () => {
   return (
@@ -23,6 +23,7 @@ const Routing = () => {
       <Route path="/news" element={<News />} />
       <Route path="/traningpages" element={<Traningpages />} />
       <Route path="/traningids" element={<Traningsid />} />
+      <Route path="/servicessub/:id" element={<Servicesubinfo />} />
     </Routes>
   );
 };

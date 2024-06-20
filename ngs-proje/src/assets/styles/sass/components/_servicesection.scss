@@ -25,7 +25,9 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-  
+  a{
+    text-decoration: none;
+  }
         .pageservice__card {
           border: 1px solid #D9D9D9;
           height: 234px;
@@ -97,7 +99,9 @@
             gap: 15px;
             justify-content: space-between;
             align-items: center;
-      
+      a{
+        text-decoration: none;
+      }
             .pageservice__card {
               border: 1px solid #D9D9D9;
               height: 234px;
@@ -170,7 +174,9 @@
             gap: 15px;
             justify-content: space-between;
             align-items: center;
-      
+            a{
+              text-decoration: none;
+            }
             .pageservice__card {
               border: 1px solid #D9D9D9;
               height: 234px;
@@ -243,7 +249,9 @@
             gap: 15px;
             justify-content: space-between;
             align-items: center;
-      
+            a{
+              text-decoration: none;
+            }
             .pageservice__card {
               border: 1px solid #D9D9D9;
               height: 234px;

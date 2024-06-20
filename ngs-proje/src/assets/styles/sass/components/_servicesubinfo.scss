@@ -1,11 +1,10 @@
-#servicesub{
-    .servicesub__top{
-        .servicesubphoto {
+#servicesubinfo{
+    .servicesubinfo__top{
+        .servicesubphoto{
             width: 100%;
             filter: brightness(70%) contrast(90%);
-          }
-          
-        .servicesubhoots__text {
+        }
+        .servicesubhoots__text{
             position: absolute;
             top: 141px;
             text-align: center;
@@ -15,131 +14,27 @@
             gap: 10px;
             color: white;
             align-items: center;
-
-            .servicesubnames {
+            .servicesubnames{
                 font-weight: bold;
                 font-size: 32px;
             }
-
-            .servicesubreportext {
+            .servicesubreportext{
                 width: 50%;
                 text-align: center;
             }
         }
     }
-    .servicesub__buttom{
-        .listboxes{
-            .listdata{
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-         
-        }
-    }
 }
 
 @media screen and (max-width: 1200px) {
-    #servicesub{
-        .servicesub__top{
-            .servicesubphoto {
-                width: 100%;
-                height: 250px !important;
-                filter: brightness(70%) contrast(90%);
-              }
-              
-            .servicesubhoots__text {
-                position: absolute;
-                top: 81px;
-                text-align: center;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                color: white;
-                align-items: center;
-    
-                .servicesubnames {
-                    font-weight: bold;
-                    font-size: 32px;
-                }
-    
-                .servicesubreportext {
-                    width: 100%;
-                    text-align: center;
-                }
-            }
-        }
-        .servicesub__buttom{
-            .listboxes{
-                .listdata{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                    text-align: center;
-                }
-             
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    #servicesub{
-        .servicesub__top{
-            .servicesubphoto {
-                width: 100%;
-                height: 250px !important;
-                filter: brightness(70%) contrast(90%);
-              }
-              
-            .servicesubhoots__text {
-                position: absolute;
-                top: 81px;
-                text-align: center;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                color: white;
-                align-items: center;
-    
-                .servicesubnames {
-                    font-weight: bold;
-                    font-size: 32px;
-                }
-    
-                .servicesubreportext {
-                    width: 100%;
-                    text-align: center;
-                }
-            }
-        }
-        .servicesub__buttom{
-            .listboxes{
-                .listdata{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                    text-align: center;
-                }
-             
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 575px) {
-    #servicesub{
-        .servicesub__top{
-            .servicesubphoto {
+    #servicesubinfo{
+        .servicesubinfo__top{
+            .servicesubphoto{
                 width: 100%;
                 height: 150px !important;
                 filter: brightness(70%) contrast(90%);
-              }
-              
-            .servicesubhoots__text {
+            }
+            .servicesubhoots__text{
                 position: absolute;
                 top: 41px;
                 text-align: center;
@@ -150,27 +45,79 @@
                 color: white;
                 align-items: center;
     
-                .servicesubnames {
+                .servicesubnames{
                     font-weight: bold;
                     font-size: 32px;
                 }
-    
-                .servicesubreportext {
+                .servicesubreportext{
                     width: 100%;
                     text-align: center;
                 }
             }
         }
-        .servicesub__buttom{
-            .listboxes{
-                .listdata{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #servicesubinfo{
+        .servicesubinfo__top{
+            .servicesubphoto{
+                width: 100%;
+                height: 150px !important;
+                filter: brightness(70%) contrast(90%);
+            }
+            .servicesubhoots__text{
+                position: absolute;
+                top: 41px;
+                text-align: center;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                color: white;
+                align-items: center;
+    
+                .servicesubnames{
+                    font-weight: bold;
+                    font-size: 32px;
+                }
+                .servicesubreportext{
+                    width: 100%;
                     text-align: center;
                 }
-             
             }
         }
-    } 
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #servicesubinfo{
+        .servicesubinfo__top{
+            .servicesubphoto{
+                width: 100%;
+                height: 150px !important;
+                filter: brightness(70%) contrast(90%);
+            }
+            .servicesubhoots__text{
+                position: absolute;
+                top: 41px;
+                text-align: center;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                color: white;
+                align-items: center;
+    
+                .servicesubnames{
+                    font-weight: bold;
+                    font-size: 32px;
+                }
+                .servicesubreportext{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
