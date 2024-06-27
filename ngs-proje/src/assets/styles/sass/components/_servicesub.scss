@@ -34,11 +34,16 @@
                 flex-direction: column;
                 gap: 15px;
                 text-align: center;
+                list-style-type: none; /* Markerları gizlemek için */
+                li::marker{
+
+                }
             }
          
         }
     }
 }
+
 
 @media screen and (max-width: 1200px) {
     #servicesub{
@@ -78,6 +83,10 @@
                     flex-direction: column;
                     gap: 15px;
                     text-align: center;
+                    list-style-type: none;
+                    li::marker{
+
+                    }
                 }
              
             }
@@ -123,6 +132,10 @@
                     flex-direction: column;
                     gap: 15px;
                     text-align: center;
+                    list-style-type: none;
+                    li::marker{
+
+                    }
                 }
              
             }
@@ -168,6 +181,10 @@
                     flex-direction: column;
                     gap: 15px;
                     text-align: center;
+                    list-style-type: none;
+                    li::marker{
+
+                    }
                 }
              
             }

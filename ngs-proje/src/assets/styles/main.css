@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -3731,8 +3732,8 @@
   flex-direction: column;
   gap: 15px;
   text-align: center;
+  list-style-type: none; /* Markerları gizlemek için */
 }
-
 @media screen and (max-width: 1200px) {
   #servicesub .servicesub__top .servicesubphoto {
     width: 100%;
@@ -3763,6 +3764,7 @@
     flex-direction: column;
     gap: 15px;
     text-align: center;
+    list-style-type: none;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -3795,6 +3797,7 @@
     flex-direction: column;
     gap: 15px;
     text-align: center;
+    list-style-type: none;
   }
 }
 @media screen and (max-width: 575px) {
@@ -3827,6 +3830,7 @@
     flex-direction: column;
     gap: 15px;
     text-align: center;
+    list-style-type: none;
   }
 }
 #servicesubinfo .servicesubinfo__top .servicesubphoto {
