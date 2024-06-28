@@ -36,9 +36,9 @@ const Banner = () => {
             <div className="slide__description">
               <h2>NGS - Təhlükəsizliyin yeni nəsli!</h2>
               <p>
-                Məqsədimiz YENİ NƏSİL TƏHLÜKƏSİZLİK TEXNOLOGİYALARI VƏ
-                METODİKASI İLƏ MÜŞTƏRİLƏRİMİZİN VƏ ƏMƏKDAŞLARININ
-                TƏHLÜKƏSİZLİYİNİ YÜKSƏK SƏVİYYƏDƏ TƏMİN ETMƏKDƏN İBARƏTDİR.
+              Məqsədimiz yeni nəsil təhlükəsizlik texnologiyaları və
+                metodikası ilə müştərilərimizin və əməkdaşlarının
+                təhlükəsizliyini yüksək səvoyyədə təmin etməkdən ibarətdir.
               </p>
               <button type="button">Ətraflı</button>
             </div>
@@ -50,9 +50,9 @@ const Banner = () => {
             <div className="slide__description">
               <h2>NGS - Təhlükəsizliyin yeni nəsli!</h2>
               <p>
-                Məqsədimiz YENİ NƏSİL TƏHLÜKƏSİZLİK TEXNOLOGİYALARI VƏ
-                METODİKASI İLƏ MÜŞTƏRİLƏRİMİZİN VƏ ƏMƏKDAŞLARININ
-                TƏHLÜKƏSİZLİYİNİ YÜKSƏK SƏVİYYƏDƏ TƏMİN ETMƏKDƏN İBARƏTDİR.
+              Məqsədimiz yeni nəsil təhlükəsizlik texnologiyaları və
+                metodikası ilə müştərilərimizin və əməkdaşlarının
+                təhlükəsizliyini yüksək səvoyyədə təmin etməkdən ibarətdir.
               </p>
               <button type="button">Ətraflı</button>
             </div>
@@ -64,9 +64,9 @@ const Banner = () => {
             <div className="slide__description">
               <h2>NGS - Təhlükəsizliyin yeni nəsli!</h2>
               <p>
-                Məqsədimiz YENİ NƏSİL TƏHLÜKƏSİZLİK TEXNOLOGİYALARI VƏ
-                METODİKASI İLƏ MÜŞTƏRİLƏRİMİZİN VƏ ƏMƏKDAŞLARININ
-                TƏHLÜKƏSİZLİYİNİ YÜKSƏK SƏVİYYƏDƏ TƏMİN ETMƏKDƏN İBARƏTDİR.
+              Məqsədimiz yeni nəsil təhlükəsizlik texnologiyaları və
+                metodikası ilə müştərilərimizin və əməkdaşlarının
+                təhlükəsizliyini yüksək səvoyyədə təmin etməkdən ibarətdir.
               </p>
               <button type="button">Ətraflı</button>
             </div>
