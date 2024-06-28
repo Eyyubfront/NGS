@@ -1924,6 +1924,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background-color: green;
 }
 #blog__comp .imgs__container {
   display: flex;
