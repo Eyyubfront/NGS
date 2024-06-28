@@ -3,14 +3,12 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
 
   .imgs__container {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 25px;
+    margin: 0 5px 25px 5px;
 
     .position__elements {
       position: relative;

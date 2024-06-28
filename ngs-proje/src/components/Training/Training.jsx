@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Training = () => {
   return (
@@ -10,7 +11,7 @@ const Training = () => {
           səhifəyə keçid edin. Qeydiyyatdan keçərək bizə qoşula və komandamızın
           bir parçasına çevrilə bilərsiniz.
         </p>
-        <button>Ətraflı</button>
+          <Link className="training__btn" to='/traningpages'>Ətraflı</Link>
       </div>
     </div>
   );
