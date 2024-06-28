@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/ngs.png";
@@ -12,6 +12,7 @@ const Header = () => {
   const logoRemover = useRef();
   const searchRemove = useRef();
   const searchBack = useRef();
+  const headerScroll = useRef();
 
   function openBtn() {
     hamburger.current.style.display = "flex";
@@ -25,7 +26,7 @@ const Header = () => {
     searchInp.current.style.display = "block";
     logoRemover.current.style.display = "none";
     searchRemove.current.style.display = "none";
-    searchBack.current.style.display = "block"
+    searchBack.current.style.display = "block";
   }
 
   function closeSearch() {
@@ -35,11 +36,24 @@ const Header = () => {
     searchInp.current.style.display = "none";
   }
 
+  const [navbar, setNavbar] = useState(false);
+
+  const scroller = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+  window.addEventListener("scroll", scroller);
+
   return (
     <Container>
-      <div id="header">
+      <div ref={headerScroll} className={navbar ? "header fixed" : "header"}>
         <div className="header__left">
-          <img src={logo} alt="logo" />
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
           <input className="search__input" type="search" placeholder="Axtar" />
         </div>
         <div className="header__right">
@@ -121,32 +135,32 @@ const Header = () => {
 
         <ul className="hamburger__menu">
           <li>
-            <Link to="/" className="hamburger__link">
+            <Link to="/AboutUs" className="hamburger__link">
               Haqqımızda
             </Link>
           </li>
           <li>
-            <Link to="/" className="hamburger__link">
+            <Link to="/servicesection" className="hamburger__link">
               Xidmətlər
             </Link>
           </li>
           <li>
-            <Link to="/" className="hamburger__link">
+            <Link to="/news" className="hamburger__link">
               Xəbərlər
             </Link>
           </li>
           <li>
-            <Link to="/" className="hamburger__link">
+            <Link to="/blogs" className="hamburger__link">
               Bloq
             </Link>
           </li>
           <li>
-            <Link to="/" className="hamburger__link">
+            <Link to="/traningpages" className="hamburger__link">
               Təlimlər
             </Link>
           </li>
           <li>
-            <Link to="/" className="hamburger__link">
+            <Link to="/contact" className="hamburger__link">
               Əlaqə
             </Link>
           </li>

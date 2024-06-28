@@ -19,7 +19,6 @@ const Blogs = () => {
 
           <div className="blogs__container">
             <BlogComponent />
-            <BlogComponent />
           </div>
           <Cerfitacion/>
         </div>

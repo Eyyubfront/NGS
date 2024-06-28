@@ -24,7 +24,6 @@ const Traningpages = () => {
                             <div className="traning__containernames">
                                 <p>Tarix</p>
                                 <p>Mövzu</p>
-                            
                             </div>
                     <Traningcontainer/>
                         </div>
