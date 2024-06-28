@@ -1924,7 +1924,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: green;
+  background-color: blue;
 }
 #blog__comp .imgs__container {
   display: flex;
@@ -1997,6 +1997,7 @@
 @media only screen and (max-width: 1000px) {
   #blog__comp .imgs__container .position__elements img {
     width: 100%;
+    background-color: red;
   }
 }
 #contact {
