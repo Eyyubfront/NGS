@@ -432,14 +432,17 @@
   width: 60%;
   height: 100%;
 }
-.container .header .header__right ul {
+.container .header .header__right .header__menu {
   margin: 0;
   padding: 0;
   display: flex;
-  width: 100%;
+  gap: 40px;
   justify-content: space-between;
 }
-.container .header .header__right ul .link {
+.container .header .header__right .header__menu li {
+  list-style-type: none;
+}
+.container .header .header__right .header__menu .link {
   font-size: 20px;
   font-weight: 500;
   text-decoration: none;
@@ -450,7 +453,10 @@
   align-items: center;
   height: 70px;
 }
-.container .header .header__right ul .link .sub__menu {
+.container .header .header__right .header__menu .link::marker {
+  display: none;
+}
+.container .header .header__right .header__menu .link .sub__menu {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -459,7 +465,7 @@
   background-color: rgba(35, 35, 35, 0.2);
   display: none;
 }
-.container .header .header__right ul .link .sub__menu .sub__link {
+.container .header .header__right .header__menu .link .sub__menu .sub__link {
   padding: 10px;
   font-size: 20px;
   font-weight: 500;
@@ -467,14 +473,17 @@
   color: #fafafa;
   transition: 0.6s;
 }
-.container .header .header__right ul .link .sub__menu .sub__link:hover {
+.container .header .header__right .header__menu .link .sub__menu .sub__link:hover {
   background-color: #fafafa;
   color: #009ee2;
 }
-.container .header .header__right ul .link:hover {
+.container .header .header__right .header__menu .link .sub__menu .sub__link::marker {
+  display: none;
+}
+.container .header .header__right .header__menu .link:hover {
   color: #009ee2;
 }
-.container .header .header__right ul .service:hover .sub__menu {
+.container .header .header__right .header__menu .service:hover .sub__menu {
   display: flex;
 }
 .container .header .header__right select {
@@ -485,6 +494,7 @@
   color: #fafafa;
   transition: 0.6s;
   cursor: pointer;
+  margin-left: 14px;
 }
 .container .header .header__right select:hover {
   color: #009ee2;
@@ -4023,9 +4033,6 @@
     width: 100%;
     text-align: center;
   }
-<<<<<<< HEAD
-}
-=======
 }
 #register {
   position: fixed;
@@ -4135,5 +4142,4 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 24.2px;
-}/*# sourceMappingURL=main.css.map */
->>>>>>> 66fe54a580e49dc6c595ebdecb5f4aaf12b15dee
+}

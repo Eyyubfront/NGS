@@ -48,12 +48,15 @@
       align-items: center;
       width: 60%;
       height: 100%;
-      ul {
+      .header__menu {
         margin: 0;
         padding: 0;
         display: flex;
-        width: 100%;
+    gap: 40px;
         justify-content: space-between;
+        li{
+          list-style-type: none; // Kara noktaları kaldır
+        }
         .link {
           font-size: 20px;
           font-weight: 500;
@@ -64,6 +67,9 @@
           display: flex;
           align-items: center;
           height: 70px;
+           &::marker {
+                display: none; // Liste işaretlerini gizler
+              }
           .sub__menu {
             display: flex;
             flex-direction: column;
@@ -79,11 +85,17 @@
               text-decoration: none;
               color: #fafafa;
               transition: 0.6s;
+            
               &:hover {
                 background-color: #fafafa;
                 color: #009ee2;
               }
+              &::marker {
+                display: none; // Liste işaretlerini gizler
+              }
             }
+            
+            
           }
           &:hover {
             color: #009ee2;
@@ -103,6 +115,7 @@
         color: #fafafa;
         transition: 0.6s;
         cursor: pointer;
+        margin-left: 14px;
         &:hover {
           color: #009ee2;
         }

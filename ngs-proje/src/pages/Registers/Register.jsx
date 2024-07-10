@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import leisure from "../../assets/images/register/leisure.png"
-
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

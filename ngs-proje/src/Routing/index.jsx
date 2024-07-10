@@ -12,6 +12,8 @@ import Servicesub from '../pages/Servicesub/Servicesub';
 import Servicesubinfo from '../pages/Servicesubinfo/Servicesubinfo';
 import Blog from '../pages/Blog/Blog';
 import SubNews from '../pages/SubNews/SubNews';
+import Register from '../pages/Registers/Register';
+
 
 const Routing = () => {
   return (
@@ -21,6 +23,7 @@ const Routing = () => {
       <Route path="/servicesection/:id" element={<Servicesub />} />
       <Route path="/aboutus" element={<AboutUs />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path='/blog' element={<Blog/>}/>
       <Route path="/news" element={<News />} />
