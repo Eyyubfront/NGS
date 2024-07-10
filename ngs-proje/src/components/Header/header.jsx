@@ -5,6 +5,7 @@ import logo from "../../assets/images/ngs.png";
 import search from "../../assets/images/search.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import Register from "../register/Register";
 
 const Header = () => {
   const hamburger = useRef();
@@ -46,6 +47,16 @@ const Header = () => {
     }
   };
   window.addEventListener("scroll", scroller);
+
+  // popup event start
+
+  const [pop, setPop] = useState(false);
+
+  function togglePop() {
+    setPop(!pop);
+  }
+
+  // popup event end
 
   return (
     <Container>
@@ -101,6 +112,11 @@ const Header = () => {
             <option value="az">AZ</option>
             <option value="en">EN</option>
           </select>
+          <div className="login__btn">
+            <button onClick={togglePop} type="button">
+              Qeydiyyat
+            </button>
+          </div>
         </div>
         <button className="hamburger__open" onClick={openBtn}>
           <MenuIcon className="open__icon" />
@@ -171,6 +187,10 @@ const Header = () => {
             </select>
           </li>
         </ul>
+      </div>
+
+      <div className="register__container">
+        {pop ? <Register toggle={togglePop} /> : null}
       </div>
     </Container>
   );
