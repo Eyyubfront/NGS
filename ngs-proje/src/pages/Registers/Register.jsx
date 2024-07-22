@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 import leisure from "../../assets/images/register/leisure.png"
 const Register = () => {
   const [name, setName] = useState("");
@@ -80,7 +80,7 @@ const Register = () => {
             <div className="exit__btn">
               <button onClick={exitWindow}>X</button>
             </div>
-            <h3>Qeydiyyat</h3>
+            <h3>Giriş</h3>
             <p className="register__p">
               Lorem ipsum dolor sit amet consectetur. Quis odio fermentum lacus
               porta tristique nunc pretium.
