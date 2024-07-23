@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Servicesection from "../pages/Servicesection/Servicesection";
@@ -8,12 +8,14 @@ import Blogs from "../pages/Blogs/Blogs";
 import News from "../pages/News/News";
 import Traningpages from "../pages/Traningpages/Traningpages";
 import Traningsid from "../pages/Traningsid/Traningsid";
-import Servicesub from '../pages/Servicesub/Servicesub';
-import Servicesubinfo from '../pages/Servicesubinfo/Servicesubinfo';
-import Blog from '../pages/Blog/Blog';
-import SubNews from '../pages/SubNews/SubNews';
-import Register from '../pages/Registers/Register';
-
+import Servicesub from "../pages/Servicesub/Servicesub";
+import Servicesubinfo from "../pages/Servicesubinfo/Servicesubinfo";
+import Blog from "../pages/Blog/Blog";
+import SubNews from "../pages/SubNews/SubNews";
+import Register from "../pages/Registers/Register";
+import Admin from "../pages/Admin/Admin";
+import AdminAppeal from "../pages/AdminAppeal/AdminAppeal";
+import AdminNews from "../pages/AdminNews/AdminNews";
 
 const Routing = () => {
   return (
@@ -25,12 +27,15 @@ const Routing = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/register" element={<Register />} />
       <Route path="/blogs" element={<Blogs />} />
-      <Route path='/blog' element={<Blog/>}/>
+      <Route path="/blog" element={<Blog />} />
       <Route path="/news" element={<News />} />
       <Route path="/subNews" element={<SubNews />} />
       <Route path="/traningpages" element={<Traningpages />} />
       <Route path="/traningids" element={<Traningsid />} />
       <Route path="/servicessub/:id" element={<Servicesubinfo />} />
+      <Route path="/adminprof" element={<Admin />} />
+      <Route path="/appeal" element={<AdminAppeal />} />
+      <Route path="/adminnews" element={<AdminNews />} />
     </Routes>
   );
 };
