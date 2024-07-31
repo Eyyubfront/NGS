@@ -58,6 +58,7 @@ const AdminService = () => {
   };
 
   return (
+    <>
     <div className="admin__news">
       <AdminHeader />
       <div className="content__tab">
@@ -105,6 +106,10 @@ const AdminService = () => {
         </div>
       </div>
     </div>
+    <div>
+      sakam
+    </div>
+    </>
   );
 };
 
