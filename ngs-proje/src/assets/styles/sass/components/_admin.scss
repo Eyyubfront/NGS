@@ -1,0 +1,90 @@
+.admin {
+    background-color: #f0f0f0;
+  
+    .content__tab {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 15px 0 0 0;
+  
+      .left__bar {
+        background: #fafafa;
+        border-radius: 20px;
+        display: flex;
+        width: 20%;
+      }
+  
+      .profile-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fafafa;
+        border-radius: 20px;
+        text-align: center;
+        padding: 75px 0;
+        width: 75%;
+  
+        .profile-picture {
+          img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+          }
+        }
+  
+        .profile-details {
+          font-size: 20px;
+          .profile-item {
+            display: flex;
+            width: 500px;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #858585;
+          }
+        }
+      }
+      .edit-button {
+        padding: 10px 40px;
+        border-radius: 24px;
+        border: 0;
+        background: #009ee2;
+        color: #fafafa;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 17px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .admin {
+      .content__tab {
+        display: flex;
+        justify-content: center;
+  
+        .left__bar {
+          display: none;
+        }
+  
+        .profile-card {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .admin {
+      .content__tab {
+        .profile-card {
+          .profile-details {
+            .profile-item {
+              width: 300px;
+            }
+          }
+        }
+      }
+    }
+  }

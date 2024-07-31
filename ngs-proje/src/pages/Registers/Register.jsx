@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 import leisure from "../../assets/images/register/leisure.png"
 const Register = () => {
   const [name, setName] = useState("");
@@ -7,23 +7,18 @@ const Register = () => {
   const [number, setNumber] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isRegistered, setIsRegistered] = useState(false); // Qeydiyyat tamamlandıqda istifadə olunacaq state
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!name || !email || !number) {
       setErrorMessage("Bütün sahələri doldurun");
       return;
     }
-
     const userData = {
       name,
       email,
       number,
     };
-
     const token = "api__token";
-
     try {
       const response = await axios.post(
         "https://jsonplaceholder.typicode.com/users",
@@ -35,9 +30,7 @@ const Register = () => {
           },
         }
       );
-
       console.log(response.data);
-
       setName("");
       setEmail("");
       setNumber("");
@@ -47,31 +40,22 @@ const Register = () => {
       console.error("Error:", error);
     }
   };
-
   // close popup start
-
   const cancel = useRef();
-
   function exitWindow() {
     if (cancel.current) {
       cancel.current.style.display = "none";
     }
   }
-
   //   close popup end
-
   // success popup start
-
   const cancelSuccess = useRef();
-
   function exitSuccess() {
     if (cancelSuccess.current) {
       cancelSuccess.current.style.display = "none";
     }
   }
-
   // success popup start
-
   return (
     <div>
       {!isRegistered ? (
@@ -80,7 +64,8 @@ const Register = () => {
             <div className="exit__btn">
               <button onClick={exitWindow}>X</button>
             </div>
-            <h3>Qeydiyyat</h3>
+           
+            <h3>Giriş</h3>
             <p className="register__p">
               Lorem ipsum dolor sit amet consectetur. Quis odio fermentum lacus
               porta tristique nunc pretium.
@@ -128,5 +113,4 @@ const Register = () => {
     </div>
   );
 };
-
 export default Register;

@@ -19,21 +19,21 @@ const Cerfitacion = () => {
   };
 
   const checkCertificateId = (id) => {
-    // fetch(`/api/checkCertificate?id=${id}`)
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     setIsPopupSend(false);
-    //     if (data.valid) {
-    //       setUserName(data.userName); // Assuming the API response contains the userName
-    //       setIsPopupVisible(true);
-    //     } else {
-    //       setIsPopupEror(true);
-    //     }
-    //   })
-    //   .catch(error => {
-    //     setIsPopupSend(false);
-    //     setIsPopupEror(true);
-    //   });
+    fetch(`https://ngs-794fc9210221.herokuapp.com/api/certificates/verify-certificate?certificateNumber=${id}`)
+      .then(response => response.json())
+      .then(data => {
+        setIsPopupSend(false);
+        if (data.valid) {
+          setUserName(data.userName); // Assuming the API response contains the userName
+          setIsPopupVisible(true);
+        } else {
+          setIsPopupEror(true);
+        }
+      })
+      .catch(error => {
+        setIsPopupSend(false);
+        setIsPopupEror(true);
+      });
   };
 
   const closePopup = () => {

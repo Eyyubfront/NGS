@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import bannerimg from "../../assets/images/homephoto/bannerphoto.png";
-
+import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <div id="banner">
@@ -26,7 +26,7 @@ const Banner = () => {
                 metodikası ilə müştərilərimizin və əməkdaşlarının
                 təhlükəsizliyini yüksək səvoyyədə təmin etməkdən ibarətdir.
               </p>
-              <button type="button">Ətraflı</button>
+              <Link to="/adminprof"><button type="button">Ətraflı</button></Link>
             </div>
           </div>
         </SwiperSlide>

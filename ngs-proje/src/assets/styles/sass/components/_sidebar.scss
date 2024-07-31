@@ -1,0 +1,57 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 100px 48px 0;
+  
+    nav {
+      ul {
+        li {
+          list-style: none;
+          margin-bottom: 20px;
+          transition: 0.5s;
+  
+          &:hover {
+            border-left: 5px solid #009ee2;
+          }
+  
+          &:focus {
+            border-left: 5px solid #009ee2;
+          }
+  
+          a {
+            text-decoration: none;
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 400;
+            color: #565656;
+            margin-left: 30px;
+            transition: 0.5s;
+  
+            &:hover {
+              color: #009ee2;
+            }
+  
+            &:focus {
+              color: #009ee2;
+            }
+          }
+        }
+      }
+    }
+  
+    .sidebar__btn {
+      display: flex;
+      justify-content: center;
+  
+      .logout {
+        padding: 10px 40px;
+        border-radius: 24px;
+        border: 0;
+        background: #009ee2;
+        color: #fafafa;
+        cursor: pointer;
+        font-size: 17px;
+      }
+    }
+  }

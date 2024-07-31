@@ -13,8 +13,12 @@ import Servicesubinfo from '../pages/Servicesubinfo/Servicesubinfo';
 import Blog from '../pages/Blog/Blog';
 import SubNews from '../pages/SubNews/SubNews';
 import Register from '../pages/Registers/Register';
-
-
+import Admin from "../pages/Admin/Admin";
+import AdminAppeal from "../pages/AdminAppeal/AdminAppeal";
+import AdminNews from "../pages/AdminNews/AdminNews";
+import AdminService from '../pages/AdminService/AdminService';
+import AdminCertificate from '../pages/AdminCertificate/AdminCertificate';
+import AdminFormService from '../pages/AdminFormService/AdminFormService';
 const Routing = () => {
   return (
     <Routes>
@@ -31,6 +35,12 @@ const Routing = () => {
       <Route path="/traningpages" element={<Traningpages />} />
       <Route path="/traningids" element={<Traningsid />} />
       <Route path="/servicessub/:id" element={<Servicesubinfo />} />
+      <Route path="/adminprof" element={<Admin />} />
+      <Route path="/appeal" element={<AdminAppeal />} />
+      <Route path="/adminnews" element={<AdminNews />} />
+      <Route path="/adminservices" element={<AdminService />} />
+      <Route path="/admincertificate" element={<AdminCertificate/>} />
+      <Route path="/adminformservice" element={<AdminFormService/>} />
     </Routes>
   );
 };
