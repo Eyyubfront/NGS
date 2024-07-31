@@ -536,12 +536,10 @@
 }
 @keyframes slide-in-bottom {
   0% {
-    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -651,12 +649,10 @@
 
 @keyframes slide-in-top {
   0% {
-    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -2338,7 +2334,8 @@
   display: block;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #banner .swiper .swiper-slide .slide__content {
   position: relative;
@@ -4258,7 +4255,12 @@
 .admin__news .content__tab .post-list .post .post-image {
   width: 100px;
   height: 100px;
+<<<<<<< HEAD
   object-fit: cover;
+=======
+  -o-object-fit: cover;
+     object-fit: cover;
+>>>>>>> 144009b97f644b3e2aad2d05a5bdcebb0f15d514
   border-radius: 5px;
   margin-right: 15px;
 }

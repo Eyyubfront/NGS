@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Servicesection from "../pages/Servicesection/Servicesection";
@@ -29,7 +29,7 @@ const Routing = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/register" element={<Register />} />
       <Route path="/blogs" element={<Blogs />} />
-      <Route path='/blog' element={<Blog/>}/>
+      <Route path="/blog" element={<Blog />} />
       <Route path="/news" element={<News />} />
       <Route path="/subNews" element={<SubNews />} />
       <Route path="/traningpages" element={<Traningpages />} />

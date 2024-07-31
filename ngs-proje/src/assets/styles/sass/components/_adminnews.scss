@@ -123,6 +123,7 @@
       }
     }
   }
+<<<<<<< HEAD
   
   @media screen and (max-width: 1000px) {
     .admin__news {
@@ -140,3 +141,23 @@
       }
     }
   }
+=======
+}
+
+@media screen and (max-width: 1000px) {
+  .admin__news {
+    .content__tab {
+      display: flex;
+      justify-content: center;
+
+      .left__bar {
+        display: none;
+      }
+
+      .post-list {
+        width: 100%;
+      }
+    }
+  }
+}
+>>>>>>> 144009b97f644b3e2aad2d05a5bdcebb0f15d514
