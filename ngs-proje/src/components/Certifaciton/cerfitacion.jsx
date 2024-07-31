@@ -20,29 +20,12 @@ const Cerfitacion = () => {
   };
 
   const checkCertificateId = (id) => {
-<<<<<<< Updated upstream
     fetch(`https://ngs-794fc9210221.herokuapp.com/api/certificates/verify-certificate?certificateNumber=${id}`)
       .then(response => response.json())
       .then(data => {
         setIsPopupSend(false);
         if (data.valid) {
           setUserName(data.userName); // Assuming the API response contains the userName
-=======
-    axios.get('https://ngs-794fc9210221.herokuapp.com/api/certificates/verify-certificate', {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      params: {
-        certificateNumber: id
-      }
-    })
-      .then(response => {
-        const data = response.data;
-        console.log(data);
-        setIsPopupSend(false);
-        setMessage(data.message);
-        if (data.valid && data.success) {
->>>>>>> Stashed changes
           setIsPopupVisible(true);
         } else {
           setIsPopupEror(true);
@@ -50,10 +33,6 @@ const Cerfitacion = () => {
       })
       .catch(error => {
         setIsPopupSend(false);
-<<<<<<< Updated upstream
-=======
-        setMessage("");
->>>>>>> Stashed changes
         setIsPopupEror(true);
       });
   };

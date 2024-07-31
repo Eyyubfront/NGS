@@ -4,11 +4,6 @@ import AdminHeader from "../../components/AdminHeader/AdminHeader";
 import profpic from "../../assets/images/adminph/prof.png"
 
 const Admin = () => {
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> 144009b97f644b3e2aad2d05a5bdcebb0f15d514
   return (
     <div className="admin">
       <AdminHeader />
@@ -16,10 +11,6 @@ const Admin = () => {
         <div className="left__bar">
           <SideBar />
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 144009b97f644b3e2aad2d05a5bdcebb0f15d514
         <div className="profile-card">
           <div className="profile-picture">
             <img src={profpic} alt="Profile" />
@@ -45,11 +36,6 @@ const Admin = () => {
               <label>Yazılarınız:</label>
               <span>12 ədəd</span>
             </div>
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> 144009b97f644b3e2aad2d05a5bdcebb0f15d514
           </div>
           <button className="edit-button">Düzəliş edin</button>
         </div>
@@ -58,8 +44,4 @@ const Admin = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Admin;
-=======
-export default Admin;
->>>>>>> 144009b97f644b3e2aad2d05a5bdcebb0f15d514
