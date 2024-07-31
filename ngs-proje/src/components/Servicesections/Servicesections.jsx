@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Button } from '@mui/material';
@@ -95,6 +96,71 @@ const Servicesections = ({ showDescription = true }) => {
                 >
                   <div className="card__text">
                     <p>{service.name}</p>
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import PageContainer from '../../components/PageContainer';
+import Cerfitacion from '../../components/Certifaciton/cerfitacion';
+import { Container } from '@mui/material';
+
+import axios from 'axios';
+import { useEffect } from 'react';
+
+const Servicesections = ({ showDescription = true }) => {
+const [services,setServices] = useState()
+
+const  handleGetServices = async()=>{
+await axios.get("https://ngs-794fc9210221.herokuapp.com/api/services")
+.then(response => {
+  console.log(response.data)
+  setServices(response.data)
+})
+}
+
+
+useEffect(() => {
+  handleGetServices()
+}, [])
+
+
+
+
+  return (
+    <>
+    <div>
+
+      <Container>
+        <div id='servicesection'>
+          <div className="pageservice__container">
+            <p className='pageservicenames'>Xidmətlərimiz</p>
+            {showDescription && (
+              <p className='pageservicenamesbutom'>Lorem ipsum dolor sit amet consectetur. Quis odio fermentum lacus porta tristique nunc pretium. Pulvinar montes sed elementum sed viverra integer fermentum.</p>
+            )}
+            <div className="pageservice__top">
+              {services?.slice(0,3).map(service => (
+                <Link key={service.id} to={`/servicesection/${service.id}`}>
+                  <div
+                    className={`pageservice__card pageservice__card${service.id}`}
+                    style={{ backgroundImage: `url(${service?.image})` }}
+                  >
+                    <div className="card__text">
+                      <p>{service.name}</p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div className="pageservice__bottom">
+              {services?.slice(3).map(service => (
+                <Link key={service.id} to={`/servicesection/${service.id}`}>
+                  <div
+                    className={`pageservice__card pageservice__card${service.id}`}
+                    style={{ backgroundImage: `url(${service?.image})` }}
+                  >
+                    <div className="card__text">
+                      <p>{service.text}</p>
+                    </div>
+>>>>>>> Stashed changes
                   </div>
                 </div>
               </Link>

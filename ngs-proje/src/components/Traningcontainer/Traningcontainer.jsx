@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaCalendarAlt } from 'react-icons/fa';
+import axios from 'axios';
 
 const Traningcontainer = () => {
+    const [services, setServices] = useState([]);
     const [selectedDate, setSelectedDate] = useState({});
 
     const handleDateChange = (event, index) => {
@@ -18,18 +20,22 @@ const Traningcontainer = () => {
         }));
     };
 
-    const trainings = [
-        { id: 1, title: "SƏTƏM üzrə siyasətin hazırlanması təlimi",  link: "/traningids" },
-        { id: 2, title: "SƏTƏM üzrə siyasətin hazırlanması təlimi",  link: "/traningids" },
-        { id: 3, title: "SƏTƏM üzrə siyasətin hazırlanması təlimi", link: "/traningids" },
-        { id: 4, title: "SƏTƏM üzrə siyasətin hazırlanması təlimi", link: "/traningids" },
-        { id: 5, title: "SƏTƏM üzrə siyasətin hazırlanması təlimi", link: "/traningids" }
-    ];
+    const handleGetTraning = async () => {
+        await axios.get("https://ngs-794fc9210221.herokuapp.com/api/services")
+            .then(response => {
+                console.log(response.data)
+                setServices(response.data)
+            })
+    }
+
+    useEffect(() => {
+        handleGetTraning()
+    }, [])
 
     return (
         <div id="traning__allcontainers">
             <div className="traning_listallcards">
-                {trainings.map((training, index) => (
+                {services.map((training) => (
                     <div key={training.id} className="traning__list">
                         <div className="list__card">
                             <div className="date__namescard">

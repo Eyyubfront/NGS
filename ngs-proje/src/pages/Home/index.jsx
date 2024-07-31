@@ -8,8 +8,8 @@ import Banner from "../../components/Banner/Banner";
 import Partners from "../../components/Partners/Partners";
 import Training from "../../components/Training/Training";
 import HomeServis from "../../components/Homeservice/Homeservice";
-import Servicesection from '../Servicesection/Servicesection';
 import Servicesections from '../../components/Servicesections/Servicesections';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   useEffect(() => {
@@ -38,9 +38,12 @@ const Home = () => {
                 <div className="information__text">
                 NGS - New Generation Safety MMC 2021-ci ildən təhlükəsizlik sektorunda fəaliyyət göstərir. Fəaliyyətə başlayan gündən məqsədlərinə yüksək səviyyədə çatmışdır.
                 </div>
+                <Link className='hrefaboutus' to="/aboutus">
+                
                 <a className="informationbtn" href="">
                   <div className="information__button">Ətraflı</div>
                 </a>
+                </Link>
               </div>
               <div className="information__right">
                 <img

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import poperorr from "../../assets/images/certification/poperorr.png";
 import popsucses from "../../assets/images/certification/popsucses.png";
 import popsend from "../../assets/images/certification/pushsend.png";
@@ -8,23 +9,40 @@ const Cerfitacion = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const [isPopupEror, setIsPopupEror] = useState(false);
   const [certificateId, setCertificateId] = useState('');
-  const [userName, setUserName] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleButtonClick = () => {
     setIsPopupSend(true);
     setTimeout(() => {
       // Make an API call to check the certificate ID
       checkCertificateId(certificateId);
-    }, 2000); // Show the send pop-up for 0.5 seconds
+    }, 2000); // Show the send pop-up for 2 seconds
   };
 
   const checkCertificateId = (id) => {
+<<<<<<< Updated upstream
     fetch(`https://ngs-794fc9210221.herokuapp.com/api/certificates/verify-certificate?certificateNumber=${id}`)
       .then(response => response.json())
       .then(data => {
         setIsPopupSend(false);
         if (data.valid) {
           setUserName(data.userName); // Assuming the API response contains the userName
+=======
+    axios.get('https://ngs-794fc9210221.herokuapp.com/api/certificates/verify-certificate', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      params: {
+        certificateNumber: id
+      }
+    })
+      .then(response => {
+        const data = response.data;
+        console.log(data);
+        setIsPopupSend(false);
+        setMessage(data.message);
+        if (data.valid && data.success) {
+>>>>>>> Stashed changes
           setIsPopupVisible(true);
         } else {
           setIsPopupEror(true);
@@ -32,6 +50,10 @@ const Cerfitacion = () => {
       })
       .catch(error => {
         setIsPopupSend(false);
+<<<<<<< Updated upstream
+=======
+        setMessage("");
+>>>>>>> Stashed changes
         setIsPopupEror(true);
       });
   };
@@ -72,7 +94,7 @@ const Cerfitacion = () => {
                 <button className='popbtn' onClick={closePopup}>Bağla</button>
               </div>
               <div className="pop__right">
-                <img src={popsucses} alt="Success" />
+                <img src={popsend} alt="Send" />
               </div>
             </div>
           </div>
@@ -85,8 +107,9 @@ const Cerfitacion = () => {
             <div className="pop__container">
               <div className="pop__left">
                 <h2 className='popcontainertext'>
-                Bu sertifikat {userName} adlı şəxsə məxsusdur.
+                  Bu sertifikat {certificateId} adlı şəxsə məxsusdur.
                 </h2>
+                <p className='popcontainertext'>{message}</p>
                 <button className='popbtn' onClick={closePopup}>Bağla</button>
               </div>
               <div className="pop__right">
@@ -102,7 +125,8 @@ const Cerfitacion = () => {
             <span className="popup__close" onClick={closePopup}>&times;</span>
             <div className="pop__container">
               <div className="pop__left">
-                <h2 className='popleftext'>Axtardığınız setifikat mövcud deyil.</h2>
+                <h2 className='popleftext'>Axtardığınız sertifikat mövcud deyil.</h2>
+                <p className='popcontainertext'>{message}</p>
                 <button className='popbtn' onClick={closePopup}>Bağla</button>
               </div>
               <div className="pop__right">

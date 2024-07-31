@@ -969,6 +969,9 @@
   flex-direction: column;
   gap: 10px;
 }
+#information .information__container .information__left .hrefaboutus {
+  text-decoration: none;
+}
 #information .information__container .information__left .information__top {
   color: #009EE2;
   font-weight: bold;
