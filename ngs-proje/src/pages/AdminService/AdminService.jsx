@@ -106,9 +106,7 @@ const AdminService = () => {
         </div>
       </div>
     </div>
-    <div>
-      sakam
-    </div>
+
     </>
   );
 };
