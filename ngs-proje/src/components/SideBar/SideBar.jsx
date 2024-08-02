@@ -13,7 +13,7 @@ const SideBar = () => {
             <Link>Bloq</Link>
           </li>
           <li>
-            <Link>Təlimlər</Link>
+            <Link to="/admintraning">Təlimlər</Link>
           </li>
           <li >
             <Link to="/adminformservice">Form Service</Link>

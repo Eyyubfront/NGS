@@ -1,0 +1,47 @@
+.admin__news{
+    .content__tab{
+        
+        .right__content{
+            display: flex;
+            align-items: self-start;
+            flex-direction: column;
+            background: #fafafa;
+            border-radius: 20px;
+            padding: 20px ;
+            width: 75%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            height: auto;
+            gap: 10px;
+            .allinpts{
+               align-items: center;
+display: flex;
+flex-direction: column;
+gap: 15px;
+                .inputdirection{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 15px;
+                    align-items: center;
+                    .input{
+                        border: 1px solid blue;
+                        border-radius: 12px;
+                      height: 30px;
+                        width: 200px;
+                    }
+                }
+                .creatbtn{
+                    border: 1px solid blue;
+                    background-color: cadetblue;
+                    width: 170px;
+                    border-radius: 12px;
+                    padding: 7px;
+                    color: white;
+                    text-align: center;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

@@ -19,6 +19,7 @@ import AdminNews from "../pages/AdminNews/AdminNews";
 import AdminService from '../pages/AdminService/AdminService';
 import AdminCertificate from '../pages/AdminCertificate/AdminCertificate';
 import AdminFormService from '../pages/AdminFormService/AdminFormService';
+import AdminTraning from "../pages/AdminTraning/AdminTraning";
 const Routing = () => {
   return (
     <Routes>
@@ -41,6 +42,7 @@ const Routing = () => {
       <Route path="/adminservices" element={<AdminService />} />
       <Route path="/admincertificate" element={<AdminCertificate/>} />
       <Route path="/adminformservice" element={<AdminFormService/>} />
+      <Route path="/admintraning" element={<AdminTraning/>} />
     </Routes>
   );
 };

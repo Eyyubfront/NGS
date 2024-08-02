@@ -70,6 +70,7 @@ const Servicesections = ({ showDescription = true }) => {
                       ? `url(data:image/${getImageType(service.icon)};base64,${service.icon})`
                       : 'none',
                     backgroundSize: 'cover',
+                    width: "287px",
                     backgroundPosition: 'center',
                   }}
                 >
@@ -91,6 +92,7 @@ const Servicesections = ({ showDescription = true }) => {
                       : 'none',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    width: "287px"
                   }}
                 >
                   <div className="card__text">
