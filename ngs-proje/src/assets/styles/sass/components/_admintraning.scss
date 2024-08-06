@@ -42,6 +42,13 @@ gap: 15px;
                     font-weight: 600;
                 }
             }
+            .admintraningsdata{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
         }
     }
 }

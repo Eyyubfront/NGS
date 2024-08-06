@@ -4342,6 +4342,7 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
   margin-left: 40px;
   margin-top: 20px;
   border: 1px solid;
@@ -4437,6 +4438,13 @@
   text-align: center;
   font-weight: 600;
 }
+.admin__news .content__tab .right__content .admintraningsdata {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
 .admin__formservice {
   background-color: #f0f0f0;
@@ -4482,4 +4490,11 @@
   width: 150px;
   text-align: center;
   color: white;
+}
+.admin__formservice .inputs_cards .data__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }

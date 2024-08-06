@@ -145,7 +145,7 @@ const AdminTraning = () => {
             </button>
           </form>
           <h2>Bütün məlumatlar</h2>
-          <ul>
+          <ul className="admintraningsdata">
             {events.map((event, index) => (
               <li key={index}>
                 <strong>Ad:</strong> {event.name} <br />

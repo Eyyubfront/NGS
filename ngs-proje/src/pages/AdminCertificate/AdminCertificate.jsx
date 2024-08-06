@@ -161,7 +161,7 @@ const AdminCertificate = () => {
           <div className="datacertficate">
             {certificates.map(({ number, valid, owner }) => (  // Owner'ı da ekledik
               <p className="numberstext" key={number}>
-                {number} - {String(valid)} - {owner}  {/* Owner'ı göster */}
+                {number} - {String(valid)} - {owner} 
                 <button
                   className="closexbtn"
                   onClick={() => handleDelete(number)}
