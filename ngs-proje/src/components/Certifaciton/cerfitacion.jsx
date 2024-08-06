@@ -20,12 +20,12 @@ const Cerfitacion = () => {
   };
 
   const checkCertificateId = (id) => {
-    fetch(`https://ngs-794fc9210221.herokuapp.com/api/certificates/verify-certificate?certificateNumber=${id}`)
-      .then(response => response.json())
-      .then(data => {
+    axios.get(`https://ngs-794fc9210221.herokuapp.com/api/certificates/get-certificate/${id}`)
+      .then(response => {
+        const data = response.data;
         setIsPopupSend(false);
-        if (data.valid) {
-          setUserName(data.userName); // Assuming the API response contains the userName
+        if (data) {
+          setMessage(`Bu sertifikat ${data.owner} adlı şəxsə məxsusdur.`); // Use owner here
           setIsPopupVisible(true);
         } else {
           setIsPopupEror(true);
@@ -86,9 +86,8 @@ const Cerfitacion = () => {
             <div className="pop__container">
               <div className="pop__left">
                 <h2 className='popcontainertext'>
-                  Bu sertifikat {certificateId} adlı şəxsə məxsusdur.
+                  {message}
                 </h2>
-                <p className='popcontainertext'>{message}</p>
                 <button className='popbtn' onClick={closePopup}>Bağla</button>
               </div>
               <div className="pop__right">
@@ -105,7 +104,7 @@ const Cerfitacion = () => {
             <div className="pop__container">
               <div className="pop__left">
                 <h2 className='popleftext'>Axtardığınız sertifikat mövcud deyil.</h2>
-                <p className='popcontainertext'>{message}</p>
+            
                 <button className='popbtn' onClick={closePopup}>Bağla</button>
               </div>
               <div className="pop__right">

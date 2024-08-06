@@ -1,53 +1,83 @@
-import React from 'react'
-import Certifaciton from "../../components/Certifaciton/cerfitacion";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import Certifaciton from '../../components/Certifaciton/cerfitacion';
 import Traningcontainer from '../../components/Traningcontainer/Traningcontainer';
 import { Container } from '@mui/material';
-import traningidphoto from "../../assets/images/traningid/traningid.png"
+import traningidphoto from '../../assets/images/traningid/traningid.png';
 import PageContainer from '../../components/PageContainer';
-import { FaCalendarAlt,FaClock, FaMapMarkerAlt  } from 'react-icons/fa';
+import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
+
 const Traningsid = () => {
+  const [eventData, setEventData] = useState(null);
+  const { id } = useParams(); // URL'den id parametresini al
+
+  useEffect(() => {
+    // Veriyi çekmek için GET isteği
+    axios.get(`https://ngs-794fc9210221.herokuapp.com/api/events/${id}`)
+      .then(response => {
+        setEventData(response.data);
+      })
+      .catch(error => {
+        console.error('Veri çekme hatası:', error);
+      });
+  }, [id]);
+
+  if (!eventData) {
+    return <div>Yükleniyor...</div>;
+  }
+
+  // Tarih ve saati formatlamak için helper fonksiyonlar
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toISOString().split('T')[0]; // YYYY-MM-DD formatı
+  };
+
+  const formatTime = (dateString) => {
+    const date = new Date(dateString);
+    return date.toISOString().split('T')[1].split('.')[0]; // HH:MM:SS formatı
+  };
+
   return (
     <PageContainer>
-
-    <div id='Traningsid'>
-<Container>
-    <div className="traningid__top">
-        <img className='traningidphoto' src={traningidphoto} alt="" />
-    </div>
-    <div className="traningid__center">
-       <div className="traningid__left">
-        <h2 className='traningidsnames'>Sətəm üzrə siyasətin hazırlanması təlimi</h2>
-        <p className='traningidsname'> Lorem ipsum dolor sit amet consectetur. Eget aenean nisi urna amet. Enim mattis nunc arcu a nisl eu ipsum. Turpis gravida elementum praesent mattis vulputate sed aliquet volutpat. Egestas ante et cursus orci lacus. Odio consectetur eu praesent rutrum libero cursus ante in. Eu lobortis pharetra condimentum arcu netus. Pretium ut consequat viverra amet sem dictumst volutpat ullamcorper. Eleifend suspendisse diam cursus egestas dis id quisque. A pretium aliquet blandit at cras convallis et pellentesque. Sit gravida euismod tristique donec. Ut posuere proin sagittis odio. Sit pellentesque massa eleifend tempor risus. Nullam quis egestas sollicitudin hac. Turpis gravida elementum praesent mattis vulputate sed aliquet volutpat. Egestas ante et cursus orci lacus.</p>
-       </div>
-        <div className="rightline"></div>
-       <div className="traningid__right">
-        <div className="right__date">
-        <FaCalendarAlt style={{ color: 'gray' }} className="calendar-icon" />
-        <p>16 Yanvar 2024</p>
-        </div>
-          <div className="right__clock">
-          <FaClock style={{ color: 'gray' }} />
-            <p>Saat 16:00</p>
+      <div id='Traningsid'>
+        <Container>
+          <div className="traningid__top">
+            <img className='traningidphoto' src={traningidphoto} alt="Training" />
           </div>
-          <div className="right__map">
-          <FaMapMarkerAlt style={{ color: 'gray',fontSize:"30px" }} className="calendar-icon" />
-          <p>Nəriman Nərimanov rayonu, Bakı şəhəri, Azərbaycan</p>
+          <div className="traningid__center">
+            <div className="traningid__left">
+              <h2 className='traningidsnames'>{eventData.name}</h2>
+              <p className='traningidsname'>{eventData.description}</p>
+            </div>
+            <div className="rightline"></div>
+            <div className="traningid__right">
+              <div className="right__date">
+                <FaCalendarAlt style={{ color: 'gray' }} className="calendar-icon" />
+                <p>{formatDate(eventData.date)}</p>
+              </div>
+              <div className="right__clock">
+                <FaClock style={{ color: 'gray' }} />
+                <p>{formatTime(eventData.date)}</p>
+              </div>
+              <div className="right__map">
+                <FaMapMarkerAlt style={{ color: 'gray', fontSize: "30px" }} className="calendar-icon" />
+                <p>{eventData.location || 'Konum belirtilmemiş'}</p>
+              </div>
+              <a className='traningbtn' href="">
+                Qoşul
+              </a>
+            </div>
           </div>
-          <a className='traningbtn' href="">
-          Qoşul
-          </a>
-       </div>
-    </div>
-<div className='moretraningsname' >
-<h2 className='moretraningsnames'>Digər Təlimlər</h2>
-<Traningcontainer/>
-</div>
-</Container>
-
-        <Certifaciton/>
-    </div>
+          <div className='moretraningsname'>
+            <h2 className='moretraningsnames'>Digər Təlimlər</h2>
+            <Traningcontainer />
+          </div>
+        </Container>
+        <Certifaciton />
+      </div>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Traningsid
+export default Traningsid;

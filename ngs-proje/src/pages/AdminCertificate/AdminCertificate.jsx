@@ -3,10 +3,12 @@ import AdminHeader from "../../components/AdminHeader/AdminHeader";
 import SideBar from "../../components/SideBar/SideBar";
 import axios from "axios";
 
-const getCert = "https://ngs-794fc9210221.herokuapp.com/api/admin/certificates";
-const addCert = "https://ngs-794fc9210221.herokuapp.com/api/admin/add-certificate";
-const delCert = "https://ngs-794fc9210221.herokuapp.com/api/admin/delete-certificate/";
-const putCert = "https://ngs-794fc9210221.herokuapp.com/api/admin/update-certificate";
+// API URL'leri
+const getCert = "https://ngs-794fc9210221.herokuapp.com/api/certificates/certificates";
+const getCertByNumber = "https://ngs-794fc9210221.herokuapp.com/api/certificates/get-certificate/";
+const addCert = "https://ngs-794fc9210221.herokuapp.com/api/certificates/add-certificate";
+const updateCert = "https://ngs-794fc9210221.herokuapp.com/api/certificates/update-certificate";
+const deleteCert = "https://ngs-794fc9210221.herokuapp.com/api/certificates/delete-certificate/";
 
 const AdminCertificate = () => {
   const [certificates, setCertificates] = useState([]);
@@ -15,32 +17,36 @@ const AdminCertificate = () => {
   const [isUpdating, setIsUpdating] = useState(false);
   const [number, setNumber] = useState("");
   const [valid, setValid] = useState(false);
+  const [owner, setOwner] = useState(""); // Yeni state ekledim
 
   useEffect(() => {
-    axios.get(getCert).then(({ data }) => {
-      setCertificates(data);
-    }).catch(e => {
-      console.error("Error fetching certificates:", e);
-    });
+    axios.get(getCert)
+      .then(({ data }) => {
+        setCertificates(data);
+      })
+      .catch(e => {
+        console.error("Error fetching certificates:", e);
+      });
   }, []);
 
   const handleAddSubmit = (e) => {
     e.preventDefault();
     const token = "api__token";
-    axios.post(addCert, { number, valid }, {
+    axios.post(addCert, { number, valid, owner }, {  // Owner'ı da ekledik
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
     })
-      .then(() => {
-        console.log('Certificate added');
+      .then(({ data }) => {
+        console.log('Certificate added:', data);
         return axios.get(getCert);
       })
       .then(({ data }) => {
         setCertificates(data);
         setNumber("");
         setValid(false);
+        setOwner(""); // Reset owner
       })
       .catch((e) => {
         console.error("Error adding certificate:", e);
@@ -50,16 +56,14 @@ const AdminCertificate = () => {
   const handleUpdateSubmit = (e) => {
     e.preventDefault();
     const token = "api__token";
-    axios.put(`${putCert}${number}`, { number: updateNumber, valid: updateValid }, {
-  
+    axios.put(updateCert, { number: updateNumber, valid: updateValid, owner }, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-    
     })
-      .then(() => {
-        console.log('Certificate updated');
+      .then(({ data }) => {
+        console.log('Certificate updated:', data);
         return axios.get(getCert);
       })
       .then(({ data }) => {
@@ -67,25 +71,37 @@ const AdminCertificate = () => {
         setIsUpdating(false);
         setUpdateNumber("");
         setUpdateValid(false);
+        setOwner(""); // Reset owner
       })
       .catch((e) => {
         console.error("Error updating certificate:", e);
       });
   };
 
-  const handleDelete = (number) => {
+  const handleDelete = (certificateNumber) => {
     const token = "api__token";
-    axios.delete(`${delCert}${number}`, {
+    axios.delete(`${deleteCert}${certificateNumber}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
       .then(() => {
         console.log('Certificate deleted');
-        setCertificates((prev) => prev.filter((e) => e.number !== number));
+        setCertificates((prev) => prev.filter((cert) => cert.number !== certificateNumber));
       })
       .catch((e) => {
         console.error("Error deleting certificate:", e);
+      });
+  };
+
+  const handleGetCertificateByNumber = (certificateNumber) => {
+    axios.get(`${getCertByNumber}${certificateNumber}`)
+      .then(({ data }) => {
+        console.log('Certificate data:', data);
+        // Handle certificate data
+      })
+      .catch(e => {
+        console.error("Error fetching certificate by number:", e);
       });
   };
 
@@ -111,6 +127,12 @@ const AdminCertificate = () => {
               onChange={(e) => setValid(e.target.checked)}
               placeholder="Validdirmi"
             />
+            <input
+              type="text"
+              value={owner}
+              onChange={(e) => setOwner(e.target.value)}
+              placeholder="Sahib"
+            />
             <button className="notebtn" type="submit">Qeyd ol</button>
           </form>
           {isUpdating && (
@@ -127,13 +149,19 @@ const AdminCertificate = () => {
                 onChange={(e) => setUpdateValid(e.target.checked)}
                 placeholder="Validdirmi"
               />
+              <input
+                type="text"
+                value={owner}
+                onChange={(e) => setOwner(e.target.value)}
+                placeholder="Sahib"
+              />
               <button className="notebtn" type="submit">Update</button>
             </form>
           )}
           <div className="datacertficate">
-            {certificates.map(({ number, valid }) => (
+            {certificates.map(({ number, valid, owner }) => (  // Owner'ı da ekledik
               <p className="numberstext" key={number}>
-                {number} - {String(valid)}
+                {number} - {String(valid)} - {owner}  {/* Owner'ı göster */}
                 <button
                   className="closexbtn"
                   onClick={() => handleDelete(number)}
@@ -144,8 +172,13 @@ const AdminCertificate = () => {
                     setIsUpdating(true);
                     setUpdateNumber(number);
                     setUpdateValid(valid);
+                    setOwner(owner); // Set owner for update
                   }}
                 >Edit</button>
+                <button
+                  className="getbtn"
+                  onClick={() => handleGetCertificateByNumber(number)}
+                >Get</button>
               </p>
             ))}
           </div>

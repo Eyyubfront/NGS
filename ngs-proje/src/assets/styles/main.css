@@ -1960,6 +1960,7 @@
 }
 #contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkinds {
   color: #565656;
+  flex-wrap: wrap;
 }
 #contact .contact__container .contact__buttom .contact__left .conatct__mail {
   display: flex;
@@ -2992,6 +2993,7 @@
   flex-direction: row;
   margin-top: 30px;
   gap: 15px;
+  justify-content: center;
 }
 #Traningsid .traningid__center .traningid__left {
   display: flex;
@@ -4434,4 +4436,50 @@
   color: white;
   text-align: center;
   font-weight: 600;
+}
+
+.admin__formservice {
+  background-color: #f0f0f0;
+  margin-top: 12px;
+}
+.admin__formservice .left__bar {
+  background: #fafafa;
+  border-radius: 20px;
+  display: flex;
+  width: 20%;
+}
+.admin__formservice .formcards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.admin__formservice .inputs_cards {
+  display: flex;
+  align-items: self-start;
+  flex-direction: column;
+  background: #fafafa;
+  border-radius: 20px;
+  padding: 20px;
+  width: 75%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: auto;
+  gap: 10px;
+}
+.admin__formservice .inputs_cards .form__container .form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.admin__formservice .inputs_cards .form__container .form .inputsform {
+  width: 150px;
+  padding: 5px;
+}
+.admin__formservice .inputs_cards .form__container .form button {
+  border: 1px solid blue;
+  background-color: blue;
+  width: 150px;
+  text-align: center;
+  color: white;
 }
