@@ -110,8 +110,8 @@ const Header = () => {
             <li><Link className="link" to="/contact">{t('contact')}</Link></li>
           </ul>
           <select onChange={handleChangeLanguage} name="languages" className="language">
-            <option value="az">{t('azerbaijani')}</option>
-            <option value="en">{t('english')}</option>
+            <option value="az">{t('az')}</option>
+            <option value="en">{t('en')}</option>
           </select>
           <div className="login__btn">
             <button onClick={togglePop} type="button">{t('register')}</button>
@@ -147,8 +147,8 @@ const Header = () => {
           <li><Link to="/contact" className="hamburger__link">{t('contact')}</Link></li>
           <li>
             <select onChange={handleChangeLanguage} name="languages" className="language">
-              <option value="az">{t('azerbaijani')}</option>
-              <option value="en">{t('english')}</option>
+              <option value="az">{t('az')}</option>
+              <option value="en">{t('en')}</option>
             </select>
           </li>
         </ul>

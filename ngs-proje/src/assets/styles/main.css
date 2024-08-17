@@ -1948,58 +1948,33 @@
   flex-direction: column;
   gap: 40px;
 }
-#contact .contact__container .contact__buttom .contact__left .conatct__phone {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-#contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkindname {
+#contact .contact__container .contact__buttom .contact__left .contactkindname {
   color: #009EE2;
   font-size: 20px;
   font-weight: 100;
 }
-#contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkinds {
+#contact .contact__container .contact__buttom .contact__left .contactkinds {
   color: #565656;
-  flex-wrap: wrap;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__phone {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 #contact .contact__container .contact__buttom .contact__left .conatct__mail {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-#contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkindname {
-  color: #009EE2;
-  font-size: 20px;
-  font-weight: 100;
-}
-#contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkinds {
-  color: #565656;
-}
 #contact .contact__container .contact__buttom .contact__left .conatct__watch {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-#contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkindname {
-  color: #009EE2;
-  font-size: 20px;
-  font-weight: 100;
-}
-#contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkinds {
-  color: #565656;
-}
 #contact .contact__container .contact__buttom .contact__left .conatct__location {
   display: flex;
   flex-direction: column;
   gap: 5px;
-}
-#contact .contact__container .contact__buttom .contact__left .conatct__location .contactkindname {
-  color: #009EE2;
-  font-size: 20px;
-  font-weight: 100;
-}
-#contact .contact__container .contact__buttom .contact__left .conatct__location .contactkinds {
-  color: #565656;
 }
 #contact .contact__container .contact__buttom .contact__right .mapphoto {
   max-width: 400px;
