@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Certifaciton from '../../components/Certifaciton/cerfitacion';
 import Traningcontainer from '../../components/Traningcontainer/Traningcontainer';
 import { Container } from '@mui/material';
@@ -11,6 +12,7 @@ import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 const Traningsid = () => {
   const [eventData, setEventData] = useState(null);
   const { id } = useParams(); // URL'den id parametresini al
+  const { t } = useTranslation(); // Çeviri hook'u
 
   useEffect(() => {
     // Veriyi çekmek için GET isteği
@@ -24,7 +26,7 @@ const Traningsid = () => {
   }, [id]);
 
   if (!eventData) {
-    return <div>Yükleniyor...</div>;
+    return <div>{t('loading')}</div>;
   }
 
   // Tarih ve saati formatlamak için helper fonksiyonlar
@@ -61,16 +63,16 @@ const Traningsid = () => {
                 <p>{formatTime(eventData.date)}</p>
               </div>
               <div className="right__map">
-                <FaMapMarkerAlt style={{ color: 'gray', fontSize: "30px" }} className="calendar-icon" />
-                <p>{eventData.location || 'Konum belirtilmemiş'}</p>
+                <FaMapMarkerAlt style={{ color: 'gray', fontSize: "18px" }} className="calendar-icon" />
+                <p>{eventData.location || t('locationNotSpecified')}</p>
               </div>
               <a className='traningbtn' href="">
-                Qoşul
+                {t('join')}
               </a>
             </div>
           </div>
           <div className='moretraningsname'>
-            <h2 className='moretraningsnames'>Digər Təlimlər</h2>
+            <h2 className='moretraningsnames'>{t('moreTrainings')}</h2>
             <Traningcontainer />
           </div>
         </Container>

@@ -4,10 +4,10 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { format } from 'date-fns'; // date-fns kütüphanesinden format fonksiyonunu import et
 import { az } from 'date-fns/locale'; // Azerice yerelleştirme için az localesini import et
 import { Link } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 const Traningcontainer = () => {
   const [services, setServices] = useState([]);
-
+  const { t } = useTranslation(); // Çeviri hook'u
   const handleGetTraning = async () => {
     try {
       const response = await axios.get("https://ngs-794fc9210221.herokuapp.com/api/events");
@@ -43,7 +43,7 @@ const Traningcontainer = () => {
               </div>
               <Link className='listshref' to={`/traningids/${training.id}`}>
                 <div className="list__btn">
-                  Qoşul
+                {t('join')}
                 </div>
               </Link>
             </div>

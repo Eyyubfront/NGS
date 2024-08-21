@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import homeservis from "../../assets/images/homephoto/homeservis.png";
 import Container from 'react-bootstrap/esm/Container';
-
+import { useTranslation } from 'react-i18next';
 const HomeServis = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -55,16 +56,16 @@ const HomeServis = () => {
         <div className="homeservice__container">
           <div className="homeservice__left">
             <div className="homeservice__top">
-              <p className='homeservicename'>Xidmətlə bağlı müraciət edin.</p>
+              <p className='homeservicename'>{t('homeServiceContact')}</p>
               <div className="homeservicetext">
-                Xidmətlərimizdən istifadə etmək və bizimlə əməkdaşlıq üçün elə indi müraciət edə bilərsiniz.
+              {t('homeServiceDescription')}
               </div>
               <form onSubmit={handleSubmit}>
                 <div className="homeservice__input">
                   <input
                     className='homeservicinputs'
                     type="text"
-                    placeholder='Ad'
+                    placeholder={t('firstName')}
                     name='firstName'
                     value={formData.firstName}
                     onChange={handleChange}
@@ -72,7 +73,7 @@ const HomeServis = () => {
                   <input
                     className='homeservicinputs'
                     type="text"
-                    placeholder='Soyad'
+                    placeholder={t('lastName')}
                     name='lastName'
                     value={formData.lastName}
                     onChange={handleChange}
@@ -80,7 +81,7 @@ const HomeServis = () => {
                   <input
                     className='homeservicinputs'
                     type="email"
-                    placeholder='Elektron Poçt'
+                    placeholder={t('email')}
                     name='email'
                     value={formData.email}
                     onChange={handleChange}
@@ -88,7 +89,7 @@ const HomeServis = () => {
                   <input
                     className='homeservicinputs'
                     type="text"
-                    placeholder='Ölkə'
+                    placeholder={t('country')}
                     name='country'
                     value={formData.country}
                     onChange={handleChange}
@@ -96,7 +97,7 @@ const HomeServis = () => {
                   <input
                     className='homeservicinputs'
                     type="text"
-                    placeholder='Şəhər'
+                    placeholder={t('city')}
                     name='city'
                     value={formData.city}
                     onChange={handleChange}
@@ -104,14 +105,14 @@ const HomeServis = () => {
                   <input
                     className='homeservicinputs'
                     type="text"
-                    placeholder='Başlıq'
+                    placeholder={t('subject')}
                     name='subject'
                     value={formData.subject}
                     onChange={handleChange}
                   />
                   <textarea
                     className='homeservicinputsmesage'
-                    placeholder='Mesaj'
+                    placeholder={t('message')}
                     name='message'
                     value={formData.message}
                     onChange={handleChange}
@@ -120,7 +121,7 @@ const HomeServis = () => {
                 <div className="homeservice__button">
                   <button type="submit" className='servicelinkhref'>
                     <p className='sendhomeservicebtn'>
-                      Göndər
+                      {t('send')}
                     </p>
                   </button>
                 </div>
