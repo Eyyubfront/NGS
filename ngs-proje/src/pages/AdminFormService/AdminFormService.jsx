@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AdminHeader from '../../components/AdminHeader/AdminHeader';
 import SideBar from '../../components/SideBar/SideBar';
-
+import { FaTrash } from "react-icons/fa"; 
 const AdminFormService = () => {
   const [data, setData] = useState([]);
   const [form, setForm] = useState({
@@ -128,14 +128,13 @@ const AdminFormService = () => {
           <div className="data__list">
             {data.map((item) => (
               <div key={item.id} className="data__item">
-                <p>First Name: {item.firstName}</p>
-                <p>Last Name: {item.lastName}</p>
-                <p>Email: {item.email}</p>
-                <p>Country: {item.country}</p>
-                <p>City: {item.city}</p>
-                <p>Subject: {item.subject}</p>
-                <p>Message: {item.message}</p>
-                <button onClick={() => deleteData(item.id)}>Sil</button>
+                <strong>First Name: </strong> {item.firstName}, <br />
+                <strong>Email: </strong> {item.email}, <br />
+                <strong>Country: </strong> {item.country}, <br />
+                <strong>City: </strong> {item.city}, <br />
+                <strong>Subject: </strong> {item.subject}, <br />
+                <strong>Message: </strong> {item.message} <br />
+                <button className='deletsservicesform' onClick={() => deleteData(item.id)}><FaTrash /> </button>
               </div>
             ))}
           </div>

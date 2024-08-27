@@ -1,4 +1,4 @@
-{
+const TRANSLATIONS_AZ = {
   "Home": "Əsas səhifə",
   "aboutUs": "Haqqımızda",
   "services": "Xidmətlər",
@@ -48,4 +48,6 @@
   "TrainingTitle": "Təlimlər, tədbir və elanlar",
   "TrainingDescription": "Təlimlərimizdən xəbərdar olmaq, tədbirlərimizdə iştirak etmək üçün səhifəyə keçid edin. Qeydiyyatdan keçərək bizə qoşula və komandamızın bir parçasına çevrilə bilərsiniz.",
   "MoreDetails": "Ətraflı"
-}
+};
+
+export default TRANSLATIONS_AZ;

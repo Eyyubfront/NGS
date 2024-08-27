@@ -7,19 +7,14 @@ import search from "../../assets/images/search.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useTranslation } from 'react-i18next';
-import azTranslations from '../../locales/az/translation.json';
-import enTranslations from '../../locales/en/translation.json';
 
 const Header = () => {
-  const { t, i18n } = useTranslation(); 
+  const { t, i18n } = useTranslation();
 
+  // Dil değişim fonksiyonu
   const handleChangeLanguage = (e) => {
     const selectedLang = e.target.value;
-  
-    i18n.changeLanguage(selectedLang).then(() => {
-      const translations = selectedLang === 'az' ? azTranslations : enTranslations;
-      i18n.addResourceBundle(selectedLang, 'translation', translations, true, true);
-    });
+    i18n.changeLanguage(selectedLang);
   };
 
   const hamburger = useRef();
@@ -30,8 +25,16 @@ const Header = () => {
   const headerScroll = useRef();
 
   useEffect(() => {
-    // Load initial translations for default language ('az') on component mount
-    i18n.addResourceBundle('az', 'translation', azTranslations, true, true);
+    // Set initial language to 'az' if no language is set in local storage
+    if (!i18n.language) {
+      i18n.changeLanguage('az');
+    }
+
+    // Ensure initial translations are loaded
+    const loadInitialTranslations = async () => {
+      await i18n.loadLanguages(['az', 'en']);
+    };
+    loadInitialTranslations();
   }, [i18n]);
 
   function openBtn() {
@@ -109,7 +112,7 @@ const Header = () => {
             <li><Link className="link" to="/traningpages">{t('trainings')}</Link></li>
             <li><Link className="link" to="/contact">{t('contact')}</Link></li>
           </ul>
-          <select onChange={handleChangeLanguage} name="languages" className="language">
+          <select onChange={handleChangeLanguage} value={i18n.language} name="languages" className="language">
             <option value="az">{t('az')}</option>
             <option value="en">{t('en')}</option>
           </select>
@@ -146,7 +149,7 @@ const Header = () => {
           <li><Link to="/traningpages" className="hamburger__link">{t('trainings')}</Link></li>
           <li><Link to="/contact" className="hamburger__link">{t('contact')}</Link></li>
           <li>
-            <select onChange={handleChangeLanguage} name="languages" className="language">
+            <select onChange={handleChangeLanguage} value={i18n.language} name="languages" className="language">
               <option value="az">{t('az')}</option>
               <option value="en">{t('en')}</option>
             </select>

@@ -17,7 +17,8 @@
             .allinpts{
                align-items: center;
 display: flex;
-flex-direction: column;
+flex-direction: row;
+flex-wrap: wrap;
 gap: 15px;
                 .inputdirection{
                     display: flex;
@@ -44,10 +45,25 @@ gap: 15px;
             }
             .admintraningsdata{
                 display: flex;
-                flex-direction: row;
-                align-items: center;
+                flex-direction: column;
                 gap: 10px;
-                flex-wrap: wrap;
+                .traningsadmindata{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    .editsbtn{
+                        border: none;
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+                    .trashbtn{
+                        border: none;
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AdminHeader from "../../components/AdminHeader/AdminHeader";
 import SideBar from "../../components/SideBar/SideBar";
-
+import { FaEdit, FaTrash } from "react-icons/fa"; 
 const AdminTraning = () => {
   const [eventData, setEventData] = useState({
     id: "",
@@ -147,13 +147,17 @@ const AdminTraning = () => {
           <h2>Bütün məlumatlar</h2>
           <ul className="admintraningsdata">
             {events.map((event, index) => (
-              <li key={index}>
-                <strong>Ad:</strong> {event.name} <br />
-                <strong>Təsviri:</strong> {event.description} <br />
-                <strong>Zaman:</strong> {event.date} <br />
+              <li className="traningsadmindata" key={index}>
+                <strong>Ad:</strong> {event.name}, <br />
+                <strong>Təsviri:</strong> {event.description}, <br />
+                <strong>Zaman:</strong> {event.date}, <br />
                 <strong>Məkan:</strong> {event.location} <br />
-                <button onClick={() => handleEdit(event)}>Güncəllə</button>
-                <button onClick={() => handleDelete(event.id)}>Sil</button>
+                <button className="editsbtn" onClick={() => handleEdit(event)}>
+                  <FaEdit  />
+                </button>
+                <button className="trashbtn" onClick={() => handleDelete(event.id)}>
+                  <FaTrash /> 
+                </button>
               </li>
             ))}
           </ul>

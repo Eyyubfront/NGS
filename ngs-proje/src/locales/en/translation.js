@@ -1,4 +1,4 @@
-{
+const TRANSLATIONS_EN = {
   "Home": "Home",
   "aboutUs": "About Us",
   "services": "Services",
@@ -18,14 +18,14 @@
   "en": "EN",
   "phone": "Phone",
   "email": "Email",
-  "hours": "Working Hours",
+  "hours": "Hours",
   "address": "Address",
   "loading": "Loading...",
   "checkCertificate": "Check your certificate:",
   "certificateNumberPlaceholder": "Certificate number",
   "checkButton": "Check",
-  "popupSendTitle": "Successfully Sent.",
-  "popupSendMessage": "Your request has been sent to our team. We will contact you soon. Thank you!",
+  "popupSendTitle": "Successfully sent.",
+  "popupSendMessage": "Your application has been sent to our team. We will contact you soon. Thank you!",
   "closeButton": "Close",
   "popupSuccessMessage": "This certificate belongs to {{owner}}.",
   "popupErrorTitle": "The certificate you are looking for does not exist.",
@@ -35,8 +35,8 @@
   "eventDescription": "Event Description",
   "moreTrainings": "More Trainings",
   "join": "Join",
-  "homeServiceContact": "Contact for Services",
-  "homeServiceDescription": "You can now apply to use our services and collaborate with us.",
+  "homeServiceContact": "Contact us for services",
+  "homeServiceDescription": "You can contact us now to use our services and collaborate with us.",
   "firstName": "First Name",
   "lastName": "Last Name",
   "email": "Email",
@@ -45,7 +45,9 @@
   "subject": "Subject",
   "message": "Message",
   "send": "Send",
-  "TrainingTitle": "Trainings, Events, and Announcements",
-  "TrainingDescription": "To stay updated with our trainings and participate in our events, visit the page. You can join us by registering and become a part of our team.",
+  "TrainingTitle": "Trainings, Events and Announcements",
+  "TrainingDescription": "To stay informed about our trainings and participate in our events, visit the page. You can register and join us to become a part of our team.",
   "MoreDetails": "More Details"
-}
+};
+
+export default TRANSLATIONS_EN;

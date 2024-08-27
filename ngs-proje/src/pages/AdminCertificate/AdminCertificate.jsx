@@ -128,6 +128,7 @@ const AdminCertificate = () => {
               placeholder="Validdirmi"
             />
             <input
+             className="inputnumber"
               type="text"
               value={owner}
               onChange={(e) => setOwner(e.target.value)}
@@ -136,7 +137,7 @@ const AdminCertificate = () => {
             <button className="notebtn" type="submit">Qeyd ol</button>
           </form>
           {isUpdating && (
-            <form onSubmit={handleUpdateSubmit}>
+            <form className="updatecertifacts" onSubmit={handleUpdateSubmit}>
               <input
                 type="text"
                 value={updateNumber}

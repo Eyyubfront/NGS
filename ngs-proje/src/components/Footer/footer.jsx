@@ -7,17 +7,12 @@ import linkedin from "../../assets/images/footericon/linkedn.png";
 import email from "../../assets/images/footericon/email.png";
 import phone from "../../assets/images/footericon/phone.png";
 import { useTranslation } from 'react-i18next';
-import azTranslations from '../../locales/az/translation.json';
-import enTranslations from '../../locales/en/translation.json';
 
 const Footer = () => {
     const { t, i18n } = useTranslation();
 
     const handleChangeLanguage = (lang) => {
-        i18n.changeLanguage(lang).then(() => {
-            const translations = lang === 'az' ? azTranslations : enTranslations;
-            i18n.addResourceBundle(lang, 'translation', translations, true, true);
-        });
+        i18n.changeLanguage(lang);
     };
 
     return (
