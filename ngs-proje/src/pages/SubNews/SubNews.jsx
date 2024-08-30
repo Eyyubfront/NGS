@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PageContainer from "../../components/PageContainer";
 import float from "../../assets/images/float.png";
-import newsImg from "../../assets/images/homephoto/pageservicesix.png";
+import fir from "../../assets/images/news/first.png";
+import sec from "../../assets/images/news/sec.png";
+import thi from "../../assets/images/news/three.png";
 import Cerfitacion from "../../components/Certifaciton/cerfitacion";
+import { useParams } from "react-router-dom"; 
 
 const SubNews = () => {
+  
+  const { prodId } = useParams()
+  const [news, setNews] = useState({})
+
+  useEffect(()=>{
+    fetch(`https://ngs-794fc9210221.herokuapp.com/api/news/${prodId}`).then((res)=>res.json()).then((data)=>{
+      setNews(data)
+    }).catch((err)=>console.log(err))
+  },[prodId])
+
+  console.log(news);
   return (
     <>
       <PageContainer>
@@ -59,19 +73,19 @@ const SubNews = () => {
 
             <div className="box__container">
               <div className="news__box">
-                <img src={newsImg} alt="img" />
+                <img src={fir} alt="img" />
                 <div className="box__content">
                   <h2>Təhlükəsiz mühitin əsasları nələrdir ?</h2>
                 </div>
               </div>
               <div className="news__box">
-                <img src={newsImg} alt="img" />
+                <img src={sec} alt="img" />
                 <div className="box__content">
                   <h2>Təhlükəsiz mühitin əsasları nələrdir ?</h2>
                 </div>
               </div>
               <div className="news__box">
-                <img src={newsImg} alt="img" />
+                <img src={thi} alt="img" />
                 <div className="box__content">
                   <h2>Təhlükəsiz mühitin əsasları nələrdir ?</h2>
                 </div>

@@ -8,18 +8,20 @@ import Blogs from "../pages/Blogs/Blogs";
 import News from "../pages/News/News";
 import Traningpages from "../pages/Traningpages/Traningpages";
 import Traningsid from "../pages/Traningsid/Traningsid";
-import Servicesub from '../pages/Servicesub/Servicesub';
-import Servicesubinfo from '../pages/Servicesubinfo/Servicesubinfo';
-import Blog from '../pages/Blog/Blog';
-import SubNews from '../pages/SubNews/SubNews';
-import Register from '../pages/Registers/Register';
+import Servicesub from "../pages/Servicesub/Servicesub";
+import Servicesubinfo from "../pages/Servicesubinfo/Servicesubinfo";
+import Blog from "../pages/Blog/Blog";
+import SubNews from "../pages/SubNews/SubNews";
+import Register from "../pages/Registers/Register";
 import Admin from "../pages/Admin/Admin";
 import AdminAppeal from "../pages/AdminAppeal/AdminAppeal";
 import AdminNews from "../pages/AdminNews/AdminNews";
-import AdminService from '../pages/AdminService/AdminService';
-import AdminCertificate from '../pages/AdminCertificate/AdminCertificate';
-import AdminFormService from '../pages/AdminFormService/AdminFormService';
+import AdminService from "../pages/AdminService/AdminService";
+import AdminCertificate from "../pages/AdminCertificate/AdminCertificate";
+import AdminFormService from "../pages/AdminFormService/AdminFormService";
 import AdminTraning from "../pages/AdminTraning/AdminTraning";
+import AdminBlog from "../pages/AdminBlog/AdminBlog";
+import AdminAbout from "../pages/AdminAbout/AdminAbout";
 const Routing = () => {
   return (
     <Routes>
@@ -32,7 +34,7 @@ const Routing = () => {
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/news" element={<News />} />
-      <Route path="/subNews" element={<SubNews />} />
+      <Route path="/news/:prodId" element={<SubNews />} />
       <Route path="/traningpages" element={<Traningpages />} />
       <Route path="/traningids" element={<Traningsid />} />
       <Route path="/servicessub/:id" element={<Servicesubinfo />} />
@@ -40,9 +42,11 @@ const Routing = () => {
       <Route path="/appeal" element={<AdminAppeal />} />
       <Route path="/adminnews" element={<AdminNews />} />
       <Route path="/adminservices" element={<AdminService />} />
-      <Route path="/admincertificate" element={<AdminCertificate/>} />
-      <Route path="/adminformservice" element={<AdminFormService/>} />
-      <Route path="/admintraning" element={<AdminTraning/>} />
+      <Route path="/admincertificate" element={<AdminCertificate />} />
+      <Route path="/adminformservice" element={<AdminFormService />} />
+      <Route path="/admintraning" element={<AdminTraning />} />
+      <Route path="/adminblog" element={<AdminBlog />} />
+      <Route path="/adminabout" element={<AdminAbout/>} />
     </Routes>
   );
 };

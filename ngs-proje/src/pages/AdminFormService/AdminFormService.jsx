@@ -1,36 +1,37 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import AdminHeader from '../../components/AdminHeader/AdminHeader';
-import SideBar from '../../components/SideBar/SideBar';
+import React, { useState } from "react";
+import axios from "axios";
+import AdminHeader from "../../components/AdminHeader/AdminHeader";
+import SideBar from "../../components/SideBar/SideBar";
 
 const AdminFormService = () => {
   const [data, setData] = useState([]);
   const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    country: '',
-    city: '',
-    subject: '',
-    message: ''
+    firstName: "",
+    lastName: "",
+    email: "",
+    country: "",
+    city: "",
+    subject: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     setForm({
       ...form,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const url = `https://ngs-794fc9210221.herokuapp.com/api/formData/save?firstName=${form.firstName}&lastName=${form.lastName}&email=${form.email}&country=${form.country}&city=${form.city}&subject=${form.subject}&message=${form.message}`;
-    axios.post(url,{formRequestDTO:form})
-      .then(response => {
+    axios
+      .post(url, { formRequestDTO: form })
+      .then((response) => {
         console.log(response.data);
         setData([...data, response.data]);
       })
-      .catch(e => {
+      .catch((e) => {
         console.error("There was an error!", e);
       });
   };
@@ -109,6 +110,7 @@ const AdminFormService = () => {
       </div>
     </div>
   );
-}
+};
 
 export default AdminFormService;
+
