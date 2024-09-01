@@ -6,13 +6,13 @@ import { FaTrash } from "react-icons/fa";
 const AdminFormService = () => {
   const [data, setData] = useState([]);
   const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    country: '',
-    city: '',
-    subject: '',
-    message: ''
+    firstName: "",
+    lastName: "",
+    email: "",
+    country: "",
+    city: "",
+    subject: "",
+    message: "",
   });
 
   // Fetch existing data
@@ -29,7 +29,7 @@ const AdminFormService = () => {
   const handleChange = (e) => {
     setForm({
       ...form,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -38,10 +38,11 @@ const AdminFormService = () => {
     const url = `https://ngs-794fc9210221.herokuapp.com/api/formData/save?firstName=${form.firstName}&lastName=${form.lastName}&email=${form.email}&country=${form.country}&city=${form.city}&subject=${form.subject}&message=${form.message}`;
     axios.post(url, { formRequestDTO: form })
       .then(response => {
+>>>>>>> main
         console.log(response.data);
         setData([...data, response.data]); // Yeni veriyi ekle
       })
-      .catch(e => {
+      .catch((e) => {
         console.error("There was an error!", e);
       });
   };
@@ -142,6 +143,7 @@ const AdminFormService = () => {
       </div>
     </div>
   );
-}
+};
 
 export default AdminFormService;
+

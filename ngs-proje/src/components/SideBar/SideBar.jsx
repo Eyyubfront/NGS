@@ -10,7 +10,7 @@ const SideBar = () => {
             <Link to="/adminnews">Xəbərlər</Link>
           </li>
           <li>
-            <Link>Bloq</Link>
+            <Link to='/adminblog'>Bloq</Link>
           </li>
           <li>
             <Link to="/admintraning">Təlimlər</Link>
@@ -29,6 +29,9 @@ const SideBar = () => {
           </li>
           <li>
             <Link to="/admincertificate">Sertifikatlar</Link>
+          </li>
+          <li>
+            <Link to="/adminabout">About Us</Link>
           </li>
         </ul>
       </nav>
