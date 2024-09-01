@@ -1,24 +1,45 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import homeservis from "../../assets/images/homephoto/homeservis.png";
 import Container from 'react-bootstrap/esm/Container';
+import { useTranslation } from 'react-i18next';
 const HomeServis = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
-    countryCity: '',
-    title: '',
-    subject: ''
+    country: '',
+    city: '',
+    subject: '',
+    message: ''
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Burada form verilerini sadece console'a yazdırıyoruz, API isteği yapmıyoruz
-    console.log('Form Verileri:', formData);
+    axios.get('https://ngs-794fc9210221.herokuapp.com/api/formData')
+      .then(response => {
+        const data = response.data;
+        const isValid = data.some(item =>
+          item.firstName === formData.firstName &&
+          item.lastName === formData.lastName &&
+          item.email === formData.email &&
+          item.country === formData.country &&
+          item.city === formData.city &&
+          item.subject === formData.subject &&
+          item.message === formData.message
+        );
 
-    // Form verilerini localStorage'da saklıyoruz
-    const storedData = JSON.parse(localStorage.getItem('formData')) || [];
-    storedData.push(formData);
-    localStorage.setItem('formData', JSON.stringify(storedData));
+        if (isValid) {
+          alert('Veriler doğru!');
+        } else {
+          alert('Veriler yanlış!');
+        }
+      })
+      .catch(error => {
+        console.error('Bir hata oluştu:', error);
+        alert('Bir hata oluştu!');
+      });
   };
 
   const handleChange = (e) => {
@@ -28,30 +49,39 @@ const HomeServis = () => {
       [name]: value
     });
   };
+
   return (
     <div id='homeservice'>
       <Container>
         <div className="homeservice__container">
           <div className="homeservice__left">
             <div className="homeservice__top">
-              <p className='homeservicename'>Xidmətlə bağlı müraciət edin.</p>
+              <p className='homeservicename'>{t('homeServiceContact')}</p>
               <div className="homeservicetext">
-                Xidmətlərimizdən istifadə etmək və bizimlə əməkdaşlıq üçün elə indi müraciət edə bilərsiniz.
+              {t('homeServiceDescription')}
               </div>
               <form onSubmit={handleSubmit}>
                 <div className="homeservice__input">
                   <input
                     className='homeservicinputs'
                     type="text"
-                    placeholder='Ad/Soyad'
-                    name='name'
-                    value={formData.name}
+                    placeholder={t('firstName')}
+                    name='firstName'
+                    value={formData.firstName}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className='homeservicinputs'
+                    type="text"
+                    placeholder={t('lastName')}
+                    name='lastName'
+                    value={formData.lastName}
                     onChange={handleChange}
                   />
                   <input
                     className='homeservicinputs'
                     type="email"
-                    placeholder='Elektron Poçt'
+                    placeholder={t('email')}
                     name='email'
                     value={formData.email}
                     onChange={handleChange}
@@ -59,32 +89,39 @@ const HomeServis = () => {
                   <input
                     className='homeservicinputs'
                     type="text"
-                    placeholder='Ölkə/Şəhər'
-                    name='countryCity'
-                    value={formData.countryCity}
+                    placeholder={t('country')}
+                    name='country'
+                    value={formData.country}
                     onChange={handleChange}
                   />
                   <input
                     className='homeservicinputs'
                     type="text"
-                    placeholder='Başlıq'
-                    name='title'
-                    value={formData.title}
+                    placeholder={t('city')}
+                    name='city'
+                    value={formData.city}
                     onChange={handleChange}
                   />
                   <input
-                    className='homeservicinputsmesage'
+                    className='homeservicinputs'
                     type="text"
-                    placeholder='Mövzu'
+                    placeholder={t('subject')}
                     name='subject'
                     value={formData.subject}
+                    onChange={handleChange}
+                  />
+                  <textarea
+                    className='homeservicinputsmesage'
+                    placeholder={t('message')}
+                    name='message'
+                    value={formData.message}
                     onChange={handleChange}
                   />
                 </div>
                 <div className="homeservice__button">
                   <button type="submit" className='servicelinkhref'>
                     <p className='sendhomeservicebtn'>
-                      Göndər
+                      {t('send')}
                     </p>
                   </button>
                 </div>

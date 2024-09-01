@@ -76,19 +76,19 @@
 #footer .footer__container .footer__top .footer__right .footer__companyname {
   color: #FAFAFA;
 }
-#footer .footer__container .footer__buttom {
+#footer .footer__container .footer__bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#footer .footer__container .footer__buttom .footer__icon {
+#footer .footer__container .footer__bottom .footer__icon {
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
 }
-#footer .footer__container .footer__buttom .footer__companyname {
+#footer .footer__container .footer__bottom .footer__companyname {
   color: #FAFAFA;
 }
 
@@ -165,19 +165,19 @@
   #footer .footer__container .footer__top .footer__right .footer__companyname {
     color: #FAFAFA;
   }
-  #footer .footer__container .footer__buttom {
+  #footer .footer__container .footer__bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  #footer .footer__container .footer__buttom .footer__icon {
+  #footer .footer__container .footer__bottom .footer__icon {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
   }
-  #footer .footer__container .footer__buttom .footer__companyname {
+  #footer .footer__container .footer__bottom .footer__companyname {
     color: #FAFAFA;
   }
 }
@@ -254,19 +254,19 @@
   #footer .footer__container .footer__top .footer__right .footer__companyname {
     color: #FAFAFA;
   }
-  #footer .footer__container .footer__buttom {
+  #footer .footer__container .footer__bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  #footer .footer__container .footer__buttom .footer__icon {
+  #footer .footer__container .footer__bottom .footer__icon {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
   }
-  #footer .footer__container .footer__buttom .footer__companyname {
+  #footer .footer__container .footer__bottom .footer__companyname {
     color: #FAFAFA;
   }
 }
@@ -1950,57 +1950,33 @@
   flex-direction: column;
   gap: 40px;
 }
-#contact .contact__container .contact__buttom .contact__left .conatct__phone {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-#contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkindname {
+#contact .contact__container .contact__buttom .contact__left .contactkindname {
   color: #009EE2;
   font-size: 20px;
   font-weight: 100;
 }
-#contact .contact__container .contact__buttom .contact__left .conatct__phone .contactkinds {
+#contact .contact__container .contact__buttom .contact__left .contactkinds {
   color: #565656;
+}
+#contact .contact__container .contact__buttom .contact__left .conatct__phone {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 #contact .contact__container .contact__buttom .contact__left .conatct__mail {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-#contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkindname {
-  color: #009EE2;
-  font-size: 20px;
-  font-weight: 100;
-}
-#contact .contact__container .contact__buttom .contact__left .conatct__mail .contactkinds {
-  color: #565656;
-}
 #contact .contact__container .contact__buttom .contact__left .conatct__watch {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-#contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkindname {
-  color: #009EE2;
-  font-size: 20px;
-  font-weight: 100;
-}
-#contact .contact__container .contact__buttom .contact__left .conatct__watch .contactkinds {
-  color: #565656;
-}
 #contact .contact__container .contact__buttom .contact__left .conatct__location {
   display: flex;
   flex-direction: column;
   gap: 5px;
-}
-#contact .contact__container .contact__buttom .contact__left .conatct__location .contactkindname {
-  color: #009EE2;
-  font-size: 20px;
-  font-weight: 100;
-}
-#contact .contact__container .contact__buttom .contact__left .conatct__location .contactkinds {
-  color: #565656;
 }
 #contact .contact__container .contact__buttom .contact__right .mapphoto {
   max-width: 400px;
@@ -2681,8 +2657,7 @@
 #homeservice .homeservice__container {
   display: flex;
   flex-direction: row;
-  gap: 10%;
-  margin-left: 1%;
+  justify-content: space-between;
 }
 #homeservice .homeservice__container .homeservice__left .homeservice__top {
   display: flex;
@@ -2690,7 +2665,6 @@
   gap: 10px;
 }
 #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicename {
-  width: 44%;
   font-weight: bold;
   font-size: 37px;
   color: #009EE2;
@@ -2720,6 +2694,7 @@
   background-color: white;
   color: grey;
   width: 263px;
+  padding: 5px;
   height: 100px;
   padding: 5x;
   border-radius: 9px;
@@ -2729,6 +2704,8 @@
   outline: #009EE2;
 }
 #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
+  border: none;
+  margin-top: 10px;
   text-decoration: none;
 }
 #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref .sendhomeservicebtn {
@@ -2753,8 +2730,7 @@
   #homeservice .homeservice__container {
     display: flex;
     flex-direction: row;
-    gap: 10%;
-    margin-left: 1%;
+    justify-content: space-between;
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top {
     display: flex;
@@ -2762,7 +2738,6 @@
     gap: 10px;
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicename {
-    width: 44%;
     font-weight: bold;
     font-size: 37px;
     color: #009EE2;
@@ -2791,6 +2766,7 @@
     border: 1px solid #009EE2;
     background-color: white;
     color: grey;
+    padding: 5px;
     width: 263px;
     height: 100px;
     padding: 5x;
@@ -2802,6 +2778,8 @@
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
     text-decoration: none;
+    margin-top: 10px;
+    border: none;
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref .sendhomeservicebtn {
     border-radius: 15px;
@@ -2835,7 +2813,6 @@
     align-items: center;
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicename {
-    width: 100%;
     font-weight: bold;
     font-size: 37px;
     color: #009EE2;
@@ -2865,6 +2842,7 @@
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__input .homeservicinputsmesage {
     border: 1px solid #009EE2;
     background-color: white;
+    padding: 5px;
     color: grey;
     width: 100%;
     height: 100px;
@@ -2876,6 +2854,8 @@
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
     text-decoration: none;
+    margin-top: 10px;
+    border: none;
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref .sendhomeservicebtn {
     border-radius: 15px;
@@ -2910,7 +2890,6 @@
     align-items: center;
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservicename {
-    width: 100%;
     font-weight: bold;
     font-size: 37px;
     color: #009EE2;
@@ -2940,6 +2919,7 @@
     border: 1px solid #009EE2;
     background-color: white;
     color: grey;
+    padding: 5px;
     width: 263px;
     height: 100px;
     padding: 5x;
@@ -2951,6 +2931,8 @@
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
     text-decoration: none;
+    border: none;
+    margin-top: 10px;
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref .sendhomeservicebtn {
     border-radius: 15px;
@@ -2995,6 +2977,7 @@
   flex-direction: row;
   margin-top: 30px;
   gap: 15px;
+  justify-content: center;
 }
 #Traningsid .traningid__center .traningid__left {
   display: flex;
@@ -4377,6 +4360,7 @@
     width: 100%;
   }
 }
+
 .admin__blog {
   background-color: #f0f0f0;
 }
@@ -4626,6 +4610,11 @@
   background-color: #c82333;
 }
 
+
+.admin__news .content__tab .post-list .updatecertifacts {
+  margin-top: 20px !important;
+}
+>>>>>>> main
 .admin__news .content__tab .post-list form {
   display: flex;
   margin-left: 40px;
@@ -4633,29 +4622,28 @@
   flex-direction: row;
 }
 .admin__news .content__tab .post-list form .inputnumber {
-  border: 1px solid #009ee2;
-  width: 200px;
+  border: 1px solid blue;
   border-radius: 12px;
-  text-align: center;
-  height: 40px;
+  height: 30px;
+  width: 200px;
 }
 .admin__news .content__tab .post-list form .notebtn {
-  border: 1px solid;
-  width: 130px;
-  background-color: #009ee2;
+  border: 1px solid blue;
+  background-color: cadetblue;
+  width: 170px;
+  border-radius: 12px;
+  padding: 7px;
   color: white;
+  text-align: center;
+  font-weight: 600;
 }
 .admin__news .content__tab .post-list .datacertficate {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  margin-left: 40px;
-  margin-top: 20px;
-  border: 1px solid;
-  border-radius: 12px;
-  width: 400px;
-  padding: 40px;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 .admin__news .content__tab .post-list .datacertficate .closexbtn {
   background-color: #009ee2;
@@ -4720,7 +4708,8 @@
 .admin__news .content__tab .right__content .allinpts {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 15px;
 }
 .admin__news .content__tab .right__content .allinpts .inputdirection {
@@ -4744,4 +4733,100 @@
   color: white;
   text-align: center;
   font-weight: 600;
+
 }/*# sourceMappingURL=main.css.map */
+=======
+}
+.admin__news .content__tab .right__content .admintraningsdata {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.admin__news .content__tab .right__content .admintraningsdata .traningsadmindata {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.admin__news .content__tab .right__content .admintraningsdata .traningsadmindata .editsbtn {
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.admin__news .content__tab .right__content .admintraningsdata .traningsadmindata .trashbtn {
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.admin__formservice {
+  background-color: #f0f0f0;
+  margin-top: 12px;
+}
+.admin__formservice .left__bar {
+  background: #fafafa;
+  border-radius: 20px;
+  display: flex;
+  width: 20%;
+}
+.admin__formservice .formcards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.admin__formservice .inputs_cards {
+  display: flex;
+  align-items: self-start;
+  flex-direction: column;
+  background: #fafafa;
+  border-radius: 20px;
+  padding: 20px;
+  width: 75%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: auto;
+  gap: 10px;
+}
+.admin__formservice .inputs_cards .form__container .form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.admin__formservice .inputs_cards .form__container .form .inputsform {
+  border: 1px solid blue;
+  border-radius: 12px;
+  height: 30px;
+  width: 200px;
+}
+.admin__formservice .inputs_cards .form__container .form button {
+  border: 1px solid blue;
+  background-color: cadetblue;
+  width: 170px;
+  border-radius: 12px;
+  padding: 7px;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+.admin__formservice .inputs_cards .data__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.admin__formservice .inputs_cards .data__list .data__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.admin__formservice .inputs_cards .data__list .data__item .deletsservicesform {
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+>>>>>>> main

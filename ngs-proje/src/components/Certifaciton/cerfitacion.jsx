@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next'; // i18next kancasını ekleyin
 import poperorr from "../../assets/images/certification/poperorr.png";
 import popsucses from "../../assets/images/certification/popsucses.png";
 import popsend from "../../assets/images/certification/pushsend.png";
 
 const Cerfitacion = () => {
+  const { t } = useTranslation(); // Çeviriyi kullanmak için kancayı çağırın
   const [isPopupSend, setIsPopupSend] = useState(false);
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const [isPopupEror, setIsPopupEror] = useState(false);
@@ -20,12 +22,12 @@ const Cerfitacion = () => {
   };
 
   const checkCertificateId = (id) => {
-    fetch(`https://ngs-794fc9210221.herokuapp.com/api/certificates/verify-certificate?certificateNumber=${id}`)
-      .then(response => response.json())
-      .then(data => {
+    axios.get(`https://ngs-794fc9210221.herokuapp.com/api/certificates/get-certificate/${id}`)
+      .then(response => {
+        const data = response.data;
         setIsPopupSend(false);
-        if (data.valid) {
-          setUserName(data.userName); // Assuming the API response contains the userName
+        if (data) {
+          setMessage(t('popupSuccessMessage', { owner: data.owner })); // Use translation here
           setIsPopupVisible(true);
         } else {
           setIsPopupEror(true);
@@ -47,18 +49,18 @@ const Cerfitacion = () => {
     <div id='cerfitacion'>
       <div className="cerfitacion__container">
         <div className="certifacion__top">
-          <h3>Sertifikatınızı yoxlayın:</h3>
+          <h3>{t('checkCertificate')}</h3> {/* Çeviri kullanımı */}
         </div>
         <div className="certifacion__buttom">
           <input
             className='certifacnumber'
             type="text"
-            placeholder='Sertifikatın nömrəsi'
+            placeholder={t('certificateNumberPlaceholder')} 
             value={certificateId}
             onChange={(e) => setCertificateId(e.target.value)}
           />
           <button className='certifactcheck' onClick={handleButtonClick}>
-            Yoxla
+            {t('checkButton')} {/* Çeviri kullanımı */}
           </button>
         </div>
       </div>
@@ -68,9 +70,9 @@ const Cerfitacion = () => {
             <span className="popup__close" onClick={closePopup}>&times;</span>
             <div className="pop__container">
               <div className="pop__left">
-                <h2 className='popleftext'>Uğurla göndərildi.</h2>
-                <p className='popcontainertext'>Müraciətiniz komandamıza göndərilmişdir, tezliklə sizinlə əlaqə saxlanılacaq. Təşəkkürlər!</p>
-                <button className='popbtn' onClick={closePopup}>Bağla</button>
+                <h2 className='popleftext'>{t('popupSendTitle')}</h2> {/* Çeviri kullanımı */}
+                <p className='popcontainertext'>{t('popupSendMessage')}</p> {/* Çeviri kullanımı */}
+                <button className='popbtn' onClick={closePopup}>{t('closeButton')}</button> {/* Çeviri kullanımı */}
               </div>
               <div className="pop__right">
                 <img src={popsend} alt="Send" />
@@ -86,10 +88,9 @@ const Cerfitacion = () => {
             <div className="pop__container">
               <div className="pop__left">
                 <h2 className='popcontainertext'>
-                  Bu sertifikat {certificateId} adlı şəxsə məxsusdur.
+                  {message}
                 </h2>
-                <p className='popcontainertext'>{message}</p>
-                <button className='popbtn' onClick={closePopup}>Bağla</button>
+                <button className='popbtn' onClick={closePopup}>{t('closeButton')}</button> {/* Çeviri kullanımı */}
               </div>
               <div className="pop__right">
                 <img src={popsucses} alt="Success" />
@@ -104,9 +105,8 @@ const Cerfitacion = () => {
             <span className="popup__close" onClick={closePopup}>&times;</span>
             <div className="pop__container">
               <div className="pop__left">
-                <h2 className='popleftext'>Axtardığınız sertifikat mövcud deyil.</h2>
-                <p className='popcontainertext'>{message}</p>
-                <button className='popbtn' onClick={closePopup}>Bağla</button>
+                <h2 className='popleftext'>{t('popupErrorTitle')}</h2> {/* Çeviri kullanımı */}
+                <button className='popbtn' onClick={closePopup}>{t('closeButton')}</button> {/* Çeviri kullanımı */}
               </div>
               <div className="pop__right">
                 <img src={poperorr} alt="Error" />

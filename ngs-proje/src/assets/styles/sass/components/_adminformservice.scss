@@ -1,0 +1,72 @@
+.admin__formservice{
+    background-color: #f0f0f0;
+    margin-top: 12px;
+    .left__bar{
+        background: #fafafa;
+        border-radius: 20px;
+        display: flex;
+        width: 20%;
+    }
+    .formcards{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+      
+    }
+    .inputs_cards{
+        display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    background: #fafafa;
+    border-radius: 20px;
+    padding: 20px;
+    width: 75%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+    gap: 10px;
+    .form__container{
+        .form{
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 30px;
+            .inputsform{
+                border: 1px solid blue;
+                border-radius: 12px;
+                height: 30px;
+                width: 200px;
+            }
+            button{
+                border: 1px solid blue;
+                background-color: cadetblue;
+                width: 170px;
+                border-radius: 12px;
+                padding: 7px;
+                color: white;
+                text-align: center;
+                font-weight: 600;
+            }
+        }
+    }
+    .data__list{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        .data__item{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            .deletsservicesform{
+                border: none;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+    }
+}

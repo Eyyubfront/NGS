@@ -2,18 +2,31 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AdminHeader from "../../components/AdminHeader/AdminHeader";
 import SideBar from "../../components/SideBar/SideBar";
-
+import { FaEdit, FaTrash } from "react-icons/fa"; 
 const AdminTraning = () => {
   const [eventData, setEventData] = useState({
     id: "",
     name: "",
     description: "",
-    date: "", 
-
+    date: "",
+    location: "", // location özelliğini ekledik
   });
 
   const [events, setEvents] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
+
+  useEffect(() => {
+    // Verileri çekmek için GET isteği
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://ngs-794fc9210221.herokuapp.com/api/events");
+        setEvents(response.data);
+      } catch (error) {
+        console.error("Veri çekme hatası:", error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const handleChange = (e) => {
     setEventData({ ...eventData, [e.target.name]: e.target.value });
@@ -31,7 +44,7 @@ const AdminTraning = () => {
         );
         console.log("Response:", response.data);
         setEvents([...events, response.data]);
-        setEventData({ id: "", name: "", description: "", date: "", location: "" });
+        setEventData({ id: "", name: "", description: "", date: "", location: "" }); // location'ı sıfırla
         alert("Etkinlik başarıyla kaydedildi!");
       } catch (error) {
         console.error("Error posting data:", error);
@@ -86,7 +99,7 @@ const AdminTraning = () => {
             <div className="inputdirection">
               <label htmlFor="name">Ad</label>
               <input
-              className="input"
+                className="input"
                 type="text"
                 id="name"
                 name="name"
@@ -97,7 +110,7 @@ const AdminTraning = () => {
             <div className="inputdirection">
               <label htmlFor="description">Təsviri</label>
               <input
-                 className="input"
+                className="input"
                 type="text"
                 id="description"
                 name="description"
@@ -108,7 +121,7 @@ const AdminTraning = () => {
             <div className="inputdirection">
               <label htmlFor="date">Zaman</label>
               <input
-                 className="input"
+                className="input"
                 type="date"
                 id="date"
                 name="date"
@@ -116,17 +129,35 @@ const AdminTraning = () => {
                 onChange={handleChange}
               />
             </div>
-            <button className="creatbtn" type="submit">{isEditing ? "Yadda saxla" : "Yarat"}</button>
+            <div className="inputdirection">
+              <label htmlFor="location">Məkan</label>
+              <input
+                className="input"
+                type="text"
+                id="location"
+                name="location"
+                value={eventData.location}
+                onChange={handleChange}
+              />
+            </div>
+            <button className="creatbtn" type="submit">
+              {isEditing ? "Yadda saxla" : "Yarat"}
+            </button>
           </form>
           <h2>Bütün məlumatlar</h2>
-          <ul>
+          <ul className="admintraningsdata">
             {events.map((event, index) => (
-              <li key={index}>
-                <strong>Ad:</strong> {event.name} <br />
-                <strong>Təsviri:</strong> {event.description} <br />
-                <strong>Zaman:</strong> {event.date} <br />
-                <button onClick={() => handleEdit(event)}>Güncəllə</button>
-                <button onClick={() => handleDelete(event.id)}>Sil</button>
+              <li className="traningsadmindata" key={index}>
+                <strong>Ad:</strong> {event.name}, <br />
+                <strong>Təsviri:</strong> {event.description}, <br />
+                <strong>Zaman:</strong> {event.date}, <br />
+                <strong>Məkan:</strong> {event.location} <br />
+                <button className="editsbtn" onClick={() => handleEdit(event)}>
+                  <FaEdit  />
+                </button>
+                <button className="trashbtn" onClick={() => handleDelete(event.id)}>
+                  <FaTrash /> 
+                </button>
               </li>
             ))}
           </ul>

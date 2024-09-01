@@ -28,57 +28,35 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    .contactkindname{
+        color: #009EE2;
+        font-size: 20px;
+        font-weight: 100;
+    }
+    .contactkinds{
+        color: #565656;
+    }
     .conatct__phone{
         display: flex;
         flex-direction: column;
         gap: 5px;
-        .contactkindname{
-            color: #009EE2;
-            font-size: 20px;
-            font-weight: 100;
-        }
-        .contactkinds{
-            color: #565656;
-        }
+    
     }
     .conatct__mail{
         display: flex;
         flex-direction: column;
         gap: 5px;
-        .contactkindname{
-            color: #009EE2;
-            font-size: 20px;
-            font-weight: 100;
-        }
-        .contactkinds{
-            color: #565656;
-        }
+        
     }
     .conatct__watch{
         display: flex;
         flex-direction: column;
         gap: 5px;
-        .contactkindname{
-            color: #009EE2;
-            font-size: 20px;
-            font-weight: 100;
-        }
-        .contactkinds{
-            color: #565656;
-        }
     }
     .conatct__location{
         display: flex;
         flex-direction: column;
         gap: 5px;
-        .contactkindname{
-            color: #009EE2;
-            font-size: 20px;
-            font-weight: 100;
-        }
-        .contactkinds{
-            color: #565656;
-        }
     }
 }
     .contact__right{
