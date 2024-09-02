@@ -1,26 +1,39 @@
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 #register {
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100%;
-  background: rgba(35, 35, 35, 0.4);
+  background: #a9c3c3;
   z-index: 5;
   display: flex;
   justify-content: center;
 
   .register__box {
-    width: 400px;
     background-color: #fafafa;
     display: flex;
     flex-direction: column;
     padding: 32px 16px;
-    height: 400px;
     justify-content: center;
     text-align: center;
-
-    .exit__btn {
+    position: relative;
+    height: 70%;
+    margin-top: 4%;
+    .acountwithpage {
       display: flex;
-      justify-content: flex-end;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
     }
 
     h3 {
@@ -32,9 +45,7 @@
     }
 
     .register__p {
-      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
       font-size: 20px;
-      font-weight: 500;
       margin: 10px 0 20px 0;
     }
 
@@ -47,6 +58,22 @@
       font-weight: 400;
       margin: 10px 0;
       width: 85%;
+    }
+
+    .password-container {
+      position: relative;
+
+      .password-toggle {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #009ee2;
+        font-size: 24px;
+      }
     }
 
     button {
@@ -63,60 +90,35 @@
   }
 }
 
-.succes {
+.success-bar {
   position: fixed;
   inset: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(35, 35, 35, 0.4);
-  z-index: 5;
+  height: 60px;
+  background-color: transparent;
+  color: white;
   display: flex;
+  align-items: center;
   justify-content: center;
+  z-index: 999;
+  opacity: 1;
+  overflow: hidden;
 
-  .success__box {
-    width: 400px;
-    background-color: #fafafa;
-    display: flex;
-    flex-direction: column;
-    padding: 32px 16px;
-    height: auto;
-    justify-content: space-evenly;
-    text-align: center;
-    align-items: center;
+  .success-bar-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: rgb(61, 230, 61);
+    animation: fillBar 3s forwards; /* Animasyon süresi ve yönü */
+  }
 
-    img {
-      width: 288px;
-      margin: 10px 0 30px 0;
-    }
-
-    h3 {
-      font-family: Inter;
-      font-size: 40px;
-      font-weight: 700;
-      color: #009ee2;
-    }
-
-    p {
-      font-family: Inter;
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 28px;
-      color: #565656;
-    }
-
-    .exit__btn {
-      button {
-        padding: 12px 48px 12px 48px;
-        border-radius: 24px;
-        background-color: #009ee2;
-        border: 0;
-        cursor: pointer;
-        color: #fff;
-        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 24.2px;
-      }
-    }
+  p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: white;
+    font-weight: bold;
   }
 }

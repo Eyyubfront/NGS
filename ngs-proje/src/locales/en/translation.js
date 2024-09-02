@@ -47,7 +47,13 @@ const TRANSLATIONS_EN = {
   "send": "Send",
   "TrainingTitle": "Trainings, Events and Announcements",
   "TrainingDescription": "To stay informed about our trainings and participate in our events, visit the page. You can register and join us to become a part of our team.",
-  "MoreDetails": "More Details"
+  "MoreDetails": "More Details",
+  "password":"Password",
+  'nameprofil':"User Name",
+  "save":"Save",
+  "logout":"Logout",
+  'areYouSureLogout':"are You Sure Logout",
+  'cancel':"Cansel"
 };
 
 export default TRANSLATIONS_EN;

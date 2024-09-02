@@ -47,7 +47,13 @@ const TRANSLATIONS_AZ = {
   "send": "Göndər",
   "TrainingTitle": "Təlimlər, tədbir və elanlar",
   "TrainingDescription": "Təlimlərimizdən xəbərdar olmaq, tədbirlərimizdə iştirak etmək üçün səhifəyə keçid edin. Qeydiyyatdan keçərək bizə qoşula və komandamızın bir parçasına çevrilə bilərsiniz.",
-  "MoreDetails": "Ətraflı"
+  "MoreDetails": "Ətraflı",
+  "password":"Parol",
+  'nameprofil':"İstifadəçi adı",
+  "save":"Yadda saxla",
+  "logout":"Çıxış",
+  'areYouSureLogout':"Çıxışa əminsən?",
+  'cancel':"Xeyr"
 };
 
 export default TRANSLATIONS_AZ;

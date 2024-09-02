@@ -1,38 +1,47 @@
-.admin__news{
-    .content__tab{
-        
-        .right__content{
+.admin__news {
+    .content__tab {
+
+        .right__content {
             display: flex;
-            align-items: self-start;
             flex-direction: column;
             background: #fafafa;
             border-radius: 20px;
-            padding: 20px ;
+            padding: 20px;
             width: 75%;
             font-family: Arial, sans-serif;
             overflow-x: hidden;
             overflow-y: scroll;
             height: auto;
             gap: 10px;
-            .allinpts{
-               align-items: center;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-gap: 15px;
-                .inputdirection{
+
+            .allinpts {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                width: 30%;
+
+                .inputdirection {
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     gap: 15px;
-                    align-items: center;
-                    .input{
-                        border: 1px solid blue;
-                        border-radius: 12px;
-                      height: 30px;
-                        width: 200px;
+                    align-items: baseline;
+
+                    label {
+                        margin-bottom: 5px;
+                        font-weight: bold;
+                        color: #333;
+                    }
+
+                    .input {
+                        width: 82%;
+                        padding: 9px;
+                        border: 1px solid #ced4da;
+                        border-radius: 4px;
+                        font-size: 16px;
                     }
                 }
-                .creatbtn{
+
+                .creatbtn {
                     border: 1px solid blue;
                     background-color: cadetblue;
                     width: 170px;
@@ -41,24 +50,33 @@ gap: 15px;
                     color: white;
                     text-align: center;
                     font-weight: 600;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #0056b3;
+                    }
                 }
             }
-            .admintraningsdata{
+
+            .admintraningsdata {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-                .traningsadmindata{
+
+                .traningsadmindata {
                     display: flex;
                     flex-direction: row;
                     gap: 10px;
                     flex-wrap: wrap;
                     align-items: center;
-                    .editsbtn{
+
+                    .editsbtn {
                         border: none;
                         font-size: 20px;
                         cursor: pointer;
                     }
-                    .trashbtn{
+
+                    .trashbtn {
                         border: none;
                         font-size: 20px;
                         cursor: pointer;

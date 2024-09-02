@@ -1,0 +1,120 @@
+// variables.scss
+$primary-color: #007bff;
+$secondary-color: #dc3545;
+$border-color: #ccc;
+$box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+.profile-popup {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  border: 1px solid $border-color;
+  padding: 20px;
+  box-shadow: $box-shadow;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+.savelogoutbtn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+    .profile-pic-container{
+      .imgtrash{
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        margin-bottom: 10px;
+        gap: 10px;
+      }
+    }
+
+
+ 
+
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    label {
+      margin-top: 10px;
+      font-family: "Poppins,sans-serif";
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 82%;
+      padding: 9px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .password-field {
+      position: relative;
+
+      input {
+        width: calc(97% - 40px);
+      }
+
+      .password-toggle {
+        position: absolute;
+        right: 35px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .save-btn,
+  .logout-btn {
+    margin-top: 20px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &.save-btn {
+      background-color: $primary-color;
+    }
+
+    &.logout-btn {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger__profile-pic-img {
+    width: 50px; /* Smaller size for mobile */
+border-radius:15px
+  }
+}
+
+/* Optional: Adjusting the position if needed */
+@media (max-width: 768px) {
+  .hamburger__profile-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

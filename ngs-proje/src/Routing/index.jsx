@@ -12,7 +12,6 @@ import Servicesub from "../pages/Servicesub/Servicesub";
 import Servicesubinfo from "../pages/Servicesubinfo/Servicesubinfo";
 import Blog from "../pages/Blog/Blog";
 import SubNews from "../pages/SubNews/SubNews";
-import Register from "../pages/Registers/Register";
 import Admin from "../pages/Admin/Admin";
 import AdminAppeal from "../pages/AdminAppeal/AdminAppeal";
 import AdminNews from "../pages/AdminNews/AdminNews";
@@ -22,10 +21,16 @@ import AdminFormService from "../pages/AdminFormService/AdminFormService";
 import AdminTraning from "../pages/AdminTraning/AdminTraning";
 import AdminBlog from "../pages/AdminBlog/AdminBlog";
 import AdminAbout from "../pages/AdminAbout/AdminAbout";
+import Login from "../pages/Login/index";
+import Register from "../pages/Registerpage/Register";
+import Profil from "../pages/Profil/Profil";
 const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/register" element={<Register/>} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/profil" element={<Profil />} />
       <Route path="/servicesection" element={<Servicesection />} />
       <Route path="/servicesection/:id" element={<Servicesub />} />
       <Route path="/aboutus" element={<AboutUs />} />

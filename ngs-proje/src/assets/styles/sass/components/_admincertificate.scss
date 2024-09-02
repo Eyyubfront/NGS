@@ -1,21 +1,70 @@
-.admin__news{
-    .content__tab{
-        .post-list{
-            .updatecertifacts{
-                margin-top: 20px !important;
-            }
-            form{
-display: flex;
-margin-left: 40px;
-gap: 10px;
-flex-direction: row;
-                .inputnumber{
-                    border: 1px solid blue;
-                    border-radius: 12px;
-                    height: 30px;
-                    width: 200px;
+.admin__news {
+    .content__tab {
+        .post-list {
+            display: flex;
+            align-items: baseline;
+            flex-direction: column;
+            background: #fafafa;
+            border-radius: 20px;
+            padding: 20px;
+            width: 75%;
+            font-family: Arial, sans-serif;
+
+            .certifacktsvalidinput {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 30%;
+
+                .update__group {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 40px;
+                    label {
+                        margin-bottom: 5px;
+                        font-weight: bold;
+                        color: #333;
+                    }
+                    .certifactknumbers {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        width: 90%;
+                        align-items: baseline;
+                    }
+
+                    .inputnumber {
+                        padding: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 14px;
+                        width: 100%;
+                    }
                 }
-                .notebtn{
+
+                .certifaktowners {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: baseline;
+                    gap: 10px;
+
+                    label {
+                        margin-bottom: 5px;
+                        font-weight: bold;
+                        color: #333;
+                    }
+                }
+
+                .inputnumber {
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    width: 85%;
+                }
+
+                .notebtn {
                     border: 1px solid blue;
                     background-color: cadetblue;
                     width: 170px;
@@ -24,30 +73,80 @@ flex-direction: row;
                     color: white;
                     text-align: center;
                     font-weight: 600;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #0056b3;
+                    }
                 }
             }
-            .datacertficate{
-display: flex;
-flex-direction: row;
-align-items: center;
-gap: 10px;
-flex-wrap: wrap;
-padding: 20px;
-.closexbtn{
-   background-color: #009ee2;
-   border: 1px solid #009ee2;
-   padding: 5px;
-   cursor: pointer;
-   color: white;
+
+            .updatecertifacts {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+margin-top: 20px;
+border: 2px solid grey;
+padding: 10px;
+border-radius: 12px;
+
+.updatinowner{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+   input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 90%;
+   }
 }
-                .numberstext{
+                .notebtn {
+                    border: 1px solid blue;
+                    background-color: cadetblue;
+                    width: 170px;
+                    border-radius: 12px;
+                    padding: 7px;
+                    color: white;
+                    text-align: center;
+                    font-weight: 600;
+
+                    &:hover {
+                        background-color: #0056b3;
+                    }
+                }
+            }
+
+            .datacertficate {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+                margin-top: 20px;
+
+                .closexbtn {
+                    background-color: #009ee2;
+                    border: 1px solid #009ee2;
+                    padding: 5px;
+                    cursor: pointer;
+                    color: white;
+                }
+
+                .numberstext {
                     display: flex;
                     flex-direction: row;
                     gap: 10px;
                     align-items: center;
-                    border: 1px solid #009ee2;
-                border-radius: 12px;
-                padding: 10px;
+                    border: 2px solid grey;
+                    border-radius: 12px;
+                    padding: 10px;
                 }
             }
         }

@@ -30,10 +30,12 @@
       display: flex;
       align-items: center;
       width: 35%;
+
       img {
         width: 85px;
         margin-right: 20px;
       }
+
       .search__input {
         padding: 12px 24px;
         border-radius: 40px;
@@ -43,20 +45,24 @@
         color: #fff;
       }
     }
+
     .header__right {
       display: flex;
       align-items: center;
       width: 60%;
       height: 100%;
+
       .header__menu {
         margin: 0;
         padding: 0;
         display: flex;
         gap: 40px;
         justify-content: space-between;
+
         li {
           list-style-type: none; // Kara noktaları kaldır
         }
+
         .link {
           font-size: 20px;
           font-weight: 500;
@@ -67,9 +73,11 @@
           display: flex;
           align-items: center;
           height: 70px;
+
           &::marker {
             display: none; // Liste işaretlerini gizler
           }
+
           .sub__menu {
             display: flex;
             flex-direction: column;
@@ -80,6 +88,7 @@
             display: none;
             height: 300px;
             justify-content: space-around;
+
             li {
               padding: 10px;
 
@@ -93,23 +102,26 @@
                 &:hover {
                   color: #009ee2;
                 }
-  
+
                 &::marker {
                   display: none;
                 }
               }
             }
           }
+
           &:hover {
             color: #009ee2;
           }
         }
+
         .service {
           &:hover .sub__menu {
             display: flex;
           }
         }
       }
+
       select {
         padding: 4px;
         font-size: 20px;
@@ -119,6 +131,7 @@
         transition: 0.6s;
         cursor: pointer;
         margin-left: 14px;
+
         &:hover {
           color: #009ee2;
         }
@@ -126,6 +139,42 @@
 
       .login__btn {
         margin-left: 15px;
+
+        .profile-btn {
+          cursor: pointer;
+
+          .profile-pic {
+            width: 50px !important;
+            height: 50px !important;
+            margin-bottom: 0;
+            border-radius: 10%; // Kenar yuvarlam
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              border-radius: 50%;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            .profile-initial {
+              font-size: 24px;
+              color: #009ee2;
+              font-weight: bold;
+            }
+          }
+
+          .remove-pic-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #f44336; // İkonun rengini kırmızı yapabiliriz
+            font-size: 20px; // İkon boyutu
+            margin-top: 5px; // İkon ve resim arasına boşluk ekle
+          }
+        }
 
         button {
           border: 1px solid #009ee2;
@@ -145,6 +194,53 @@
       }
     }
   }
+/* Genel arka plan bulanıklığı */
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Yarı şeffaf siyah arka plan */
+  z-index: 9998; /* Pop-up'ın altında */
+}
+
+/* Pop-up stili */
+.logout-confirm {
+  position: fixed;
+  top: 50%;
+  border-radius: 12px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 2px solid #007bff; /* Mavi border */
+
+  padding: 30px; /* Padding'i artırdık */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Gölgeyi biraz daha belirgin yaptık */
+  z-index: 9999; /* Pop-up'ın üstte görünmesini sağlar */
+  text-align: center;
+  width: 400px; /* Box'ın genişliğini artırdık */
+  max-width: 90%; /* Ekran boyutlarına uyum sağlaması için */
+}
+
+
+/* Buton stili */
+.logout-confirm button {
+  background-color: #007bff; /* Mavi arka plan */
+  color: #fff; /* Beyaz yazı rengi */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Buton hover efekti */
+.logout-confirm button:hover {
+  background-color: #0056b3; /* Daha koyu mavi */
+}
 
   .fixed {
     position: fixed;
@@ -156,7 +252,6 @@
       opacity: 0;
       transform: translateY(-20px);
     }
-
     100% {
       opacity: 1;
       transform: translateY(0);
@@ -174,7 +269,6 @@
       transform: translateY(-1000px);
       opacity: 0;
     }
-
     100% {
       -webkit-transform: translateY(0);
       transform: translateY(0);
@@ -195,19 +289,18 @@
     animation: slide-in-top 0.3s ease;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-
+  
     .hamburger__head {
       display: flex;
       width: 90%;
-      justify-content: space-around;
+      justify-content: space-between; /* Space out the elements */
       align-items: center;
-
+      position: relative;
+      
       .hamburger__right {
         display: flex;
-        justify-content: flex-end;
         align-items: center;
-        width: 60%;
-
+  
         .hamburger__search {
           display: none;
           padding: 12px 24px;
@@ -218,35 +311,18 @@
           color: #fafafa;
           animation: bounce-in 0.6s ease;
         }
-
-        @keyframes bounce-in {
-          0% {
-            opacity: 0;
-            transform: scale(0.3);
-          }
-          50% {
-            opacity: 1;
-            transform: scale(1.05);
-          }
-          70% {
-            transform: scale(0.9);
-          }
-          100% {
-            transform: scale(1);
-          }
-        }
-
+  
         button {
           background: transparent;
           border: 0;
-
+  
           .close__icon {
             color: #fafafa;
             width: 40px;
             height: 40px;
             cursor: pointer;
           }
-
+  
           .close__search {
             display: none;
             color: #fafafa;
@@ -254,7 +330,7 @@
             height: 40px;
             cursor: pointer;
           }
-
+  
           .search__icon {
             color: #fafafa;
             width: 30px;
@@ -264,14 +340,14 @@
         }
       }
     }
-
+  
     .hamburger__menu {
       display: flex;
       flex-direction: column;
       width: 100%;
       align-items: center;
       font-size: 28px;
-
+  
       .language {
         padding: 4px;
         font-size: 28px;
@@ -280,22 +356,100 @@
         color: #fafafa;
         transition: 0.6s;
         cursor: pointer;
+  
         &:hover {
           color: #009ee2;
         }
       }
-
+  
       li {
         list-style: none;
         padding: 15px 0;
-
+  
         .hamburger__link {
           text-decoration: none;
           color: #fafafa;
         }
       }
     }
+  
+    .hamburger__login-btn {
+      position: absolute;
+      top: 57px;
+      right: 53px;
+      display: flex;
+      align-items: center;
+  .hamburger__profile-pic{
+      width: 50px !important;
+            height: 50px !important;
+            margin-bottom: 0;
+            border-radius: 10%; // Kenar yuvarlam
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .hamburger__profile-pic-img{
+              width: 60px !important;
+              cursor: pointer;
+              border-radius: 40%;
+            }
+        
   }
+      .profile-btn {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+  
+        .profile-pic {
+          width: 50px !important;
+          height: 50px !important;
+          margin-bottom: 0;
+          border-radius: 10%; /* Rounded corners */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+  
+          .profile-initial {
+            font-size: 24px;
+            color: #009ee2;
+            font-weight: bold;
+          }
+        }
+  
+        .remove-pic-btn {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          color: #f44336; /* Icon color */
+          font-size: 20px; /* Icon size */
+          margin-top: 5px; /* Spacing between icon and picture */
+        }
+      }
+  
+      button {
+        border: 1px solid #009ee2;
+        background-color: #009ee2;
+        color: #fff;
+        text-align: center;
+        border-radius: 15px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+  
+        &:focus {
+          background-color: #027eb4;
+          border-color: #027eb4;
+        }
+      }
+    }
+  }
+  
 }
 
 @keyframes slide-in-top {
@@ -304,7 +458,6 @@
     transform: translateY(-1000px);
     opacity: 0;
   }
-
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);

@@ -113,56 +113,56 @@ const AdminCertificate = () => {
           <SideBar />
         </div>
         <div className="post-list">
-          <form onSubmit={handleAddSubmit}>
-            <input
-              className="inputnumber"
-              type="text"
-              value={number}
-              onChange={(e) => setNumber(e.target.value)}
-              placeholder="Sertifikat nomresi"
-            />
-            <input
-              type="checkbox"
-              checked={valid}
-              onChange={(e) => setValid(e.target.checked)}
-              placeholder="Validdirmi"
-            />
-            <input
-             className="inputnumber"
-              type="text"
-              value={owner}
-              onChange={(e) => setOwner(e.target.value)}
-              placeholder="Sahib"
-            />
-            <button className="notebtn" type="submit">Qeyd ol</button>
+          <form className="certifacktsvalidinput" onSubmit={handleAddSubmit}>
+            <div className="update__group">
+              <div className="certifactknumbers">
+                <label htmlFor="">Number</label>
+                <input
+                  className="inputnumber"
+                  type="text"
+                  value={number}
+                  onChange={(e) => setNumber(e.target.value)}
+                  placeholder="certifackt number"
+                />
+              </div>
+              <input
+                style={{ marginTop: "5%" }}
+                type="checkbox"
+                checked={valid}
+                onChange={(e) => setValid(e.target.checked)}
+                placeholder="Validdirmi"
+              />
+            </div>
+            <div className="certifaktowners">
+              <label htmlFor="">Owner</label>
+              <input
+                className="inputnumber"
+                type="text"
+                value={owner}
+                onChange={(e) => setOwner(e.target.value)}
+                placeholder="certifackt owner"
+              />
+            </div>
+            <button className="notebtn" type="submit">Submit</button>
           </form>
           {isUpdating && (
             <form className="updatecertifacts" onSubmit={handleUpdateSubmit}>
-              <input
-                type="text"
-                value={updateNumber}
-                onChange={(e) => setUpdateNumber(e.target.value)}
-                placeholder="Sertifikat nomresi"
-              />
-              <input
-                type="checkbox"
-                checked={updateValid}
-                onChange={(e) => setUpdateValid(e.target.checked)}
-                placeholder="Validdirmi"
-              />
+              <div className="updatinowner">
+                <label htmlFor="Updatiing_Owner">Update Owner</label>
               <input
                 type="text"
                 value={owner}
                 onChange={(e) => setOwner(e.target.value)}
                 placeholder="Sahib"
               />
+              </div>
               <button className="notebtn" type="submit">Update</button>
             </form>
           )}
           <div className="datacertficate">
             {certificates.map(({ number, valid, owner }) => (  // Owner'ı da ekledik
               <p className="numberstext" key={number}>
-                {number} - {String(valid)} - {owner} 
+                {number} - {String(valid)} - {owner}
                 <button
                   className="closexbtn"
                   onClick={() => handleDelete(number)}

@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../assets/images/ngs.png";
-import profpic from "../../assets/images/adminph/ellipse.png"
 import { Link } from "react-router-dom";
 
 const AdminHeader = () => {
+  const [user, setUser] = useState({ name: '', profilePic: '' });
+
+  useEffect(() => {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+    setUser({
+      name: currentUser.name || 'Default Name',
+      profilePic: currentUser.profilePic || 'path/to/default/profile-pic.png' // varsayılan bir profil fotoğrafı yolu
+    });
+  }, []);
+
   return (
     <div className="admin__header">
-      <div className="logo"><img src={logo} alt="logo" /></div>
+      <div className="logo">
+        <img src={logo} alt="logo" />
+      </div>
       <input type="text" placeholder="Axtar" />
       <div className="user">
-        <span>Emin H.</span>
-        <Link to="/adminprof"><img src={profpic} alt="Profile" /></Link>
+        <span>{user.name}</span>
+        <Link to="/adminprof">
+          <img src={user.profilePic} alt="Profile" />
+        </Link>
       </div>
     </div>
   );

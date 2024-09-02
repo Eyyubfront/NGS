@@ -97,7 +97,7 @@ const AdminTraning = () => {
           <h2>{isEditing ? "Etkinliği Güncelle" : "Yeni məlumat daxil et"}</h2>
           <form className="allinpts" onSubmit={handleSubmit}>
             <div className="inputdirection">
-              <label htmlFor="name">Ad</label>
+              <label htmlFor="name">Name</label>
               <input
                 className="input"
                 type="text"
@@ -108,7 +108,7 @@ const AdminTraning = () => {
               />
             </div>
             <div className="inputdirection">
-              <label htmlFor="description">Təsviri</label>
+              <label htmlFor="description">Description</label>
               <input
                 className="input"
                 type="text"
@@ -119,7 +119,7 @@ const AdminTraning = () => {
               />
             </div>
             <div className="inputdirection">
-              <label htmlFor="date">Zaman</label>
+              <label htmlFor="date">Time</label>
               <input
                 className="input"
                 type="date"
@@ -130,7 +130,7 @@ const AdminTraning = () => {
               />
             </div>
             <div className="inputdirection">
-              <label htmlFor="location">Məkan</label>
+              <label htmlFor="location">Location</label>
               <input
                 className="input"
                 type="text"
@@ -141,7 +141,7 @@ const AdminTraning = () => {
               />
             </div>
             <button className="creatbtn" type="submit">
-              {isEditing ? "Yadda saxla" : "Yarat"}
+              {isEditing ? "Save" : "Submit"}
             </button>
           </form>
           <h2>Bütün məlumatlar</h2>
