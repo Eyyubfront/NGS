@@ -55,11 +55,11 @@ const Profil = ({ onClose, onLogout }) => {
     <div className="profile-popup">
       <button onClick={onClose} className="close-popup">X</button>
       <div className="profile-pic-container">
-        <div className="imgtrash">
+        <div className=" imgtrash">
           <img
             src={profilePic || `https://via.placeholder.com/150?text=${email[0].toUpperCase()}`}
             alt="Profile"
-            className="profile-pic"
+            className="hamburger__profile-pic-img  profile-pic"
           />
           <button onClick={handleRemoveProfilePic} className="remove-pic-btn">
             <FaTrash /> {/* Trash ikonu */}

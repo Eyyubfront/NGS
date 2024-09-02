@@ -190,7 +190,7 @@ const Header = () => {
       <div className="hamburger__profile-btn">
         <div className="hamburger__profile-pic" onClick={toggleProfile}>
           {currentUser.profilePic ? (
-            <img src={currentUser.profilePic} alt="Profile" className="profile-pic-img" />
+            <img src={currentUser.profilePic} alt="Profile" className="hamburger-profils-picimg profile-pic-img" />
           ) : (
             <span className="profile-initial">{getInitials(currentUser.email)}</span>
           )}
