@@ -57,9 +57,7 @@ const Servicesections = ({ showDescription = true }) => {
           {showDescription && (
             <p className='pageservicenamesbutom'>Lorem ipsum dolor sit amet consectetur. Quis odio fermentum lacus porta tristique nunc pretium. Pulvinar montes sed elementum sed viverra integer fermentum.</p>
           )}
-          <Button variant="contained" color="secondary" onClick={deleteAllData}>
-            Tüm Verileri Sil
-          </Button>
+         
           <div className="pageservice__top">
             {data.slice(0, 3).map(service => (
               <Link key={service.id} to={`/servicesection/${service.id}`}>

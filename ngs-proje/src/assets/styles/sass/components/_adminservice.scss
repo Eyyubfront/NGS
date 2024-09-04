@@ -1,13 +1,51 @@
-.admin__news{
-    .content__tab{
-        .post-list{
+.admin__news {
+    .content__tab {
+        .post-list {
             height: auto;
-            .adminservicedata{
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+                gap: 10px;
+
+                button {
+                    border: 1px solid blue;
+                    background-color: cadetblue;
+                    width: 170px;
+                    border-radius: 12px;
+                    padding: 7px;
+                    cursor: pointer;
+                    color: white;
+                    text-align: center;
+                    font-weight: 600;
+
+                    &:hover {
+                        background-color: #0056b3;
+                    }
+                }
+
+                .input__file {
+                    width: 95px;
+                    cursor: pointer;
+                    padding: 0px;
+                }
+
+                input {
+                    width: 40%;
+                    padding: 9px;
+                    border: 1px solid #ced4da;
+                    border-radius: 4px;
+                    font-size: 16px;
+                }
+            }
+
+            .adminservicedata {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 gap: 10px;
-                .adminservices{
+
+                .adminservices {
                     border: 1px solid;
                     margin-left: 20px;
                     border-radius: 12px;
@@ -15,14 +53,17 @@
                     text-align: center;
                     display: flex;
                     flex-direction: column;
-                   margin-top: 20px;
-                    .serviceadminimg{
+                    margin-top: 20px;
+
+                    .serviceadminimg {
                         width: 150px !important;
                     }
-                    .adminservicename{
+
+                    .adminservicename {
                         font-weight: 700;
                     }
-                    .adminservicedescription{
+
+                    .adminservicedescription {
                         font-weight: 700;
                     }
                 }

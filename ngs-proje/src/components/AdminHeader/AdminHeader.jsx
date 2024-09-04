@@ -8,7 +8,7 @@ const AdminHeader = () => {
   useEffect(() => {
     const currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
     setUser({
-      name: currentUser.name || 'Default Name',
+      name: currentUser.name || 'No Name',
       profilePic: currentUser.profilePic || 'path/to/default/profile-pic.png' // varsayılan bir profil fotoğrafı yolu
     });
   }, []);

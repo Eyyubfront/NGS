@@ -126,7 +126,7 @@ const AdminCertificate = () => {
                 />
               </div>
               <input
-                style={{ marginTop: "5%" }}
+                style={{ marginTop: "10%" }}
                 type="checkbox"
                 checked={valid}
                 onChange={(e) => setValid(e.target.checked)}

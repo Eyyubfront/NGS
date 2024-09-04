@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AdminHeader from "../../components/AdminHeader/AdminHeader";
 import SideBar from "../../components/SideBar/SideBar";
 import axios from "axios";
@@ -18,26 +18,50 @@ const AdminService = () => {
   const [service, setService] = useState({
     name: "",
     description: "",
-    file: "",
+    file: null,
   });
+  const [loading, setLoading] = useState(true);
+
+  // Fetch data on component mount
+  useEffect(() => {
+    const storedData = localStorage.getItem('services');
+    if (storedData) {
+      setData(JSON.parse(storedData));
+      setLoading(false); // Set loading to false after loading from local storage
+    }
+
+    // Fetch data from the API and update local storage
+    axios
+      .get("https://ngs-794fc9210221.herokuapp.com/api/services")
+      .then((response) => {
+        setData(response.data);
+        localStorage.setItem('services', JSON.stringify(response.data));
+      })
+      .catch((error) => {
+        console.error("Error fetching services: ", error);
+      })
+      .finally(() => {
+        setLoading(false); // Ensure loading is set to false after the fetch is done
+      });
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("file", service.file);
-
-    const urlWithParams = `https://ngs-794fc9210221.herokuapp.com/api/services?name=${service.name}&description=${service.description}`;
+    formData.append("name", service.name);
+    formData.append("description", service.description);
 
     axios
-      .post(urlWithParams, formData, {
+      .post("https://ngs-794fc9210221.herokuapp.com/api/services", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       })
       .then((response) => {
-        console.log("Service added:", response.data);
-        // Add newly added service to the state
-        setData([...data, response.data]);
+        setData((prevData) => [...prevData, response.data]);
+        setService({ name: "", description: "", file: null }); // Reset form
+        window.alert("Service created successfully!");
       })
       .catch((error) => {
         console.error("Error adding service: ", error);
@@ -48,9 +72,9 @@ const AdminService = () => {
     axios
       .delete(`https://ngs-794fc9210221.herokuapp.com/api/services/${id}`)
       .then(() => {
-        console.log("Service deleted");
-        // Remove deleted service from the state
-        setData(data.filter((item) => item.id !== id));
+        // Remove deleted item from local state
+        setData((prevData) => prevData.filter((item) => item.id !== id));
+        window.alert("Service deleted successfully!");
       })
       .catch((error) => {
         console.error("Error deleting service: ", error);
@@ -59,54 +83,65 @@ const AdminService = () => {
 
   return (
     <>
-    <div className="admin__news">
-      <AdminHeader />
-      <div className="content__tab">
-        <div className="left__bar">
-          <SideBar />
-        </div>
-        <div className="post-list">
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              value={service.name}
-              onChange={(e) => setService({ ...service, name: e.target.value })}
-              placeholder="Ad/Soyad"
-            />
-            <input
-              type="text"
-              value={service.description}
-              onChange={(e) =>
-                setService({ ...service, description: e.target.value })
-              }
-              placeholder="Description"
-            />
-            <input
-              type="file"
-              onChange={(e) => setService({ ...service, file: e.target.files[0] })}
-            />
-            <button type="submit">Qeyd ol</button>
-          </form>
-          <div className="adminservicedata">
-            {data.map((item, index) => (
-              <div className="adminservices" key={index}>
-                {item.icon && (
-                  <img
-                  className="serviceadminimg"
-                    src={`data:image/${getImageType(item.icon)};base64,${item.icon}`}
-                    alt={item.name}
+      <div className="admin__news">
+        <AdminHeader />
+        <div className="content__tab">
+          <div className="left__bar">
+            <SideBar />
+          </div>
+          <div className="post-list">
+            {loading ? (
+              <p>Loading...</p>
+            ) : (
+              <>
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="text"
+                    value={service.name}
+                    onChange={(e) => setService({ ...service, name: e.target.value })}
+                    placeholder="Name"
+                    required
                   />
-                )}
-                <p className="adminservicename">{item.name}</p>
-                <p className="adminservicedescription">{item.description}</p>
-                <button onClick={() => handleDelete(item.id)}>Sil</button>
-              </div>
-            ))}
+                  <input
+                    type="text"
+                    value={service.description}
+                    onChange={(e) => setService({ ...service, description: e.target.value })}
+                    placeholder="Description"
+                    required
+                  />
+                  <input
+                  className="input__file"
+                    type="file"
+                    onChange={(e) => setService({ ...service, file: e.target.files[0] })}
+                    required
+                  />
+                  <button type="submit">Submit</button>
+                </form>
+                <div className="adminservicedata">
+                  {data.length > 0 ? (
+                    data.map((item) => (
+                      <div className="adminservices" key={item.id}>
+                        {item.icon && (
+                          <img
+                            className="serviceadminimg"
+                            src={`data:image/${getImageType(item.icon)};base64,${item.icon}`}
+                            alt={item.name}
+                          />
+                        )}
+                        <p className="adminservicename">{item.name}</p>
+                        <p className="adminservicedescription">{item.description}</p>
+                        <button onClick={() => handleDelete(item.id)}>Delete</button>
+                      </div>
+                    ))
+                  ) : (
+                    <p>No services available</p>
+                  )}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
-    </div>
-
     </>
   );
 };

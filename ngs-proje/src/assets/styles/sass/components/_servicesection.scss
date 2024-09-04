@@ -23,10 +23,9 @@
     .pageservice__bottom {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      flex-wrap: wrap;
       align-items: center;
       gap: 15px;
-
       .pageservice__card {
         border: 1px solid gray;
         border-radius: 10px;

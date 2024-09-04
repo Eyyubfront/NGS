@@ -24,24 +24,26 @@ import AdminAbout from "../pages/AdminAbout/AdminAbout";
 import Login from "../pages/Login/index";
 import Register from "../pages/Registerpage/Register";
 import Profil from "../pages/Profil/Profil";
+import Notfound from "../pages/Notfound/notfound";
+
 const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/register" element={<Register/>} />
+      <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/profil" element={<Profil />} />
+      <Route path="/notfound" element={<Notfound />} />
       <Route path="/servicesection" element={<Servicesection />} />
       <Route path="/servicesection/:id" element={<Servicesub />} />
       <Route path="/aboutus" element={<AboutUs />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/register" element={<Register />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/news" element={<News />} />
       <Route path="/news/:prodId" element={<SubNews />} />
       <Route path="/traningpages" element={<Traningpages />} />
-        <Route path="/traningids/:id" element={<Traningsid />} />
+      <Route path="/traningids/:id" element={<Traningsid />} />
       <Route path="/servicessub/:id" element={<Servicesubinfo />} />
       <Route path="/adminprof" element={<Admin />} />
       <Route path="/appeal" element={<AdminAppeal />} />
@@ -51,7 +53,8 @@ const Routing = () => {
       <Route path="/adminformservice" element={<AdminFormService />} />
       <Route path="/admintraning" element={<AdminTraning />} />
       <Route path="/adminblog" element={<AdminBlog />} />
-      <Route path="/adminabout" element={<AdminAbout/>} />
+      <Route path="/adminabout" element={<AdminAbout />} />
+      <Route path="*" element={<Notfound />} />
     </Routes>
   );
 };
