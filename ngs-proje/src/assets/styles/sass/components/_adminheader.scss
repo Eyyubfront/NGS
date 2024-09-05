@@ -1,49 +1,120 @@
 .admin__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #fafafa;
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    .line {
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+      margin: 3px 0;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background: #fafafa;
+    padding: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+    .list {
+      ul {
+        li {
+          list-style: none;
+          margin-bottom: 20px;
+          transition: 0.5s;
+
+          &:hover {
+            border-left: 5px solid #009ee2;
+          }
+
+          &:focus {
+            border-left: 5px solid #009ee2;
+          }
+
+          a {
+            text-decoration: none;
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 400;
+            color: #565656;
+            margin-left: 30px;
+            transition: 0.5s;
+
+            &:hover {
+              color: #009ee2;
+            }
+
+            &:focus {
+              color: #009ee2;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    img {
+      width: 100px;
+    }
+  }
+
+  input {
+    padding: 12px 24px 12px 24px;
+    border-radius: 40px;
+    border: 1px solid #565656;
+    width: 300px;
+  }
+
+  .user {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    background-color: #fafafa;
-  
-    .logo {
-  
-      img {
-        width: 100px;
-      }
+
+    span {
+      margin-right: 10px;
+      font-family: Inter;
+      font-size: 20px;
+      font-weight: 500;
+      color: #858585;
     }
-  
-    input {
-      padding: 12px 24px 12px 24px;
-      border-radius: 40px;
-      border: 1px solid #565656;
-      width: 300px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
     }
-  
-    .user {
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .admin__header {
+    justify-content: space-around;
+    .hamburger {
       display: flex;
-      align-items: center;
-  
-      span {
-        margin-right: 10px;
-        font-family: Inter;
-        font-size: 20px;
-        font-weight: 500;
-        color: #858585;
-      }
-  
-      img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-      }
+    }
+
+    .admin__header .logo,
+    .admin__header .user,
+    .admin__header input[type="text"] {
+      display: none;
+    }
+
+    .menu {
+      display: block;
+    }
+
+    input {
+      display: none;
     }
   }
-  
-  @media screen and (max-width: 1000px) {
-    .admin__header {
-  
-      input {
-        display: none;
-      }
-    }
-  }
+}

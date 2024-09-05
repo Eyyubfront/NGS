@@ -28,6 +28,7 @@
 
     .header__left {
       display: flex;
+      position: relative;
       align-items: center;
       width: 35%;
 
@@ -43,6 +44,33 @@
         border: 1px solid rgba(250, 250, 250, 1);
         background: transparent;
         color: #fff;
+      }
+
+      .dropdown {
+        position: absolute;
+        top: 100%; /* Positions dropdown right below the input */
+        left: 0;
+        right: 0;
+        background-color: white;
+        border: 1px solid #ccc;
+        z-index: 1000;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .dropdown__item, .dropdown__subitem {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      
+      .dropdown__item:hover, .dropdown__subitem:hover {
+        background-color: #f0f0f0;
+      }
+      
+      .dropdown__item .link, .dropdown__subitem .sub__link {
+        text-decoration: none;
+        color: black;
       }
     }
 
@@ -79,7 +107,6 @@
           }
 
           .sub__menu {
-            display: flex;
             flex-direction: column;
             position: absolute;
             width: 400px;
