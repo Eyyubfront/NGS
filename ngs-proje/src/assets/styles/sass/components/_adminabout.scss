@@ -138,3 +138,14 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .admin__about {
+    .content__tab {
+      justify-content: center;
+      .left__bar{
+        display: none;
+      }
+    }
+  }
+}
