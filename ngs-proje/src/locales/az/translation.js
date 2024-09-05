@@ -53,7 +53,10 @@ const TRANSLATIONS_AZ = {
   "save":"Yadda saxla",
   "logout":"Çıxış",
   'areYouSureLogout':"Çıxışa əminsən?",
-  'cancel':"Xeyr"
+  'cancel':"Xeyr",
+  "partners":"Tərəfdaşlar",
+  "newsabout":"Burada şirkətimiz haqqında ən son yenilikləri və elanları tapa bilərsiniz. Müştərilərimizə və biznes tərəfdaşlarımıza təqdim etdiyimiz dəyərlər haqqında sizə məlumat verməkdən məmnunuq. Əlavə olaraq dünya təhlükəsizlik sektoru və onun yenilikləri haqqında da məlumat əldə edə, daim xəbərdar qala bilərsiniz.",
+  "projeabout":"NGS - New Generation Safety MMC 2021-ci ildən təhlükəsizlik sektorunda fəaliyyət göstərir. Fəaliyyətə başlayan gündən məqsədlərinə yüksək səviyyədə çatmışdır."
 };
 
 export default TRANSLATIONS_AZ;

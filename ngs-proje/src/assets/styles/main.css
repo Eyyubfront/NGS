@@ -563,8 +563,7 @@
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .container .header .header__right .login__btn .profile-btn .profile-pic .profile-initial {
   font-size: 24px;
@@ -651,10 +650,12 @@
 }
 @keyframes slide-in-bottom {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -783,8 +784,7 @@
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .container .hamburger__container .hamburger__login-btn .profile-btn .profile-pic .profile-initial {
   font-size: 24px;
@@ -816,10 +816,12 @@
 
 @keyframes slide-in-top {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -2481,8 +2483,7 @@
   display: block;
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #banner .swiper .swiper-slide .slide__content {
   position: relative;
@@ -5319,6 +5320,420 @@
   padding: 10px;
 }
 
+@media (max-width: 1200px) {
+  .admin__news .content__tab .post-list {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    background: #fafafa;
+    border-radius: 20px;
+    padding: 20px;
+    width: 75%;
+    font-family: Arial, sans-serif;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group .certifactknumbers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    align-items: baseline;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group .inputnumber {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 160px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .certifaktowners {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .certifaktowners label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .inputnumber {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 80%;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .notebtn {
+    border: 1px solid blue;
+    background-color: cadetblue;
+    width: 170px;
+    border-radius: 12px;
+    padding: 7px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .notebtn:hover {
+    background-color: #0056b3;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .updatinowner {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .updatinowner input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 90%;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .notebtn {
+    border: 1px solid blue;
+    background-color: cadetblue;
+    width: 170px;
+    border-radius: 12px;
+    padding: 7px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .notebtn:hover {
+    background-color: #0056b3;
+  }
+  .admin__news .content__tab .post-list .datacertficate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .admin__news .content__tab .post-list .datacertficate .closexbtn {
+    background-color: #009ee2;
+    border: 1px solid #009ee2;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  .admin__news .content__tab .post-list .datacertficate .numberstext {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .admin__news .content__tab .post-list {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    background: #fafafa;
+    border-radius: 20px;
+    padding: 20px;
+    width: 75%;
+    font-family: Arial, sans-serif;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group .certifactknumbers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    align-items: baseline;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group .inputnumber {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 160px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .certifaktowners {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .certifaktowners label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .inputnumber {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 80%;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .notebtn {
+    border: 1px solid blue;
+    background-color: cadetblue;
+    width: 170px;
+    border-radius: 12px;
+    padding: 7px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .notebtn:hover {
+    background-color: #0056b3;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .updatinowner {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .updatinowner input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 90%;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .notebtn {
+    border: 1px solid blue;
+    background-color: cadetblue;
+    width: 170px;
+    border-radius: 12px;
+    padding: 7px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .notebtn:hover {
+    background-color: #0056b3;
+  }
+  .admin__news .content__tab .post-list .datacertficate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .admin__news .content__tab .post-list .datacertficate .closexbtn {
+    background-color: #009ee2;
+    border: 1px solid #009ee2;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  .admin__news .content__tab .post-list .datacertficate .numberstext {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .admin__news .content__tab .post-list {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    background: #fafafa;
+    border-radius: 20px;
+    padding: 20px;
+    width: 75%;
+    font-family: Arial, sans-serif;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group .certifactknumbers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    align-items: baseline;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .update__group .inputnumber {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 160px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .certifaktowners {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .certifaktowners label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .inputnumber {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 80%;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .notebtn {
+    border: 1px solid blue;
+    background-color: cadetblue;
+    width: 170px;
+    border-radius: 12px;
+    padding: 7px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .admin__news .content__tab .post-list .certifacktsvalidinput .notebtn:hover {
+    background-color: #0056b3;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .updatinowner {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .updatinowner input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 90%;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .notebtn {
+    border: 1px solid blue;
+    background-color: cadetblue;
+    width: 170px;
+    border-radius: 12px;
+    padding: 7px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+  }
+  .admin__news .content__tab .post-list .updatecertifacts .notebtn:hover {
+    background-color: #0056b3;
+  }
+  .admin__news .content__tab .post-list .datacertficate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .admin__news .content__tab .post-list .datacertficate .closexbtn {
+    background-color: #009ee2;
+    border: 1px solid #009ee2;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  .admin__news .content__tab .post-list .datacertficate .numberstext {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 10px;
+  }
+}
 .admin__news .content__tab .post-list {
   height: auto;
 }
@@ -5740,4 +6155,4 @@
   .admin__formservice .formcards {
     justify-content: center;
   }
-}/*# sourceMappingURL=main.css.map */
+}

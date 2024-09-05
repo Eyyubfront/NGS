@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Button } from '@mui/material';
 import axios from 'axios';
-
+import { useTranslation } from 'react-i18next';
 const getImageType = (base64String) => {
   if (!base64String) return null;
 
@@ -17,6 +17,7 @@ const dataUrl = "https://ngs-794fc9210221.herokuapp.com/api/services";
 const deleteUrl = "https://ngs-794fc9210221.herokuapp.com/api/services/";
 
 const Servicesections = ({ showDescription = true }) => {
+  const { t } = useTranslation();
   const [data, setData] = useState([]);
 
   const fetchData = () => {
@@ -53,7 +54,7 @@ const Servicesections = ({ showDescription = true }) => {
     <Container>
       <div id='servicesection'>
         <div className="pageservice__container">
-          <p className='pageservicenames'>Xidmətlərimiz</p>
+          <p className='pageservicenames'>{t('services')}</p>
           {showDescription && (
             <p className='pageservicenamesbutom'>Lorem ipsum dolor sit amet consectetur. Quis odio fermentum lacus porta tristique nunc pretium. Pulvinar montes sed elementum sed viverra integer fermentum.</p>
           )}

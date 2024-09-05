@@ -16,12 +16,28 @@ const Register = () => {
 
   const navigate = useNavigate();
 
-const Registersucses=(res)=>{
-console.log(res);
-}
-const Registerfailed=(res)=>{
-  console.log(res);
-  }
+  const handleGoogleLoginSuccess = (response) => {
+    console.log('Google Login Success:', response);
+    const profile = response.profileObj;
+    if (profile) {
+      localStorage.setItem('currentUser', JSON.stringify(profile));
+      navigate("/");
+    } else {
+      setErrorMessage("Google ile giriş yapılamadı.");
+    }
+  };
+  
+  const handleGoogleLoginFailure = (error) => {
+    console.log('Google Login Error:', error);
+    if (error.error === 'popup_closed_by_user') {
+      setErrorMessage("Giriş penceresi kapatıldı. Lütfen tekrar deneyin.");
+    } else {
+      setErrorMessage("Google ile giriş başarısız oldu. Lütfen tekrar deneyin.");
+    }
+  };
+  
+  
+
   const validateEmail = (email) => {
     // E-posta formatını doğrulama ve sık kullanılan basit e-posta adreslerini engelleme
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -77,21 +93,6 @@ const Registerfailed=(res)=>{
     setEmailErrorMessage("");
     setPasswordErrorMessage("");
     setIsRegistered(true);
-  };
-
-  const handleLoginRedirect = () => {
-    navigate("/login");
-  };
-
-  const responseGoogle = (response) => {
-    if (response.profileObj) {
-      // Kullanıcı bilgilerini başarılı bir şekilde aldıysak
-      console.log(response);
-      // Google ile başarılı bir giriş sonrası Home sayfasına yönlendir
-      navigate("/home");
-    } else {
-      setErrorMessage("Google ile giriş yapılamadı.");
-    }
   };
 
   useEffect(() => {
@@ -164,13 +165,14 @@ const Registerfailed=(res)=>{
             {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
           </form>
           <div className="acountwithpage">
-            <GoogleLogin
-              clientId="372295507246-2qpice79jshjj4lt31a5ufanmkbtknku.apps.googleusercontent.com"
-              buttonText="Google ile Giriş Yap"
-              onSuccess={Registersucses}
-              onFailure={Registerfailed}
-              cookiePolicy={'single_host_origin'}
-            />
+          <GoogleLogin
+  clientId="618729088572-qt1u18e9njh3aqdqm356mvhb8m5u3h9l.apps.googleusercontent.com"
+  buttonText="Google ile Giriş Yap"
+  onSuccess={handleGoogleLoginSuccess}
+  onError={handleGoogleLoginFailure}
+  cookiePolicy={'single_host_origin'}
+/>
+
             <p style={{ marginTop: "10px" }}>
               Hesabınız var mı? <a href="/login" style={{ color: "#009ee2" }}>Login</a>
             </p>

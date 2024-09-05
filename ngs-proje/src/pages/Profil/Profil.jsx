@@ -32,11 +32,7 @@ const Profil = ({ onClose, onLogout }) => {
     const updatedUser = { name, email, password, profilePic };
     localStorage.setItem('currentUser', JSON.stringify(updatedUser));
     setUser(updatedUser); // Kullanıcıyı güncelle
-    
-    // Sayfayı yenilemek için
-    window.location.reload(); // Sayfayı yenile
   };
-  
 
   const handleFileChange = (e) => {
     if (e.target.files.length > 0) {

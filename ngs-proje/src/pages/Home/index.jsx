@@ -10,8 +10,9 @@ import Training from "../../components/Training/Training";
 import HomeServis from "../../components/Homeservice/Homeservice";
 import Servicesections from '../../components/Servicesections/Servicesections';
 import { Link } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 const Home = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     const handleResize = () => {
         const homenewsText = document.querySelector('.homenews__text');
@@ -34,14 +35,14 @@ const Home = () => {
           <div id="information">
             <div className="information__container">
               <div className="information__left">
-                <div className="information__top">Haqqımızda</div>
+                <div className="information__top">{t('aboutUs')}</div>
                 <div className="information__text">
-                NGS - New Generation Safety MMC 2021-ci ildən təhlükəsizlik sektorunda fəaliyyət göstərir. Fəaliyyətə başlayan gündən məqsədlərinə yüksək səviyyədə çatmışdır.
+                {t('projeabout')}
                 </div>
                 <Link className='hrefaboutus' to="/aboutus">
                 
                 <a className="informationbtn" href="">
-                  <div className="information__button">Ətraflı</div>
+                  <div className="information__button">{t('MoreDetails')}</div>
                 </a>
                 </Link>
               </div>
@@ -65,11 +66,12 @@ const Home = () => {
                 <img className="homenewsphoto" src={homenwsphoto} alt="" />
               </div>
               <div className="homenews__right">
-                <div className="homenews__top">Xəbərlər</div>
+                <div className="homenews__top">{t('news')}</div>
                 <div className="homenews__text">
+                {t('newsabout')}
                 </div>
                 <a className="homenewsbtn" href="">
-                  <div className="homenews__button">Ətraflı</div>
+                  <div className="homenews__button">{t('MoreDetails')}</div>
                 </a>
               </div>
             </div>
