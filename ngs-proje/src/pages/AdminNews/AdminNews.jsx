@@ -111,10 +111,6 @@ const handleSubmit = async (e) => {
           <SideBar />
         </div>
         <div className="post-list">
-          <div className="header">
-            <button className="btn">Yazdıqlarınız (4)</button>
-            <button className="btn">Hamısı</button>
-          </div>
           <div className="post__news">
             <form onSubmit={handleSubmit}>
               <div>

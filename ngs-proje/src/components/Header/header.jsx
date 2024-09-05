@@ -172,7 +172,7 @@ const Header = () => {
           <ul className="dropdown">
             {filteredItems.map((item, index) => (
               <li key={index} className="dropdown__item">
-                <Link to={item.link} className="link">
+                <Link to={item.link} className="drop__link">
                   {item.name}
                 </Link>
                 {item.subMenu && item.subMenu.map((subItem, subIndex) => (
