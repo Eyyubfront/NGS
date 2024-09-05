@@ -16,6 +16,12 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+const Registersucses=(res)=>{
+console.log(res);
+}
+const Registerfailed=(res)=>{
+  console.log(res);
+  }
   const validateEmail = (email) => {
     // E-posta formatını doğrulama ve sık kullanılan basit e-posta adreslerini engelleme
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -159,10 +165,10 @@ const Register = () => {
           </form>
           <div className="acountwithpage">
             <GoogleLogin
-              clientId="YOUR_GOOGLE_CLIENT_ID"
+              clientId="372295507246-2qpice79jshjj4lt31a5ufanmkbtknku.apps.googleusercontent.com"
               buttonText="Google ile Giriş Yap"
-              onSuccess={responseGoogle}
-              onFailure={responseGoogle}
+              onSuccess={Registersucses}
+              onFailure={Registerfailed}
               cookiePolicy={'single_host_origin'}
             />
             <p style={{ marginTop: "10px" }}>
