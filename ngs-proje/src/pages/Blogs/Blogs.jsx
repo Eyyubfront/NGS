@@ -4,6 +4,7 @@ import BlogComponent from "../../components/BlogComponent/BlogComponent";
 import Cerfitacion from "../../components/Certifaciton/cerfitacion";
 
 const Blogs = () => {
+
   return (
     <>
       <PageContainer>

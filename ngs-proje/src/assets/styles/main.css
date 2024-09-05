@@ -418,6 +418,7 @@
 }
 .container .header .header__left {
   display: flex;
+  position: relative;
   align-items: center;
   width: 35%;
 }
@@ -432,6 +433,29 @@
   border: 1px solid rgb(250, 250, 250);
   background: transparent;
   color: #fff;
+}
+.container .header .header__left .dropdown {
+  position: absolute;
+  top: 100%; /* Positions dropdown right below the input */
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container .header .header__left .dropdown__item, .container .header .header__left .dropdown__subitem {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.container .header .header__left .dropdown__item:hover, .container .header .header__left .dropdown__subitem:hover {
+  background-color: #f0f0f0;
+}
+.container .header .header__left .dropdown__item .link, .container .header .header__left .dropdown__subitem .sub__link {
+  text-decoration: none;
+  color: black;
 }
 .container .header .header__right {
   display: flex;
@@ -464,7 +488,6 @@
   display: none;
 }
 .container .header .header__right .header__menu .link .sub__menu {
-  display: flex;
   flex-direction: column;
   position: absolute;
   width: 400px;
@@ -528,7 +551,8 @@
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container .header .header__right .login__btn .profile-btn .profile-pic .profile-initial {
   font-size: 24px;
@@ -615,12 +639,10 @@
 }
 @keyframes slide-in-bottom {
   0% {
-    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -749,7 +771,8 @@
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container .hamburger__container .hamburger__login-btn .profile-btn .profile-pic .profile-initial {
   font-size: 24px;
@@ -781,12 +804,10 @@
 
 @keyframes slide-in-top {
   0% {
-    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -1997,6 +2018,7 @@
   border-radius: 32px;
 }
 #blog__comp .imgs__container .position__elements .element__content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -2447,7 +2469,8 @@
   display: block;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #banner .swiper .swiper-slide .slide__content {
   position: relative;
@@ -4398,6 +4421,51 @@
   padding: 20px 0;
   background-color: #fafafa;
 }
+.admin__header .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.admin__header .hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 3px 0;
+}
+.admin__header .menu {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  background: #fafafa;
+  padding: 20px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+.admin__header .menu .list ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+.admin__header .menu .list ul li:hover {
+  border-left: 5px solid #009ee2;
+}
+.admin__header .menu .list ul li:focus {
+  border-left: 5px solid #009ee2;
+}
+.admin__header .menu .list ul li a {
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 400;
+  color: #565656;
+  margin-left: 30px;
+  transition: 0.5s;
+}
+.admin__header .menu .list ul li a:hover {
+  color: #009ee2;
+}
+.admin__header .menu .list ul li a:focus {
+  color: #009ee2;
+}
 .admin__header .logo img {
   width: 100px;
 }
@@ -4425,6 +4493,20 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .admin__header {
+    justify-content: space-around;
+  }
+  .admin__header .hamburger {
+    display: flex;
+  }
+  .admin__header .admin__header .logo,
+  .admin__header .admin__header .user,
+  .admin__header .admin__header input[type=text] {
+    display: none;
+  }
+  .admin__header .menu {
+    display: block;
+  }
   .admin__header input {
     display: none;
   }
@@ -4782,7 +4864,8 @@
 .admin__news .content__tab .post-list .posts .post .post-image {
   width: 100px;
   height: 100px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
   margin-right: 15px;
 }
@@ -5441,4 +5524,4 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
-}
+}/*# sourceMappingURL=main.css.map */

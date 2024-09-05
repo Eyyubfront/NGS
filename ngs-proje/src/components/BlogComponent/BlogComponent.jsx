@@ -1,63 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import firstImg from "../../assets/images/homephoto/pageservicetwo.png";
 import secondImg from "../../assets/images/homephoto/pageserviceone.png";
 import thirdImg from "../../assets/images/homephoto/pageservicesix.png";
 import fourthImg from "../../assets/images/homephoto/pageservicethree.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const BlogComponent = () => {
-  const blogData = [
-    {
-      id: 1,
-      imgSrc: firstImg,
-      text: "Lorem ipsum dolor sit amet consectetur.",
-    },
-    {
-      id: 2,
-      imgSrc: secondImg,
-      text: "Lorem ipsum dolor sit amet consectetur.",
-    },
-    {
-      id: 3,
-      imgSrc: thirdImg,
-      text: "Lorem ipsum dolor sit amet consectetur.",
-    },
-    {
-      id: 4,
-      imgSrc: fourthImg,
-      text: "Lorem ipsum dolor sit amet consectetur.",
-    },
-    {
-      id: 1,
-      imgSrc: firstImg,
-      text: "Lorem ipsum dolor sit amet consectetur.",
-    },
-    {
-      id: 2,
-      imgSrc: secondImg,
-      text: "Lorem ipsum dolor sit amet consectetur.",
-    },
-    {
-      id: 3,
-      imgSrc: thirdImg,
-      text: "Lorem ipsum dolor sit amet consectetur.",
-    },
-    {
-      id: 4,
-      imgSrc: fourthImg,
-      text: "Lorem ipsum dolor sit amet consectetur.",
-    },
-  ];
+  const [blogPosts, setBlogPosts] = useState([]);
+
+   // Fetch blog posts on component mount
+   useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await axios.get(
+          "https://ngs-794fc9210221.herokuapp.com/api/blogs"
+        );
+        setBlogPosts(response.data);
+        console.log("Blog posts fetched:", response.data);
+      } catch (error) {
+        console.error("Error fetching blog posts", error);
+      }
+    };
+
+    fetchBlogPosts();
+  }, []);
 
   return (
     <>
       <div id="blog__comp">
-        {blogData.map((item) => (
+        {blogPosts.map((item) => (
           <div className="imgs__container" key={item.id}>
             <div className="position__elements">
-              <img src={item.imgSrc} alt="img" />
+              <img src={firstImg} alt="img" />
               <div className="element__content">
-                <span className="element__span">{item.text}</span>
+                <span className="element__span">{item.title}</span>
                 <div className="element__btn">
                   <Link to="/blog">
                     <button>Oxu</button>

@@ -101,6 +101,56 @@ const Header = () => {
     return email.split(' ')[0].charAt(0).toUpperCase();
   };
 
+
+  // State to manage search input, filtered items, and dropdown visibility
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredItems, setFilteredItems] = useState([]);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
+  const menuItems = [
+    { name: t('aboutUs'), link: "/AboutUs" },
+    { name: t('services'), link: "/servicesection", subMenu: [
+      { name: t('documentPreparation'), link: "/" },
+      { name: t('systemInstallation'), link: "/" },
+      { name: t('audit'), link: "/" },
+      { name: t('repairConstruction'), link: "/" },
+      { name: t('cleaning'), link: "/" },
+      { name: t('otherServices'), link: "/" },
+    ]},
+    { name: t('news'), link: "/news" },
+    { name: t('blog'), link: "/blogs" },
+    { name: t('trainings'), link: "/traningpages" },
+    { name: t('contact'), link: "/contact" },
+  ];
+
+  // Handle search input change
+  const handleSearch = (e) => {
+    const term = e.target.value.toLowerCase();
+    setSearchTerm(term);
+
+    if (term) {
+      // Filter menu items based on search term
+      const filtered = menuItems.filter(item => {
+        if (item.subMenu) {
+          return item.subMenu.some(subItem => subItem.name.toLowerCase().includes(term)) || item.name.toLowerCase().includes(term);
+        }
+        return item.name.toLowerCase().includes(term);
+      });
+      setFilteredItems(filtered);
+      setDropdownVisible(true);
+    } else {
+      setDropdownVisible(false);
+    }
+  };
+
+  // Close dropdown when a user clicks outside of it
+  const handleBlur = () => {
+    setTimeout(() => {
+      setDropdownVisible(false);
+    }, 200); // Timeout to allow click event on dropdown items
+  };
+
+
   return (
     <Container>
       <div ref={headerScroll} className={navbar ? "header fixed" : "header"}>
@@ -108,7 +158,34 @@ const Header = () => {
           <Link to="/">
             <img src={logo} alt="logo" />
           </Link>
-          <input className="search__input" type="search" placeholder={t('searchPlaceholder')} ref={searchInp} />
+           <input
+          className="search__input"
+          type="search"
+          placeholder={t('searchPlaceholder')}
+          ref={searchInp}
+          value={searchTerm}
+          onChange={handleSearch}
+          onBlur={handleBlur}
+          onFocus={() => searchTerm && setDropdownVisible(true)}
+        />
+        {dropdownVisible && (
+          <ul className="dropdown">
+            {filteredItems.map((item, index) => (
+              <li key={index} className="dropdown__item">
+                <Link to={item.link} className="link">
+                  {item.name}
+                </Link>
+                {item.subMenu && item.subMenu.map((subItem, subIndex) => (
+                  <li key={subIndex} className="dropdown__subitem">
+                    <Link to={subItem.link} className="sub__link">
+                      {subItem.name}
+                    </Link>
+                  </li>
+                ))}
+              </li>
+            ))}
+          </ul>
+        )}
         </div>
         <div className="header__right">
           <ul className="header__menu">
