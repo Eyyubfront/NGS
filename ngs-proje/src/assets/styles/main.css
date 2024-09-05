@@ -551,8 +551,7 @@
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .container .header .header__right .login__btn .profile-btn .profile-pic .profile-initial {
   font-size: 24px;
@@ -639,10 +638,12 @@
 }
 @keyframes slide-in-bottom {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -771,8 +772,7 @@
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .container .hamburger__container .hamburger__login-btn .profile-btn .profile-pic .profile-initial {
   font-size: 24px;
@@ -804,10 +804,12 @@
 
 @keyframes slide-in-top {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -2469,8 +2471,7 @@
   display: block;
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #banner .swiper .swiper-slide .slide__content {
   position: relative;
@@ -4864,8 +4865,7 @@
 .admin__news .content__tab .post-list .posts .post .post-image {
   width: 100px;
   height: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
   margin-right: 15px;
 }
@@ -5368,6 +5368,201 @@
   font-weight: 700;
 }
 
+@media (max-width: 1200px) {
+  .admin__news .content__tab {
+    height: 83vh;
+  }
+  .admin__news .content__tab .post-list {
+    height: auto;
+  }
+  .admin__news .content__tab .post-list form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 10px;
+  }
+  .admin__news .content__tab .post-list form button {
+    border: 1px solid blue;
+    background-color: cadetblue;
+    width: 170px;
+    border-radius: 12px;
+    padding: 7px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+  }
+  .admin__news .content__tab .post-list form button:hover {
+    background-color: #0056b3;
+  }
+  .admin__news .content__tab .post-list form .input__file {
+    width: 95px;
+    cursor: pointer;
+    padding: 0px;
+  }
+  .admin__news .content__tab .post-list form input {
+    width: 40%;
+    padding: 9px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .admin__news .content__tab .post-list .adminservicedata {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices {
+    border: 1px solid;
+    margin-left: 20px;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices .serviceadminimg {
+    width: 150px !important;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices .adminservicename {
+    font-weight: 700;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices .adminservicedescription {
+    font-weight: 700;
+  }
+}
+@media (max-width: 768px) {
+  .admin__news .content__tab {
+    height: 83vh;
+  }
+  .admin__news .content__tab .post-list {
+    height: auto;
+  }
+  .admin__news .content__tab .post-list form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 10px;
+  }
+  .admin__news .content__tab .post-list form button {
+    border: 1px solid blue;
+    background-color: cadetblue;
+    width: 170px;
+    border-radius: 12px;
+    padding: 7px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+  }
+  .admin__news .content__tab .post-list form button:hover {
+    background-color: #0056b3;
+  }
+  .admin__news .content__tab .post-list form .input__file {
+    width: 95px;
+    cursor: pointer;
+    padding: 0px;
+  }
+  .admin__news .content__tab .post-list form input {
+    width: 40%;
+    padding: 9px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .admin__news .content__tab .post-list .adminservicedata {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices {
+    border: 1px solid;
+    margin-left: 20px;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices .serviceadminimg {
+    width: 150px !important;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices .adminservicename {
+    font-weight: 700;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices .adminservicedescription {
+    font-weight: 700;
+  }
+}
+@media (max-width: 576px) {
+  .admin__news .content__tab {
+    height: 83vh;
+  }
+  .admin__news .content__tab .post-list {
+    height: auto;
+  }
+  .admin__news .content__tab .post-list form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 10px;
+  }
+  .admin__news .content__tab .post-list form button {
+    border: 1px solid blue;
+    background-color: cadetblue;
+    width: 170px;
+    border-radius: 12px;
+    padding: 7px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+  }
+  .admin__news .content__tab .post-list form button:hover {
+    background-color: #0056b3;
+  }
+  .admin__news .content__tab .post-list form .input__file {
+    width: 95px;
+    cursor: pointer;
+    padding: 0px;
+  }
+  .admin__news .content__tab .post-list form input {
+    width: 40%;
+    padding: 9px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .admin__news .content__tab .post-list .adminservicedata {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices {
+    border: 1px solid;
+    margin-left: 20px;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices .serviceadminimg {
+    width: 150px !important;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices .adminservicename {
+    font-weight: 700;
+  }
+  .admin__news .content__tab .post-list .adminservicedata .adminservices .adminservicedescription {
+    font-weight: 700;
+  }
+}
 .admin__news .content__tab .right__content {
   display: flex;
   flex-direction: column;
@@ -5524,4 +5719,4 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
-}/*# sourceMappingURL=main.css.map */
+}
