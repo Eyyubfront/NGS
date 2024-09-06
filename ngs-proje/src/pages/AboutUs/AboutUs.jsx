@@ -7,7 +7,7 @@ import HomeServis from "../../components/Homeservice/Homeservice";
 import axios from "axios";
 
 const AboutUs = () => {
-
+  
   const [abouts, setAbouts] = useState([]);
 
   // Fetch blog posts on component mount
