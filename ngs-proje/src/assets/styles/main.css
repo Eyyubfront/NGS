@@ -2842,6 +2842,21 @@
   width: 75%;
   align-items: center;
 }
+.logins .login__box form .password-container {
+  width: 100%;
+  position: relative;
+}
+.logins .login__box form .password-container .password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #009ee2;
+  font-size: 24px;
+}
 .logins .login__box h3 {
   font-family: Inter, sans-serif;
   font-size: 40px;

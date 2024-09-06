@@ -13,7 +13,6 @@ const Partners = () => {
   return (
     <div id="partners">
       <h2>{t('partners')}</h2>
-
       <Swiper
         slidesPerView={6}
         spaceBetween={30}
