@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import firstImg from "../../assets/images/homephoto/pageservicetwo.png";
-import secondImg from "../../assets/images/homephoto/pageserviceone.png";
-import thirdImg from "../../assets/images/homephoto/pageservicesix.png";
-import fourthImg from "../../assets/images/homephoto/pageservicethree.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 const BlogComponent = () => {
   const [blogPosts, setBlogPosts] = useState([]);
 
-   // Fetch blog posts on component mount
-   useEffect(() => {
+  // Fetch blog posts on component mount
+  useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
         const response = await axios.get(
@@ -36,7 +33,7 @@ const BlogComponent = () => {
               <div className="element__content">
                 <span className="element__span">{item.title}</span>
                 <div className="element__btn">
-                  <Link to="/blog">
+                  <Link to={`/blog/${item.id}`}>
                     <button>Oxu</button>
                   </Link>
                 </div>

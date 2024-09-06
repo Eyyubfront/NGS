@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PageContainer from "../../components/PageContainer";
 import firstimg from "../../assets/images/aboutphoto/first.png";
 import secondimg from "../../assets/images/aboutphoto/second.png";
 import Training from "../../components/Training/Training";
 import HomeServis from "../../components/Homeservice/Homeservice";
+import axios from "axios";
 
 const AboutUs = () => {
+
+  const [abouts, setAbouts] = useState([]);
+
+  // Fetch blog posts on component mount
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://ngs-794fc9210221.herokuapp.com/api/about"
+        );
+        setAbouts(response.data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+        setError("There was a problem fetching the data. Please try again.");
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <PageContainer>
       <div id="aboutUs">
