@@ -7,8 +7,10 @@ import thi from "../../assets/images/news/three.png";
 import Cerfitacion from "../../components/Certifaciton/cerfitacion";
 import { useParams } from "react-router";
 import axios from "axios";
+import { useTranslation } from 'react-i18next';
 
 const SubNews = () => {
+  const { t } = useTranslation();
   
   const { newsId } = useParams();
   const [news, setNews] = useState(null);
@@ -28,7 +30,7 @@ useEffect(() => {
   fetchNewsPost();
 }, [newsId]);
 
-if (!news) return <div>Loading...</div>;
+if (!news) return <div>{t('loading')}</div>;
 
   console.log(news);
   return (
@@ -36,7 +38,7 @@ if (!news) return <div>Loading...</div>;
       <PageContainer>
         <div id="subNews">
           <div className="subNews__head">
-            <h1>Təhlükəsiz mühitin əsasları nələrdir ?</h1>
+            <h1>{t('danger')}</h1>
             <p>
             {news.title}
             </p>
@@ -50,26 +52,26 @@ if (!news) return <div>Loading...</div>;
 
           <div className="subNews__body">
             <div>
-              <h1>Təkliflər</h1>
+              <h1>{t('offers')}</h1>
             </div>
 
             <div className="box__container">
               <div className="news__box">
                 <img src={fir} alt="img" />
                 <div className="box__content">
-                  <h2>Təhlükəsiz mühitin əsasları nələrdir ?</h2>
+                  <h2>{t('danger')}</h2>
                 </div>
               </div>
               <div className="news__box">
                 <img src={sec} alt="img" />
                 <div className="box__content">
-                  <h2>Təhlükəsiz mühitin əsasları nələrdir ?</h2>
+                  <h2>{t('danger')}</h2>
                 </div>
               </div>
               <div className="news__box">
                 <img src={thi} alt="img" />
                 <div className="box__content">
-                  <h2>Təhlükəsiz mühitin əsasları nələrdir ?</h2>
+                  <h2>{t('danger')}</h2>
                 </div>
               </div>
             </div>

@@ -4,8 +4,10 @@ import Cerfitacion from "../../components/Certifaciton/cerfitacion";
 import fir from "../../assets/images/news/first.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useTranslation } from 'react-i18next';
 
 const News = () => {
+  const { t } = useTranslation();
 
   const [newsPost, setNewsPost] = useState([]);
 
@@ -29,7 +31,7 @@ const News = () => {
     <PageContainer>
       <div id="news">
         <div className="news__head">
-          <h1>Xəbərlər</h1>
+          <h1>{t('news')}</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur. Quis odio fermentum lacus
             porta tristique nunc pretium. Pulvinar montes sed elementum sed

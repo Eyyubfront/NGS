@@ -1,25 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
-import { FaEye, FaEyeSlash, FaTrash } from 'react-icons/fa'; // trash ikonu ekleyelim
+import { FaEye, FaEyeSlash, FaTrash } from 'react-icons/fa';
 
-const Profil = ({ onClose, onLogout }) => {
+const Profile = ({ onClose, onLogout }) => {
   const { t } = useTranslation();
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('currentUser')) || {});
-  const [name, setName] = useState(user.name || '');
-  const [email, setEmail] = useState(user.email || '');
-  const [password, setPassword] = useState(user.password || '');
-  const [profilePic, setProfilePic] = useState(user.profilePic || '');
+  const [user, setUser] = useState({});
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [profilePic, setProfilePic] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    if (currentUser) {
-      setUser(currentUser);
-      setName(currentUser.name || '');
-      setEmail(currentUser.email || '');
-      setPassword(currentUser.password || '');
-      setProfilePic(currentUser.profilePic || '');
-    }
+    const currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+    setUser(currentUser);
+    setName(currentUser.name || '');
+    setEmail(currentUser.email || '');
+    setPassword(currentUser.password || '');
+    setProfilePic(currentUser.profilePic || '');
   }, []);
 
   useEffect(() => {
@@ -32,11 +30,7 @@ const Profil = ({ onClose, onLogout }) => {
     const updatedUser = { name, email, password, profilePic };
     localStorage.setItem('currentUser', JSON.stringify(updatedUser));
     setUser(updatedUser); // Kullanıcıyı güncelle
-    
-    // Sayfayı yenilemek için
-    window.location.reload(); // Sayfayı yenile
   };
-  
 
   const handleFileChange = (e) => {
     if (e.target.files.length > 0) {
@@ -100,4 +94,4 @@ const Profil = ({ onClose, onLogout }) => {
   );
 };
 
-export default Profil;
+export default Profile;

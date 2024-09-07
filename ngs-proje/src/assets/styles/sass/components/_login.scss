@@ -22,6 +22,21 @@
       flex-direction: column !important;
       width: 75%;
       align-items: center;
+      .password-container{
+        width: 100%;
+        position: relative;
+        .password-toggle {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          cursor: pointer;
+          color: #009ee2;
+          font-size: 24px;
+        }
+      }
     }
 
     h3 {

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaTimes } from 'react-icons/fa'; // X butonu için ikon
+import { FaTimes, FaEye, FaEyeSlash } from 'react-icons/fa'; // X butonu ve göz ikonları
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false); // Parola görünürlük durumu
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
@@ -27,7 +28,6 @@ const Login = () => {
     }
   };
   
-
   const handleClose = () => {
     navigate("/"); // Kapatma butonuna tıklandığında anasayfaya yönlendir
   };
@@ -47,13 +47,22 @@ const Login = () => {
             placeholder="Elektron Poçt"
             required
           />
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Parola"
-            required
-          />
+          <div className="password-container">
+            <input
+              type={passwordVisible ? "text" : "password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Parola"
+              required
+            />
+            <button
+              type="button"
+              className="password-toggle"
+              onClick={() => setPasswordVisible(!passwordVisible)}
+            >
+              {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
           <button type="submit">Giriş Yap</button>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
         </form>

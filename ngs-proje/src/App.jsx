@@ -1,11 +1,12 @@
-import Routing from './Routing'
+import React from 'react';
+import Routing from './Routing';
 import "./assets/styles/main.css";
+
 function App() {
   return (
     <>
-<Routing/>
+      <Routing />
     </>
-  )
+  );
 }
-
-export default App
+export default App;

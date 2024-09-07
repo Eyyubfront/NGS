@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { GoogleLogin } from 'react-google-login';
 import { useNavigate } from "react-router-dom";
-import { FaEye, FaEyeSlash } from 'react-icons/fa'; // react-icons'dan göz ikonları
-import { FaTimes } from 'react-icons/fa'; // X butonu için ikon
+import { FaEye, FaEyeSlash, FaTimes } from 'react-icons/fa';
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -16,15 +14,44 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+//     console.log('Google Login Success:', response);
+
+//     // Google Login yanıtını işleme
+//     const profile = response?.profileObj;
+// console.log(profile);
+//     if (profile) {
+//       // Kullanıcı verilerini localStorage’a kaydet
+//       const userData = {
+//         name: profile.name || '',
+//         email: profile.email || '',
+//         password: '', // Google ile şifre alınamaz, bu boş bırakılabilir
+//         profilePic: profile.picture || ''
+//       };
+//       localStorage.setItem('currentUser', JSON.stringify(userData));
+
+//       // Ana sayfaya yönlendir
+//       navigate("/");
+//     } else {
+//       setErrorMessage("Google ile giriş yapılamadı.");
+//     }
+//   };
+
+//   const handleGoogleLoginFailure = (error) => {
+//     console.log('Google Login Error:', error);
+//     if (error.error === 'popup_closed_by_user') {
+//       setErrorMessage("Giriş penceresi kapatıldı. Lütfen tekrar deneyin.");
+//     } else {
+//       setErrorMessage("Google ile giriş başarısız oldu. Lütfen tekrar deneyin.");
+//     }
+//   };
+
   const validateEmail = (email) => {
-    // E-posta formatını doğrulama ve sık kullanılan basit e-posta adreslerini engelleme
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const simpleEmails = ['e@gmail.com', 'test@example.com'];
     return emailRegex.test(email) && !simpleEmails.includes(email.toLowerCase());
   };
 
   const validatePassword = (password) => {
-    // Parola kuralları: minimum 8 karakter, en az bir simvol
     const passwordRegex = /^(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
     return passwordRegex.test(password) && !/\d{4}-\d{2}-\d{2}/.test(password);
   };
@@ -32,15 +59,13 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Boş alan kontrolü
     if (!name || !email || !password) {
       setErrorMessage("Bütün sahələri doldurun");
       return;
     }
 
-    // E-posta ve şifre doğrulama
     if (!validateEmail(email)) {
-      setEmailErrorMessage("Etibarlı və təhlükəsiz e-poçt ünvanı daxil edin..");
+      setEmailErrorMessage("Etibarlı və təhlükəsiz e-poçt ünvanı daxil edin.");
       return;
     }
 
@@ -49,10 +74,7 @@ const Register = () => {
       return;
     }
 
-    // Kullanıcıların verilerini al
     const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
-
-    // Aynı e-posta ve şifre kombinasyonunu kontrol et
     const userExists = registeredUsers.some(user => user.email === email && user.password === password);
 
     if (userExists) {
@@ -62,7 +84,7 @@ const Register = () => {
 
     const userData = { name, email, password };
     registeredUsers.push(userData);
-    localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers)); // Kullanıcıyı kaydet
+    localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
 
     setName("");
     setEmail("");
@@ -73,30 +95,14 @@ const Register = () => {
     setIsRegistered(true);
   };
 
-  const handleLoginRedirect = () => {
-    navigate("/login");
-  };
-
-  const responseGoogle = (response) => {
-    if (response.profileObj) {
-      // Kullanıcı bilgilerini başarılı bir şekilde aldıysak
-      console.log(response);
-      // Google ile başarılı bir giriş sonrası Home sayfasına yönlendir
-      navigate("/home");
-    } else {
-      setErrorMessage("Google ile giriş yapılamadı.");
-    }
-  };
-
   useEffect(() => {
     if (isRegistered) {
-      // success-bar için animasyon etkisini vermek için küçük bir gecikme ekle
       const timer = setTimeout(() => {
-        setIsRegistered(false); // Kayıt tamamlandıktan sonra success-bar'ı gizle
-        navigate("/login"); // Kayıt tamamlandıktan sonra giriş sayfasına yönlendir
-      }, 3000); // 3 saniye gösterildikten sonra gizle
+        setIsRegistered(false);
+        navigate("/login");
+      }, 3000);
 
-      return () => clearTimeout(timer); // Temizleme işlemi
+      return () => clearTimeout(timer);
     }
   }, [isRegistered]);
 
@@ -158,13 +164,6 @@ const Register = () => {
             {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
           </form>
           <div className="acountwithpage">
-            <GoogleLogin
-              clientId="YOUR_GOOGLE_CLIENT_ID"
-              buttonText="Google ile Giriş Yap"
-              onSuccess={responseGoogle}
-              onFailure={responseGoogle}
-              cookiePolicy={'single_host_origin'}
-            />
             <p style={{ marginTop: "10px" }}>
               Hesabınız var mı? <a href="/login" style={{ color: "#009ee2" }}>Login</a>
             </p>

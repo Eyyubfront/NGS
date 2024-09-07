@@ -6,13 +6,13 @@ import binary from "../../assets/images/Logo.png";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 
 const Partners = () => {
+  const { t } = useTranslation();
   return (
     <div id="partners">
-      <h2>Tərəfdaşlar</h2>
-
+      <h2>{t('partners')}</h2>
       <Swiper
         slidesPerView={6}
         spaceBetween={30}

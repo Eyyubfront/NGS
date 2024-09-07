@@ -9,8 +9,10 @@ import BlogComponent from "../../components/BlogComponent/BlogComponent";
 import Cerfitacion from "../../components/Certifaciton/cerfitacion";
 import { useParams } from "react-router";
 import axios from "axios";
+import { useTranslation } from 'react-i18next';
 
 const Blog = () => {
+  const { t } = useTranslation();
 
   const { id } = useParams();
   const [blogPost, setBlogPost] = useState(null);
@@ -60,7 +62,7 @@ const Blog = () => {
             <div className="paragraph__info">
               <div className="eye">
                 <img src={eye} alt="icon" />
-                <span>368 Baxış</span>
+                <span>368 {t('view')}</span>
               </div>
               <div className="date">
                 <img src={date} alt="icon" />

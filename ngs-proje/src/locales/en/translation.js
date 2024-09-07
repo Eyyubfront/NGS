@@ -9,11 +9,17 @@ const TRANSLATIONS_EN = {
   "cleaning": "Cleaning",
   "otherServices": "Other Services",
   "news": "News",
+  "blogs": "Blogs",
   "blog": "Blog",
+  "view": "View",
+  "read": "Read",
   "trainings": "Trainings",
   "contact": "Contact",
   "searchPlaceholder": "Search",
   "register": "Register",
+  "loading": "Loading",
+  "offers": "Offers",
+  "danger": "What are the basics of a safe environment?",
   "az": "AZ",
   "en": "EN",
   "phone": "Phone",
@@ -52,8 +58,11 @@ const TRANSLATIONS_EN = {
   'nameprofil':"User Name",
   "save":"Save",
   "logout":"Logout",
-  'areYouSureLogout':"are You Sure Logout",
-  'cancel':"Cansel"
+  'areYouSureLogout':"Are You Sure You Want to Logout?",
+  'cancel':"Cancel",
+  "partners":"Partners",
+  "newsabout":"Here you will find the latest updates and announcements about our company. We are happy to tell you about the value we provide to our customers and business partners. In addition, you can get information about the world security sector and its innovations and stay informed.",
+  "projeabout":"NGS - New Generation Safety LLC has been operating in the security sector since 2021. It has achieved its goals at a high level since the day it started its activities."
 };
 
 export default TRANSLATIONS_EN;
