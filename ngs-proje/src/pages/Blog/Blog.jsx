@@ -67,6 +67,7 @@ const Blog = () => {
               <div className="date">
                 <img src={date} alt="icon" />
                 <span>8 Sentyabr 2024</span>
+                
               </div>
             </div>
           </div>
