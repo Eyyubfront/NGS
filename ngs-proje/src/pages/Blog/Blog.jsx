@@ -62,11 +62,11 @@ const Blog = () => {
             <div className="paragraph__info">
               <div className="eye">
                 <img src={eye} alt="icon" />
-                <span>368 {t('view')}</span>
+                <span>364 {t('view')}</span>
               </div>
               <div className="date">
                 <img src={date} alt="icon" />
-                <span>16 Yanvar 2024</span>
+                <span>8 Sentyabr 2024</span>
               </div>
             </div>
           </div>
