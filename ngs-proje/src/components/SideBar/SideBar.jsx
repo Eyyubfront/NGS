@@ -10,12 +10,12 @@ const SideBar = () => {
             <Link to="/adminnews">Xəbərlər</Link>
           </li>
           <li>
-            <Link to='/adminblog'>Bloq</Link>
+            <Link to="/adminblog">Bloq</Link>
           </li>
           <li>
             <Link to="/admintraning">Təlimlər</Link>
           </li>
-          <li >
+          <li>
             <Link to="/adminformservice">Form Service</Link>
           </li>
           <li>
@@ -35,6 +35,7 @@ const SideBar = () => {
           </li>
         </ul>
       </nav>
+      
       <div className="sidebar__btn">
         <button className="logout">Çıxış</button>
       </div>
