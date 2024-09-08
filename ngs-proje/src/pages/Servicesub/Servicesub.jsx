@@ -1,73 +1,106 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PageContainer from '../../components/PageContainer';
 import Cerfitacion from '../../components/Certifaciton/cerfitacion';
-import servicesub from "../../assets/images/servicesub/subsservice.png";
-import { IoIosArrowForward } from 'react-icons/io';
 import { Container } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
+import { IoIosArrowForward } from 'react-icons/io';
+import { useTranslation } from 'react-i18next';
+
+// Base64 resim türünü belirleyen yardımcı fonksiyon
+const getImageType = (base64String) => {
+  if (!base64String) return null;
+  const mimeTypeMatch = base64String.match(/^data:image\/(.*?);base64,/);
+  return mimeTypeMatch ? mimeTypeMatch[1] : null;
+};
 
 const Servicesub = () => {
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const { t } = useTranslation();
+
   const items = [
-    'SƏTƏM üzrə siyasətin hazırlanması',
-    'SƏTƏM Planının hazırlanması',
-    'Əməyin mühafizəsinə dair illik tədbirlər planının hazırlanması',
-    'Prosedurların hazırlanması',
-    'Vəzifələr üzrə təhlükəsizlik təlimatlarının hazırlanması',
-    'Cavabdeh şəxslər üçün təlimatın hazırlanması',
-    'İş təlimatların hazırlanması',
-    'Yanğın təhlükəsizlik qaydalarının hazırlanması',
-    'Fövqaladə hallara hazırlıq',
-    'Bədbəxt hadisələrin aradan qaldırılması sxemlərinin tətbiqi',
-    'Qəzaların ləğvi planları',
-    'Fövqaladə hadisə baş verdikdə davranış qaydaları',
-    'Texniki təhlükəsizlik bəyannaməsinin hazırlanması',
-    'Əməyin mühafizəsi üzrə Giriş təlimatının keçirilməsi',
+    'item1',
+    'item2',
+    'item3',
+    'item4',
+    'item5',
+    'item6',
+    'item7',
+    'item8',
+    'item9',
+    'item10',
+    'item11',
+    'item12',
+    'item13',
+    'item14',
   ];
 
-  const navigate = useNavigate();
+  const [service, setService] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios.get(`https://ngs-794fc9210221.herokuapp.com/api/services/${id}`)
+      .then(response => {
+        setService(response.data);
+      })
+      .catch(error => {
+        console.error("Error fetching service data: ", error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [id]);
 
   const handleItemClick = (index) => {
-    navigate(`/servicessub/${index}`, { state: { itemIndex: index, itemName: items[index] } });
+    navigate(`/servicessub/${id}`, { state: { itemIndex: index, itemName: t(items[index]) } });
   };
 
+  if (loading) return <p>{t('loading')}</p>;
+  if (!service) return <p>{t('serviceNotFound')}</p>;
+
   return (
-    <>
-      <PageContainer>
-        <div id="servicesub">
-          <div className="servicesub__top">
-            <img className='servicesubphoto' src={servicesub} alt="" />
-            <div className="servicesubhoots__text">
-              <h2 className='servicesubnames'>Təlimlər, tədbir və elanlar</h2>
-              <p className='servicesubreportext'>
-                Lorem ipsum dolor sit amet consectetur. Quis odio fermentum lacus porta tristique nunc pretium. Pulvinar montes sed elementum sed viverra integer fermentum.
-              </p>
+    <PageContainer>
+      <div id="servicesub">
+        <div className="servicesub__top">
+          {service.icon && (
+            <img
+              className='servicesubphoto'
+              src={`data:image/${getImageType(service.icon)};base64,${service.icon}`}
+              alt={service.name}
+            />
+          )}
+          <div className="servicesubhoots__text">
+            <h2 className='servicesubnames'>{service.name}</h2>
+            <p className='servicesubreportext'>
+              {service.description}
+            </p>
+          </div>
+        </div>
+        <Container>
+          <div className="servicesub__buttom">
+            <div className='listboxes'>
+              <ul className='listdata'>
+                {items.map((item, index) => (
+                  <li key={index}>
+                    <div className="list subs">
+                      {t(item)}
+                      <span
+                        style={{ cursor: 'pointer' }}
+                        onClick={() => handleItemClick(index)}
+                      >
+                        <IoIosArrowForward />
+                      </span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-          <Container>
-            <div className="servicesub__buttom">
-              <div className='listboxes'>
-                <ul className='listdata'>
-                  {items.map((item, index) => (
-                    <li key={index}>
-                      <div className="list subs">
-                        {item}
-                        <span
-                          style={{ cursor: 'pointer' }}
-                          onClick={() => handleItemClick(index)}
-                        >
-                          <IoIosArrowForward />
-                        </span>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </Container>
-        </div>
+        </Container>
         <Cerfitacion />
-      </PageContainer>
-    </>
+      </div>
+    </PageContainer>
   );
 };
 

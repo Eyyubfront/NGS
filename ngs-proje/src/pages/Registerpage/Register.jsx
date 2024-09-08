@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaTimes } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Register = () => {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,37 +15,6 @@ const Register = () => {
   const [isRegistered, setIsRegistered] = useState(false);
 
   const navigate = useNavigate();
-
-//     console.log('Google Login Success:', response);
-
-//     // Google Login yanıtını işleme
-//     const profile = response?.profileObj;
-// console.log(profile);
-//     if (profile) {
-//       // Kullanıcı verilerini localStorage’a kaydet
-//       const userData = {
-//         name: profile.name || '',
-//         email: profile.email || '',
-//         password: '', // Google ile şifre alınamaz, bu boş bırakılabilir
-//         profilePic: profile.picture || ''
-//       };
-//       localStorage.setItem('currentUser', JSON.stringify(userData));
-
-//       // Ana sayfaya yönlendir
-//       navigate("/");
-//     } else {
-//       setErrorMessage("Google ile giriş yapılamadı.");
-//     }
-//   };
-
-//   const handleGoogleLoginFailure = (error) => {
-//     console.log('Google Login Error:', error);
-//     if (error.error === 'popup_closed_by_user') {
-//       setErrorMessage("Giriş penceresi kapatıldı. Lütfen tekrar deneyin.");
-//     } else {
-//       setErrorMessage("Google ile giriş başarısız oldu. Lütfen tekrar deneyin.");
-//     }
-//   };
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -60,17 +31,17 @@ const Register = () => {
     e.preventDefault();
 
     if (!name || !email || !password) {
-      setErrorMessage("Bütün sahələri doldurun");
+      setErrorMessage(t("emptyFields"));
       return;
     }
 
     if (!validateEmail(email)) {
-      setEmailErrorMessage("Etibarlı və təhlükəsiz e-poçt ünvanı daxil edin.");
+      setEmailErrorMessage(t("invalidEmail"));
       return;
     }
 
     if (!validatePassword(password)) {
-      setPasswordErrorMessage("Parolanız en az 8 karakter uzunluğunda ve bir simvol içermelidir");
+      setPasswordErrorMessage(t("invalidPassword"));
       return;
     }
 
@@ -78,7 +49,7 @@ const Register = () => {
     const userExists = registeredUsers.some(user => user.email === email && user.password === password);
 
     if (userExists) {
-      setErrorMessage("Siz artıq qeydiyyatdan keçmisiniz.");
+      setErrorMessage(t("alreadyRegistered"));
       return;
     }
 
@@ -110,7 +81,7 @@ const Register = () => {
     <div>
       {isRegistered && (
         <div className="success-bar">
-          <div className="success-bar-content">Kayıt başarılı!</div>
+          <div className="success-bar-content">{t("registrationSuccess")}</div>
         </div>
       )}
       <div id="register">
@@ -119,27 +90,28 @@ const Register = () => {
             type="button"
             className="close-btn"
             onClick={() => navigate(-1)}
+            aria-label={t("closeButtonAriaLabel")}
             style={{ position: 'absolute', background: "transparent", color: "black", zIndex: "99999", top: '10px', right: '10px', border: 'none', fontSize: '24px', cursor: 'pointer' }}
           >
             <FaTimes />
           </button>
-          <h3>Qeydiyyatdan keç</h3>
+          <h3>{t("register")}</h3>
           <p className="register__p">
-            Zəhmət olmasa məlumatlarınızı xanalara doldurun
+            {t("enterDetails")}
           </p>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Ad/Soyad"
+              placeholder={t("namePlaceholder")}
               required
             />
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Elektron Poçt"
+              placeholder={t("emailPlaceholder")}
               required
             />
             {emailErrorMessage && <p style={{ color: "red" }}>{emailErrorMessage}</p>}
@@ -148,7 +120,7 @@ const Register = () => {
                 type={passwordVisible ? "text" : "password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Parola"
+                placeholder={t("passwordPlaceholder")}
                 required
               />
               <button
@@ -160,13 +132,11 @@ const Register = () => {
               </button>
             </div>
             {passwordErrorMessage && <p style={{ color: "red" }}>{passwordErrorMessage}</p>}
-            <button type="submit">Qeyd ol</button>
+            <button type="submit">{t("registerButton")}</button>
             {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
           </form>
           <div className="acountwithpage">
-            <p style={{ marginTop: "10px" }}>
-              Hesabınız var mı? <a href="/login" style={{ color: "#009ee2" }}>Login</a>
-            </p>
+            <p style={{ marginTop: "10px" }} dangerouslySetInnerHTML={{ __html: t("accountExists") }} />
           </div>
         </div>
       </div>

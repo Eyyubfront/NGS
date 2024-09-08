@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from "react";
-import AdminHeader from "../../components/AdminHeader/AdminHeader";
-import SideBar from "../../components/SideBar/SideBar";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import AdminHeader from '../../components/AdminHeader/AdminHeader';
+import SideBar from '../../components/SideBar/SideBar';
+import axios from 'axios';
 
+// Base64 resim türünü belirleyen yardımcı fonksiyon
 const getImageType = (base64String) => {
   if (!base64String) return null;
-
   const mimeTypeMatch = base64String.match(/^data:image\/(.*?);base64,/);
-  if (mimeTypeMatch && mimeTypeMatch[1]) {
-    return mimeTypeMatch[1]; // Return the extension (e.g., 'png', 'jpeg')
-  }
-  return null; // Return null if no extension is found
+  return mimeTypeMatch ? mimeTypeMatch[1] : null;
 };
 
 const AdminService = () => {
@@ -110,7 +107,7 @@ const AdminService = () => {
                     required
                   />
                   <input
-                  className="input__file"
+                    className="input__file"
                     type="file"
                     onChange={(e) => setService({ ...service, file: e.target.files[0] })}
                     required

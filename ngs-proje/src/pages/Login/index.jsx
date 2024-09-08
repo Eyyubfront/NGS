@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaTimes, FaEye, FaEyeSlash } from 'react-icons/fa'; // X butonu ve göz ikonları
-
+import { useTranslation } from 'react-i18next';
 const Login = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false); // Parola görünürlük durumu
@@ -38,7 +39,7 @@ const Login = () => {
         <button className="close-btn" onClick={handleClose}>
           <FaTimes />
         </button>
-        <h3>Giriş</h3>
+        <h3>{t("logins")}</h3>
         <form onSubmit={handleLogin}>
           <input
             type="email"

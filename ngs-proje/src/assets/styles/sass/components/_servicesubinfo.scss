@@ -2,6 +2,7 @@
     .servicesubinfo__top{
         .servicesubphoto{
             width: 100%;
+            height: 50vh;
             filter: brightness(70%) contrast(90%);
         }
         .servicesubhoots__text{
@@ -31,7 +32,39 @@
         .servicesubinfo__top{
             .servicesubphoto{
                 width: 100%;
-                height: 150px !important;
+                    height: 261px !important;
+                filter: brightness(70%) contrast(90%);
+            }
+            .servicesubhoots__text{
+                position: absolute;
+                top: 81px;
+                text-align: center;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                color: white;
+                align-items: center;
+    
+                .servicesubnames{
+                    font-weight: bold;
+                    font-size: 32px;
+                }
+                .servicesubreportext{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #servicesubinfo{
+        .servicesubinfo__top{
+            .servicesubphoto{
+                width: 100%;
+                height: 261px !important;
                 filter: brightness(70%) contrast(90%);
             }
             .servicesubhoots__text{
@@ -58,7 +91,7 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 575px) {
     #servicesubinfo{
         .servicesubinfo__top{
             .servicesubphoto{
@@ -90,7 +123,9 @@
     }
 }
 
-@media screen and (max-width: 575px) {
+
+
+@media screen and (max-width:320px) {
     #servicesubinfo{
         .servicesubinfo__top{
             .servicesubphoto{

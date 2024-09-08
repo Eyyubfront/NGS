@@ -1,20 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Button } from '@mui/material';
+import { Container } from '@mui/material';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+
+// Base64 resim türünü belirleyen yardımcı fonksiyon
 const getImageType = (base64String) => {
   if (!base64String) return null;
-
   const mimeTypeMatch = base64String.match(/^data:image\/(.*?);base64,/);
-  if (mimeTypeMatch && mimeTypeMatch[1]) {
-    return mimeTypeMatch[1]; // Return the extension (e.g., 'png', 'jpeg')
-  }
-  return null; // Return null if no extension is found
+  return mimeTypeMatch ? mimeTypeMatch[1] : null;
 };
 
 const dataUrl = "https://ngs-794fc9210221.herokuapp.com/api/services";
-const deleteUrl = "https://ngs-794fc9210221.herokuapp.com/api/services/";
 
 const Servicesections = ({ showDescription = true }) => {
   const { t } = useTranslation();
@@ -23,26 +20,10 @@ const Servicesections = ({ showDescription = true }) => {
   const fetchData = () => {
     axios.get(dataUrl)
       .then((response) => {
-        console.log("GET response data: ", response.data);
         setData(response.data);
       })
       .catch((error) => {
         console.error("Error fetching data: ", error);
-      });
-  };
-
-  const deleteAllData = () => {
-    const deletePromises = data.map((service) =>
-      axios.delete(`${deleteUrl}${service.id}`)
-    );
-
-    Promise.all(deletePromises)
-      .then(() => {
-        console.log("All old data deleted");
-        fetchData(); // Fetch data again after deletion
-      })
-      .catch((error) => {
-        console.error("Error deleting data: ", error);
       });
   };
 
@@ -58,7 +39,6 @@ const Servicesections = ({ showDescription = true }) => {
           {showDescription && (
             <p className='pageservicenamesbutom'>Lorem ipsum dolor sit amet consectetur. Quis odio fermentum lacus porta tristique nunc pretium. Pulvinar montes sed elementum sed viverra integer fermentum.</p>
           )}
-         
           <div className="pageservice__top">
             {data.slice(0, 3).map(service => (
               <Link key={service.id} to={`/servicesection/${service.id}`}>

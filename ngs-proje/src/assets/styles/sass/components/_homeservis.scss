@@ -3,7 +3,8 @@
     .homeservice__container{
         display: flex;
         flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 100px;
         .homeservice__left{
             .homeservice__top{
                 display: flex;

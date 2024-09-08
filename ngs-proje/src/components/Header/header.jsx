@@ -161,6 +161,7 @@ const Header = () => {
            <input
           className="search__input"
           type="search"
+          style={{fontFamily:"inherit"}}
           placeholder={t('searchPlaceholder')}
           ref={searchInp}
           value={searchTerm}
@@ -224,7 +225,7 @@ const Header = () => {
                 )}
               </div>
             ) : (
-              <button onClick={() => navigate('/register')} type="button">{t('register')}</button>
+              <button onClick={() => navigate('/register')} type="button">{t('registers')}</button>
             )}
           </div>
         </div>

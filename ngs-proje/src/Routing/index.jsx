@@ -36,6 +36,7 @@ const Routing = () => {
       <Route path="/notfound" element={<Notfound />} />
       <Route path="/servicesection" element={<Servicesection />} />
       <Route path="/servicesection/:id" element={<Servicesub />} />
+      <Route path="/servicessub/:id" element={<Servicesubinfo />} />
       <Route path="/aboutus" element={<AboutUs />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blogs" element={<Blogs />} />
@@ -44,7 +45,6 @@ const Routing = () => {
       <Route path="/subnews/:newsId" element={<SubNews />} />
       <Route path="/traningpages" element={<Traningpages />} />
       <Route path="/traningids/:id" element={<Traningsid />} />
-      <Route path="/servicessub/:id" element={<Servicesubinfo />} />
       <Route path="/adminprof" element={<Admin />} />
       <Route path="/appeal" element={<AdminAppeal />} />
       <Route path="/adminnews" element={<AdminNews />} />

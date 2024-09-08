@@ -5,7 +5,38 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import bannerimg from "../../assets/images/homephoto/bannerphoto.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next'; 
+
 const Banner = () => {
+  const { t } = useTranslation(); 
+
+  const slides = [
+    {
+      title: t("projebaner"),
+      description: t("bannerstext"),
+      link: "/adminprof",
+      buttonText: t("MoreDetails")
+    },
+    {
+      title: t("projebaner"),
+      description: t("bannerstext"),
+      link: "/adminprof",
+      buttonText: t("MoreDetails")
+    },
+    {
+      title: t("projebaner"),
+      description: t("bannerstext"),
+      link: "/adminprof",
+      buttonText:  t("MoreDetails")
+    },
+    {
+      title: t("projebaner"),
+      description: t("bannerstext"),
+      link: "/adminprof",
+      buttonText:  t("MoreDetails")
+    }
+  ];
+
   return (
     <div id="banner">
       <Swiper
@@ -16,62 +47,18 @@ const Banner = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="slide__content">
-            <img src={bannerimg} alt="img" />
-            <div className="slide__description">
-              <h2>NGS - Təhlükəsizliyin yeni nəsli!</h2>
-              <p>
-                Məqsədimiz yeni nəsil təhlükəsizlik texnologiyaları və
-                metodikası ilə müştərilərimizin və əməkdaşlarının
-                təhlükəsizliyini yüksək səvoyyədə təmin etməkdən ibarətdir.
-              </p>
-              <Link to="/adminprof"><button type="button">Ətraflı</button></Link>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="slide__content">
+              <img src={bannerimg} alt="img" />
+              <div className="slide__description">
+                <h2>{slide.title}</h2>
+                <p>{slide.description}</p>
+                <Link to={slide.link}><button type="button">{slide.buttonText}</button></Link>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide__content">
-            <img src={bannerimg} alt="img" />
-            <div className="slide__description">
-              <h2>NGS - Təhlükəsizliyin yeni nəsli!</h2>
-              <p>
-              Məqsədimiz yeni nəsil təhlükəsizlik texnologiyaları və
-                metodikası ilə müştərilərimizin və əməkdaşlarının
-                təhlükəsizliyini yüksək səvoyyədə təmin etməkdən ibarətdir.
-              </p>
-              <button type="button">Ətraflı</button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide__content">
-            <img src={bannerimg} alt="img" />
-            <div className="slide__description">
-              <h2>NGS - Təhlükəsizliyin yeni nəsli!</h2>
-              <p>
-              Məqsədimiz yeni nəsil təhlükəsizlik texnologiyaları və
-                metodikası ilə müştərilərimizin və əməkdaşlarının
-                təhlükəsizliyini yüksək səvoyyədə təmin etməkdən ibarətdir.
-              </p>
-              <button type="button">Ətraflı</button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide__content">
-            <img src={bannerimg} alt="img" />
-            <div className="slide__description">
-              <h2>NGS - Təhlükəsizliyin yeni nəsli!</h2>
-              <p>
-              Məqsədimiz yeni nəsil təhlükəsizlik texnologiyaları və
-                metodikası ilə müştərilərimizin və əməkdaşlarının
-                təhlükəsizliyini yüksək səvoyyədə təmin etməkdən ibarətdir.
-              </p>
-              <button type="button">Ətraflı</button>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
