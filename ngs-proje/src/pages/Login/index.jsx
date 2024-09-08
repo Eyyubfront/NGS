@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaTimes, FaEye, FaEyeSlash } from 'react-icons/fa'; // X butonu ve göz ikonları
+import { FaTimes, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+
 const Login = () => {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordVisible, setPasswordVisible] = useState(false); // Parola görünürlük durumu
+  const [passwordVisible, setPasswordVisible] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
@@ -22,7 +23,7 @@ const Login = () => {
     const user = registeredUsers.find(user => user.email === email && user.password === password);
   
     if (user) {
-      localStorage.setItem('currentUser', JSON.stringify(user)); // Kullanıcıyı kaydet
+      localStorage.setItem('currentUser', JSON.stringify(user));
       navigate("/");
     } else {
       setErrorMessage("Giriş bilgileri hatalı.");

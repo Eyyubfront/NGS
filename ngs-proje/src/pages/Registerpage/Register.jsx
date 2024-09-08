@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // Link'i ekleyin
 import { FaEye, FaEyeSlash, FaTimes } from 'react-icons/fa';
 
 const Register = () => {
@@ -134,7 +134,7 @@ const Register = () => {
           </form>
           <div className="acountwithpage">
             <p style={{ marginTop: "10px" }}>
-              Hesabınız var mı? <a href="/login" style={{ color: "#009ee2" }}>Login</a>
+              Hesabınız var mı? <Link to="/login" style={{ color: "#009ee2" }}>Login</Link>
             </p>
           </div>
         </div>
