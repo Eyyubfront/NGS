@@ -88,9 +88,9 @@ const TRANSLATIONS_AZ = {
   "accountExists": "Hesabınız var mı? <a href='/login' style='color: #009ee2'>Giriş</a>",
   "emptyFields": "Bütün sahələri doldurun",
   "invalidEmail": "Etibarlı və təhlükəsiz e-poçt ünvanı daxil edin.",
-  "invalidPassword": "Parolanız en az 8 karakter uzunluğunda ve bir simvol içermelidir",
+  "invalidPassword": "Parolunuz ən azı 8 simvol uzunluğunda və simvoldan ibarət olmalıdır",
   "alreadyRegistered": "Siz artıq qeydiyyatdan keçmisiniz.",
-  "registrationSuccess": "Kayıt başarılı!",
+  "registrationSuccess": "Qeydiyyat uğurludur!",
   "closeButtonAriaLabel": "Geri dön",
   "registers":"Qeydiyyat",
   "logins":'Giris'
