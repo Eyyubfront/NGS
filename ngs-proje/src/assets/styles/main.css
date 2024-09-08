@@ -3664,6 +3664,7 @@
 #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
   border: none;
   margin-top: 10px;
+  background-color: transparent;
   text-decoration: none;
 }
 #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref .sendhomeservicebtn {
@@ -3735,6 +3736,7 @@
     outline: #009EE2;
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
+    background-color: transparent;
     text-decoration: none;
     margin-top: 10px;
     border: none;
@@ -3811,6 +3813,7 @@
     outline: #009EE2;
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
+    background-color: transparent;
     text-decoration: none;
     margin-top: 10px;
     border: none;
@@ -3888,6 +3891,7 @@
     outline: #009EE2;
   }
   #homeservice .homeservice__container .homeservice__left .homeservice__top .homeservice__button .servicelinkhref {
+    background-color: transparent;
     text-decoration: none;
     border: none;
     margin-top: 10px;
@@ -4211,10 +4215,12 @@
   padding: 200px 0;
 }
 #training .training__content {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #training .training__content h2 {
-  font-size: 48px;
+  font-size: 39px;
   font-weight: 700;
   line-height: 58.09px;
 }
