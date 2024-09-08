@@ -9,7 +9,7 @@ import BlogComponent from "../../components/BlogComponent/BlogComponent";
 import Cerfitacion from "../../components/Certifaciton/cerfitacion";
 import { useParams } from "react-router";
 import axios from "axios";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const Blog = () => {
   const { t } = useTranslation();
@@ -56,25 +56,21 @@ const Blog = () => {
         </div>
         <Container>
           <div className="blog__paragraph">
-            <p>
-            {blogPost.content}
-            </p>
+            <p>{blogPost.content}</p>
             <div className="paragraph__info">
               <div className="eye">
                 <img src={eye} alt="icon" />
-                <span>364 {t('view')}</span>
+                <span>364 {t("view")}</span>
               </div>
               <div className="date">
                 <img src={date} alt="icon" />
                 <span>8 Sentyabr 2024</span>
-                
               </div>
             </div>
           </div>
         </Container>
-
-          <BlogComponent />
-          <Cerfitacion/>
+        <BlogComponent />
+        <Cerfitacion />
       </div>
     </PageContainer>
   );
