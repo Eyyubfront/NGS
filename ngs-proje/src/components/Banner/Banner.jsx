@@ -14,26 +14,8 @@ const Banner = () => {
     {
       title: t("projebaner"),
       description: t("bannerstext"),
-      link: "/adminprof",
+      link: "/aboutus",
       buttonText: t("MoreDetails")
-    },
-    {
-      title: t("projebaner"),
-      description: t("bannerstext"),
-      link: "/adminprof",
-      buttonText: t("MoreDetails")
-    },
-    {
-      title: t("projebaner"),
-      description: t("bannerstext"),
-      link: "/adminprof",
-      buttonText:  t("MoreDetails")
-    },
-    {
-      title: t("projebaner"),
-      description: t("bannerstext"),
-      link: "/adminprof",
-      buttonText:  t("MoreDetails")
     }
   ];
 
