@@ -1193,8 +1193,8 @@
   }
   .container .hamburger__container .hamburger__login-btn {
     position: absolute;
-    top: 57px;
-    right: 53px;
+    top: 41px;
+    right: 6px;
     display: flex;
     align-items: center;
   }
