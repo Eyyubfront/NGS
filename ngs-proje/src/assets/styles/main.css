@@ -2975,7 +2975,7 @@
   background-color: #009ee2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   #banner {
     position: relative;
     height: 750px;
@@ -3013,7 +3013,7 @@
   #banner .swiper .swiper-slide .slide__content .slide__description {
     position: absolute;
     top: 47%;
-    right: 35px;
+    left: 24%;
     text-align: left;
     color: #fff;
     z-index: 2;
@@ -3058,7 +3058,7 @@
 @media (max-width: 576px) {
   #banner {
     position: relative;
-    height: 750px;
+    height: 445px;
   }
   #banner .swiper {
     width: 100%;
@@ -3092,8 +3092,9 @@
   }
   #banner .swiper .swiper-slide .slide__content .slide__description {
     position: absolute;
-    top: 47%;
-    right: 35px;
+    top: 33%;
+    right: 36%;
+    left: 35%;
     text-align: center;
     color: #fff;
     z-index: 2;
@@ -3101,7 +3102,7 @@
     font-family: "Impact, Haettenschweiler, " Arial Narrow Bold ", sans-serif";
   }
   #banner .swiper .swiper-slide .slide__content .slide__description h2 {
-    font-size: 33px;
+    font-size: 29px;
     font-weight: 700;
     line-height: 58.09px;
   }
@@ -3109,7 +3110,7 @@
     font-weight: 500;
     line-height: 28px;
     margin: 20px 0;
-    width: 36%;
+    width: 344px;
   }
   #banner .swiper .swiper-slide .slide__content .slide__description button {
     padding: 12px 48px 12px 48px;
