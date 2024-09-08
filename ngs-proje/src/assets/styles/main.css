@@ -2930,15 +2930,10 @@
   position: absolute;
   z-index: 1;
 }
-#banner .swiper .swiper-slide .slide__content img {
-  width: 100%;
-  height: 750px;
-}
 #banner .swiper .swiper-slide .slide__content .slide__description {
   position: absolute;
-  left: 30px;
-  bottom: 190px;
-  width: 600px;
+  top: 47%;
+  right: 35px;
   text-align: left;
   color: #fff;
   z-index: 2;
@@ -2955,6 +2950,7 @@
   font-weight: 500;
   line-height: 28px;
   margin: 20px 0;
+  width: 52%;
 }
 #banner .swiper .swiper-slide .slide__content .slide__description button {
   padding: 12px 48px 12px 48px;
@@ -2979,6 +2975,165 @@
   background-color: #009ee2;
 }
 
+@media (max-width: 768px) {
+  #banner {
+    position: relative;
+    height: 750px;
+  }
+  #banner .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  #banner .swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #banner .swiper .swiper-slide .swiper-slide img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #banner .swiper .swiper-slide .slide__content {
+    position: relative;
+  }
+  #banner .swiper .swiper-slide .slide__content::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 35, 35, 0.4);
+    position: absolute;
+    z-index: 1;
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description {
+    position: absolute;
+    top: 47%;
+    right: 35px;
+    text-align: left;
+    color: #fff;
+    z-index: 2;
+    font-size: 24px;
+    font-family: "Impact, Haettenschweiler, " Arial Narrow Bold ", sans-serif";
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58.09px;
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 20px 0;
+    width: 52%;
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description button {
+    padding: 12px 48px 12px 48px;
+    border-radius: 24px;
+    background-color: #009ee2;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: center;
+  }
+  #banner .swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 28px;
+    border-radius: 3px;
+    background: #fafafa;
+    opacity: 1;
+  }
+  #banner .swiper .swiper-pagination-bullet-active {
+    background-color: #009ee2;
+  }
+}
+@media (max-width: 576px) {
+  #banner {
+    position: relative;
+    height: 750px;
+  }
+  #banner .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  #banner .swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #banner .swiper .swiper-slide .swiper-slide img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #banner .swiper .swiper-slide .slide__content {
+    position: relative;
+  }
+  #banner .swiper .swiper-slide .slide__content::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 35, 35, 0.4);
+    position: absolute;
+    z-index: 1;
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description {
+    position: absolute;
+    top: 47%;
+    right: 35px;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    font-size: 24px;
+    font-family: "Impact, Haettenschweiler, " Arial Narrow Bold ", sans-serif";
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description h2 {
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 58.09px;
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description p {
+    font-weight: 500;
+    line-height: 28px;
+    margin: 20px 0;
+    width: 36%;
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description button {
+    padding: 12px 48px 12px 48px;
+    border-radius: 24px;
+    background-color: #009ee2;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: center;
+  }
+  #banner .swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 28px;
+    border-radius: 3px;
+    background: #fafafa;
+    opacity: 1;
+  }
+  #banner .swiper .swiper-pagination-bullet-active {
+    background-color: #009ee2;
+  }
+}
 #traning__allcontainers .traning_listallcards {
   margin-top: 20px;
   display: flex;

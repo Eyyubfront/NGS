@@ -34,7 +34,7 @@ const Banner = () => {
             <div className="slide__content">
               <img src={bannerimg} alt="img" />
               <div className="slide__description">
-                <h2>{slide.title}</h2>
+                <h2 className="slide__title">{slide.title}</h2>
                 <p>{slide.description}</p>
                 <Link to={slide.link}><button type="button">{slide.buttonText}</button></Link>
               </div>
