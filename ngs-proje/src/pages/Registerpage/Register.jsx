@@ -64,13 +64,16 @@ const Register = () => {
     setEmailErrorMessage("");
     setPasswordErrorMessage("");
     setIsRegistered(true);
+
+    // Yönlendirmeyi hemen yapabilirsiniz
+    navigate("/login");
   };
 
   useEffect(() => {
     if (isRegistered) {
+      // Bu kullanım gerekli olmayabilir çünkü navigate'i handleSubmit içinde zaten yapıyoruz
       const timer = setTimeout(() => {
         setIsRegistered(false);
-        navigate("/login");
       }, 3000);
 
       return () => clearTimeout(timer);
