@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaTimes } from 'react-icons/fa';
-import { useTranslation } from 'react-i18next';
 
 const Register = () => {
-  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,17 +29,17 @@ const Register = () => {
     e.preventDefault();
 
     if (!name || !email || !password) {
-      setErrorMessage(t("emptyFields"));
+      setErrorMessage("Bütün sahələri doldurun");
       return;
     }
 
     if (!validateEmail(email)) {
-      setEmailErrorMessage(t("invalidEmail"));
+      setEmailErrorMessage("Etibarlı və təhlükəsiz e-poçt ünvanı daxil edin.");
       return;
     }
 
     if (!validatePassword(password)) {
-      setPasswordErrorMessage(t("invalidPassword"));
+      setPasswordErrorMessage("Parolanız en az 8 karakter uzunluğunda ve bir simvol içermelidir");
       return;
     }
 
@@ -49,7 +47,7 @@ const Register = () => {
     const userExists = registeredUsers.some(user => user.email === email && user.password === password);
 
     if (userExists) {
-      setErrorMessage(t("alreadyRegistered"));
+      setErrorMessage("Siz artıq qeydiyyatdan keçmisiniz.");
       return;
     }
 
@@ -64,16 +62,13 @@ const Register = () => {
     setEmailErrorMessage("");
     setPasswordErrorMessage("");
     setIsRegistered(true);
-
-    // Yönlendirmeyi hemen yapabilirsiniz
-    navigate("/login");
   };
 
   useEffect(() => {
     if (isRegistered) {
-      // Bu kullanım gerekli olmayabilir çünkü navigate'i handleSubmit içinde zaten yapıyoruz
       const timer = setTimeout(() => {
         setIsRegistered(false);
+        navigate("/login");
       }, 3000);
 
       return () => clearTimeout(timer);
@@ -84,7 +79,7 @@ const Register = () => {
     <div>
       {isRegistered && (
         <div className="success-bar">
-          <div className="success-bar-content">{t("registrationSuccess")}</div>
+          <div className="success-bar-content">Kayıt başarılı!</div>
         </div>
       )}
       <div id="register">
@@ -93,28 +88,27 @@ const Register = () => {
             type="button"
             className="close-btn"
             onClick={() => navigate(-1)}
-            aria-label={t("closeButtonAriaLabel")}
             style={{ position: 'absolute', background: "transparent", color: "black", zIndex: "99999", top: '10px', right: '10px', border: 'none', fontSize: '24px', cursor: 'pointer' }}
           >
             <FaTimes />
           </button>
-          <h3>{t("register")}</h3>
+          <h3>Qeydiyyatdan keç</h3>
           <p className="register__p">
-            {t("enterDetails")}
+            Zəhmət olmasa məlumatlarınızı xanalara doldurun
           </p>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder={t("namePlaceholder")}
+              placeholder="Ad/Soyad"
               required
             />
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder={t("emailPlaceholder")}
+              placeholder="Elektron Poçt"
               required
             />
             {emailErrorMessage && <p style={{ color: "red" }}>{emailErrorMessage}</p>}
@@ -123,7 +117,7 @@ const Register = () => {
                 type={passwordVisible ? "text" : "password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder={t("passwordPlaceholder")}
+                placeholder="Parola"
                 required
               />
               <button
@@ -135,11 +129,13 @@ const Register = () => {
               </button>
             </div>
             {passwordErrorMessage && <p style={{ color: "red" }}>{passwordErrorMessage}</p>}
-            <button type="submit">{t("registerButton")}</button>
+            <button type="submit">Qeyd ol</button>
             {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
           </form>
           <div className="acountwithpage">
-            <p style={{ marginTop: "10px" }} dangerouslySetInnerHTML={{ __html: t("accountExists") }} />
+            <p style={{ marginTop: "10px" }}>
+              Hesabınız var mı? <a href="/login" style={{ color: "#009ee2" }}>Login</a>
+            </p>
           </div>
         </div>
       </div>
