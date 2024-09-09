@@ -385,6 +385,10 @@
   background-color: #005f99;
 }
 
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 .container {
   /* Genel arka plan bulanıklığı */
   /* Pop-up stili */
@@ -1996,6 +2000,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 30px;
+  align-items: center;
 }
 #servicesection .pageservice__container .pageservicenames {
   color: #009EE2;
@@ -2058,6 +2063,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+  #servicesection .pageservice__container {
+    align-items: center;
+  }
   #servicesection .pageservice__container .pageservicenames {
     font-size: 30px;
   }
@@ -2075,6 +2083,9 @@
   }
 }
 @media screen and (max-width: 575px) {
+  #servicesection .pageservice__container {
+    align-items: center;
+  }
   #servicesection .pageservice__container .pageservicenames {
     font-size: 25px;
   }
@@ -2934,6 +2945,7 @@
 #banner .swiper .swiper-slide .slide__content .slide__description {
   position: absolute;
   top: 47%;
+  left: 4%;
   right: 35px;
   text-align: left;
   color: #fff;
@@ -3095,15 +3107,18 @@
     position: absolute;
     top: 33%;
     right: 35%;
-    left: 37%;
+    left: 35%;
     text-align: center;
     color: #fff;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 24px;
     font-family: "Impact, Haettenschweiler, " Arial Narrow Bold ", sans-serif";
   }
   #banner .swiper .swiper-slide .slide__content .slide__description h2 {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 58.09px;
   }
@@ -3111,7 +3126,7 @@
     font-weight: 500;
     line-height: 28px;
     margin: 20px 0;
-    width: 364px;
+    width: 320px;
   }
   #banner .swiper .swiper-slide .slide__content .slide__description button {
     padding: 12px 48px 12px 48px;

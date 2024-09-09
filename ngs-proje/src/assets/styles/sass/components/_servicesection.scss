@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+    align-items: center;
 
     .pageservicenames {
       color: #009EE2;
@@ -74,6 +75,8 @@
 @media screen and (max-width: 1200px) {
   #servicesection {
     .pageservice__container {
+      align-items: center;
+      
       .pageservicenames {
         font-size: 30px;
       }
@@ -98,6 +101,7 @@
 @media screen and (max-width: 575px) {
   #servicesection {
     .pageservice__container {
+      align-items: center;
       .pageservicenames {
         font-size: 25px;
       }

@@ -39,6 +39,7 @@
         .slide__description {
           position: absolute;
           top: 47%;
+          left: 4%;
           right: 35px;
           text-align: left;
           color: #fff;
@@ -226,14 +227,17 @@
             position: absolute;
             top: 33%;
             right: 35%;
-            left: 37%;
+            left: 35%;
             text-align: center;
             color: #fff;
             z-index: 2;
+            display: flex;
+    flex-direction: column;
+    align-items: center;
             font-size: 24px;
             font-family: "Impact, Haettenschweiler, " Arial Narrow Bold", sans-serif";
             h2 {
-              font-size: 24px;
+              font-size: 18px;
               font-weight: 700;
               line-height: 58.09px;
             }
@@ -242,7 +246,7 @@
               font-weight: 500;
               line-height: 28px;
               margin: 20px 0;
-              width: 364px;
+              width: 320px;
             }
   
             button {
