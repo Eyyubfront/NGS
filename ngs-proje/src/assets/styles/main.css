@@ -1170,6 +1170,7 @@
     width: 100%;
     align-items: center;
     font-size: 28px;
+    margin-top: 40px;
   }
   .container .hamburger__container .hamburger__menu .language {
     padding: 4px;
@@ -3093,8 +3094,88 @@
   #banner .swiper .swiper-slide .slide__content .slide__description {
     position: absolute;
     top: 33%;
-    right: 36%;
-    left: 35%;
+    right: 35%;
+    left: 37%;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    font-size: 24px;
+    font-family: "Impact, Haettenschweiler, " Arial Narrow Bold ", sans-serif";
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 58.09px;
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description p {
+    font-weight: 500;
+    line-height: 28px;
+    margin: 20px 0;
+    width: 364px;
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description button {
+    padding: 12px 48px 12px 48px;
+    border-radius: 24px;
+    background-color: #009ee2;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: center;
+  }
+  #banner .swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 28px;
+    border-radius: 3px;
+    background: #fafafa;
+    opacity: 1;
+  }
+  #banner .swiper .swiper-pagination-bullet-active {
+    background-color: #009ee2;
+  }
+}
+@media (max-width: 320px) {
+  #banner {
+    position: relative;
+    height: 445px;
+  }
+  #banner .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  #banner .swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #banner .swiper .swiper-slide .swiper-slide img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #banner .swiper .swiper-slide .slide__content {
+    position: relative;
+  }
+  #banner .swiper .swiper-slide .slide__content::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 35, 35, 0.4);
+    position: absolute;
+    z-index: 1;
+  }
+  #banner .swiper .swiper-slide .slide__content .slide__description {
+    position: absolute;
+    top: 33%;
+    right: 39%;
+    left: 39%;
     text-align: center;
     color: #fff;
     z-index: 2;
@@ -3108,9 +3189,9 @@
   }
   #banner .swiper .swiper-slide .slide__content .slide__description p {
     font-weight: 500;
-    line-height: 28px;
+    line-height: 20px;
     margin: 20px 0;
-    width: 344px;
+    width: 320px;
   }
   #banner .swiper .swiper-slide .slide__content .slide__description button {
     padding: 12px 48px 12px 48px;
@@ -4248,7 +4329,7 @@
 }
 
 #traningpages {
-  margin-top: 4%;
+  margin-top: 1%;
 }
 #traningpages .traning__top .framesphoto {
   width: 100% !important;
@@ -4282,9 +4363,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-  #traningpages {
-    margin-top: 4%;
-  }
   #traningpages .traning__top .framesphoto {
     width: 100%;
     height: 300px;
@@ -4378,9 +4456,6 @@
   }
 }
 @media screen and (max-width: 1000px) {
-  #traningpages {
-    margin-top: 4%;
-  }
   #traningpages .traning__top .framesphoto {
     width: 100%;
     height: 300px;
@@ -4474,9 +4549,6 @@
   }
 }
 @media screen and (max-width: 575px) {
-  #traningpages {
-    margin-top: 4%;
-  }
   #traningpages .traning__top .framesphoto {
     width: 100%;
     height: 300px;
@@ -4529,6 +4601,107 @@
     display: flex;
     align-items: flex-end;
     flex-direction: initial;
+    gap: 36px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .publicstexts {
+    margin-bottom: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .date-picker-button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .date-picker-button:focus {
+    outline: none;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .calendar-icon {
+    margin-right: 5px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .date__namescard .traning__date .datewathc {
+    margin-left: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .listshref {
+    text-decoration: none;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card .listshref .list__btn {
+    border: 1px solid #009EE2;
+    background-color: #009EE2;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .traning__botomline {
+    border: 1px solid #ccc;
+  }
+}
+@media screen and (max-width: 320px) {
+  #traningpages .traning__top .framesphoto {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  #traningpages .traning__top .traningphoots__text {
+    position: absolute;
+    top: 141px;
+    text-align: center;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    align-items: center;
+  }
+  #traningpages .traning__top .traningphoots__text .toptraningsnames {
+    font-weight: bold;
+    font-size: 32px;
+  }
+  #traningpages .traning__top .traningphoots__text .traningreportext {
+    width: 100%;
+    text-align: center;
+  }
+  #traningpages .traning__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+  }
+  #traningpages .traning__container .traning__containernames {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    color: #009EE2;
+  }
+  #traningpages .traning__container .traning_listallcards {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #traningpages .traning__container .traning_listallcards .traning__list .list__card {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: initial;
+    gap: 19px;
   }
   #traningpages .traning__container .traning_listallcards .traning__list .list__card .publicstexts {
     margin-bottom: 10px;
