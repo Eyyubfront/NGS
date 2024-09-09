@@ -34,6 +34,7 @@ const Footer = () => {
                                 <Link className='linkcolor' to="/news">{t('news')}</Link>
                                 <Link className='linkcolor' to="/blogs">{t('blog')}</Link>
                                 <Link className='linkcolor' to="/traningpages">{t('trainings')}</Link>
+                                <Link className='linkcolor' to="/contact">{t('contact')}</Link>
                             </div>
                         </div>
                         <div className="footer__right">
