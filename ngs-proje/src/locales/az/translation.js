@@ -64,7 +64,7 @@ const TRANSLATIONS_AZ = {
   "partners":"Tərəfdaşlar",
   "bannerstext":"Məqsədimiz yeni nəsil təhlükəsizlik texnologiyaları və metodikası ilə müştərilərimizin və əməkdaşlarının təhlükəsizliyini yüksək səvoyyədə təmin etməkdən ibarətdir.",
   "newsabout":"Burada şirkətimiz haqqında ən son yenilikləri və elanları tapa bilərsiniz. Müştərilərimizə və biznes tərəfdaşlarımıza təqdim etdiyimiz dəyərlər haqqında sizə məlumat verməkdən məmnunuq. Əlavə olaraq dünya təhlükəsizlik sektoru və onun yenilikləri haqqında da məlumat əldə edə, daim xəbərdar qala bilərsiniz.",
-  "projeabout":"NGS - New Generation Safety MMC 2021-ci ildən təhlükəsizlik sektorunda fəaliyyət göstərir. Fəaliyyətə başlayan gündən məqsədlərinə yüksək səviyyədə çatmışdır.",
+  "projeabout":"NGS - Yeni Nəsil Təhlükəsizlik MMC 2021-ci ildən təhlükəsizlik sektorunda fəaliyyət göstərir. Fəaliyyətə başlayan gündən məqsədlərinə yüksək səviyyədə çatmışdır.",
   "item1": "SƏTƏM üzrə siyasətin hazırlanması",
   "item2": "SƏTƏM Planının hazırlanması",
   "item3": "Əməyin mühafizəsinə dair illik tədbirlər planının hazırlanması",

@@ -1759,11 +1759,11 @@
   color: #565656;
   width: 100%;
 }
-#homenews .homenews__container .homenews__right .homenewsbtn {
+#homenews .homenews__container .homenews__right .newsbtnlinks {
   text-decoration: none;
 }
-#homenews .homenews__container .homenews__right .homenewsbtn .homenews__button {
-  border: 1px solid #009EE2;
+#homenews .homenews__container .homenews__right .newsbtnlinks .homenews__button {
+  border: 1px solid #009EE2 !important;
   background-color: #009EE2;
   color: aliceblue;
   text-align: center;

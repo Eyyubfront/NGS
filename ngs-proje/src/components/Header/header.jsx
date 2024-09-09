@@ -14,14 +14,19 @@ const Header = () => {
   const [profileOpen, setProfileOpen] = useState(false);
   const [logoutConfirm, setLogoutConfirm] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
-  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredItems, setFilteredItems] = useState([]);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
 
+  const navigate = useNavigate();
   const hamburger = useRef(null);
   const searchInp = useRef(null);
   const logoRemover = useRef(null);
   const searchRemove = useRef(null);
   const searchBack = useRef(null);
   const headerScroll = useRef(null);
+  const profileMenuRef = useRef(null);
+  const searchDropdownRef = useRef(null);
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('currentUser'));
@@ -46,6 +51,19 @@ const Header = () => {
     loadInitialTranslations();
   }, [i18n]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (profileMenuRef.current && !profileMenuRef.current.contains(event.target)) {
+        setProfileOpen(false);
+      }
+      if (searchDropdownRef.current && !searchDropdownRef.current.contains(event.target)) {
+        setDropdownVisible(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const handleChangeLanguage = (e) => {
     const selectedLang = e.target.value;
     i18n.changeLanguage(selectedLang);
@@ -60,7 +78,8 @@ const Header = () => {
     setCurrentUser(null);
     window.location.reload(); // Sayfayı yenile
     navigate('/');
-};
+  };
+
   const openLogoutConfirm = () => {
     setLogoutConfirm(true);
   };
@@ -72,7 +91,7 @@ const Header = () => {
   const confirmLogout = () => {
     handleLogout();
     closeLogoutConfirm();
-};
+  };
 
   const openBtn = () => {
     hamburger.current.style.display = "flex";
@@ -101,12 +120,6 @@ const Header = () => {
     return email.split(' ')[0].charAt(0).toUpperCase();
   };
 
-
-  // State to manage search input, filtered items, and dropdown visibility
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredItems, setFilteredItems] = useState([]);
-  const [dropdownVisible, setDropdownVisible] = useState(false);
-
   const menuItems = [
     { name: t('aboutUs'), link: "/AboutUs" },
     { name: t('services'), link: "/servicesection", subMenu: [
@@ -123,13 +136,11 @@ const Header = () => {
     { name: t('contact'), link: "/contact" },
   ];
 
-  // Handle search input change
   const handleSearch = (e) => {
     const term = e.target.value.toLowerCase();
     setSearchTerm(term);
 
     if (term) {
-      // Filter menu items based on search term
       const filtered = menuItems.filter(item => {
         if (item.subMenu) {
           return item.subMenu.some(subItem => subItem.name.toLowerCase().includes(term)) || item.name.toLowerCase().includes(term);
@@ -143,13 +154,11 @@ const Header = () => {
     }
   };
 
-  // Close dropdown when a user clicks outside of it
   const handleBlur = () => {
     setTimeout(() => {
       setDropdownVisible(false);
     }, 200); // Timeout to allow click event on dropdown items
   };
-
 
   return (
     <Container>
@@ -158,35 +167,35 @@ const Header = () => {
           <Link to="/">
             <img src={logo} alt="logo" />
           </Link>
-           <input
-          className="search__input"
-          type="search"
-          style={{fontFamily:"inherit"}}
-          placeholder={t('searchPlaceholder')}
-          ref={searchInp}
-          value={searchTerm}
-          onChange={handleSearch}
-          onBlur={handleBlur}
-          onFocus={() => searchTerm && setDropdownVisible(true)}
-        />
-        {dropdownVisible && (
-          <ul className="dropdown">
-            {filteredItems.map((item, index) => (
-              <li key={index} className="dropdown__item">
-                <Link to={item.link} className="drop__link">
-                  {item.name}
-                </Link>
-                {item.subMenu && item.subMenu.map((subItem, subIndex) => (
-                  <li key={subIndex} className="dropdown__subitem">
-                    <Link to={subItem.link} className="sub__link">
-                      {subItem.name}
-                    </Link>
-                  </li>
-                ))}
-              </li>
-            ))}
-          </ul>
-        )}
+          <input
+            className="search__input"
+            type="search"
+            style={{ fontFamily: "inherit" }}
+            placeholder={t('searchPlaceholder')}
+            ref={searchInp}
+            value={searchTerm}
+            onChange={handleSearch}
+            onBlur={handleBlur}
+            onFocus={() => searchTerm && setDropdownVisible(true)}
+          />
+          {dropdownVisible && (
+            <ul className="dropdown" ref={searchDropdownRef}>
+              {filteredItems.map((item, index) => (
+                <li key={index} className="dropdown__item">
+                  <Link to={item.link} className="drop__link">
+                    {item.name}
+                  </Link>
+                  {item.subMenu && item.subMenu.map((subItem, subIndex) => (
+                    <li key={subIndex} className="dropdown__subitem">
+                      <Link to={subItem.link} className="sub__link">
+                        {subItem.name}
+                      </Link>
+                    </li>
+                  ))}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <div className="header__right">
           <ul className="header__menu">
@@ -212,7 +221,7 @@ const Header = () => {
           </select>
           <div className="login__btn">
             {currentUser ? (
-              <div className="profile-btn">
+              <div className="profile-btn" ref={profileMenuRef}>
                 <div className="profile-pic" onClick={toggleProfile}>
                   {currentUser.profilePic ? (
                     <img src={currentUser.profilePic} alt="Profile" className="profile-pic-img" />
@@ -234,78 +243,64 @@ const Header = () => {
         </button>
       </div>
       <div className="hamburger__container" ref={hamburger}>
-  <div className="hamburger__head">
-    <img ref={logoRemover} src={logo} alt="logo" />
-    <div className="hamburger__right">
-      <input type="search" ref={searchInp} className="hamburger__search" />
-      <button onClick={openSearch}>
-        <img src={search} ref={searchRemove} className="search__icon" alt="icon" />
-      </button>
-      <button onClick={closeSearch}>
-        <CloseIcon ref={searchBack} className="close__search" />
-      </button>
-      <button onClick={closeBtn}>
-        <CloseIcon className="close__icon" />
-      </button>
-    </div>
-  </div>
-  <ul className="hamburger__menu">
-    <li><Link to="/AboutUs" className="hamburger__link">{t('aboutUs')}</Link></li>
-    <li><Link to="/servicesection" className="hamburger__link">{t('services')}</Link></li>
-    <li><Link to="/news" className="hamburger__link">{t('news')}</Link></li>
-    <li><Link to="/blogs" className="hamburger__link">{t('blog')}</Link></li>
-    <li><Link to="/traningpages" className="hamburger__link">{t('trainings')}</Link></li>
-    <li><Link to="/contact" className="hamburger__link">{t('contact')}</Link></li>
-    <li>
-      <select onChange={handleChangeLanguage} value={i18n.language} name="languages" className="language">
-        <option value="az">{t('az')}</option>
-        <option value="en">{t('en')}</option>
-      </select>
-    </li>
-  </ul>
-  <div className="hamburger__login-btn">
-    {currentUser ? (
-      <div className="hamburger__profile-btn">
-        <div className="hamburger__profile-pic" onClick={toggleProfile}>
-          {currentUser.profilePic ? (
-            <img src={currentUser.profilePic} alt="Profile" className="hamburger-profils-picimg profile-pic-img" />
+        <div className="hamburger__head">
+          <img ref={logoRemover} src={logo} alt="logo" />
+          <div className="hamburger__right">
+            <input type="search" ref={searchInp} className="hamburger__search" />
+            <button onClick={openSearch}>
+              <img src={search} ref={searchRemove} className="search__icon" alt="icon" />
+            </button>
+            <button onClick={closeSearch}>
+              <CloseIcon ref={searchBack} className="close__search" />
+            </button>
+            <button onClick={closeBtn}>
+              <CloseIcon className="close__icon" />
+            </button>
+          </div>
+        </div>
+        <ul className="hamburger__menu">
+          <li><Link to="/AboutUs" className="hamburger__link">{t('aboutUs')}</Link></li>
+          <li><Link to="/servicesection" className="hamburger__link">{t('services')}</Link></li>
+          <li><Link to="/news" className="hamburger__link">{t('news')}</Link></li>
+          <li><Link to="/blogs" className="hamburger__link">{t('blog')}</Link></li>
+          <li><Link to="/traningpages" className="hamburger__link">{t('trainings')}</Link></li>
+          <li><Link to="/contact" className="hamburger__link">{t('contact')}</Link></li>
+          <li>
+            <select onChange={handleChangeLanguage} value={i18n.language} name="languages" className="language">
+              <option value="az">{t('az')}</option>
+              <option value="en">{t('en')}</option>
+            </select>
+          </li>
+        </ul>
+        <div className="hamburger__login-btn">
+          {currentUser ? (
+            <div className="hamburger__profile-btn" ref={profileMenuRef}>
+              <div className="hamburger__profile-pic" onClick={toggleProfile}>
+                {currentUser.profilePic ? (
+                  <img src={currentUser.profilePic} alt="Profile" className="hamburger-profils-picimg profile-pic-img" />
+                ) : (
+                  <span className="profile-initial">{getInitials(currentUser.email)}</span>
+                )}
+              </div>
+              {profileOpen && (
+                <Profil user={currentUser} onClose={toggleProfile} onLogout={openLogoutConfirm} />
+              )}
+            </div>
           ) : (
-            <span className="profile-initial">{getInitials(currentUser.email)}</span>
+            <button onClick={() => navigate('/register')} type="button">{t('register')}</button>
           )}
         </div>
-        {profileOpen && (
-          <Profil user={currentUser} onClose={toggleProfile} onLogout={openLogoutConfirm} />
+        {logoutConfirm && (
+          <>
+            <div className="blur-background"></div>
+            <div className="logout-confirm">
+              <p>{t('areYouSureLogout')}</p>
+              <button onClick={confirmLogout}>{t('logout')}</button>
+              <button onClick={closeLogoutConfirm}>{t('cancel')}</button>
+            </div>
+          </>
         )}
       </div>
-    ) : (
-      <button onClick={() => navigate('/register')} type="button">{t('register')}</button>
-    )}
-  </div>
-  {logoutConfirm && (
-    <>
-      <div className="blur-background"></div>
-      <div className="logout-confirm">
-        <p>{t('areYouSureLogout')}</p>
-        <button onClick={confirmLogout}>{t('logout')}</button>
-        <button onClick={closeLogoutConfirm}>{t('cancel')}</button>
-      </div>
-    </>
-  )}
-</div>
-
-
-{logoutConfirm && (
-  <>
-    <div className="blur-background"></div>
-    <div className="logout-confirm">
-      <p>{t('areYouSureLogout')}</p>
-      <button onClick={confirmLogout}>{t('logout')}</button>
-      <button onClick={closeLogoutConfirm}>{t('cancel')}</button>
-    </div>
-  </>
-)}
-
-
     </Container>
   );
 };

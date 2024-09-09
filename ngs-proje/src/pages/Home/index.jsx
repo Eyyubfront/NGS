@@ -70,9 +70,10 @@ const Home = () => {
                 <div className="homenews__text">
                 {t('newsabout')}
                 </div>
-                <a className="homenewsbtn" href="">
+                <Link className='newsbtnlinks' to="/news">
                   <div className="homenews__button">{t('MoreDetails')}</div>
-                </a>
+                </Link>
+              
               </div>
             </div>
           </div>

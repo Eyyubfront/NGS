@@ -30,19 +30,19 @@
                 width: 100%;
             }
 
-            .homenewsbtn {
-                text-decoration: none;
-
-                .homenews__button {
-                    border: 1px solid #009EE2;
-                    background-color: #009EE2;
-                    color: aliceblue;
-                    text-align: center;
-                    border-radius: 15px;
-                    padding: 5px;
-                    width: 100px;
-                }
+          .newsbtnlinks{
+            text-decoration: none;
+            .homenews__button {
+                border: 1px solid #009EE2 !important;
+                background-color: #009EE2;
+                color: aliceblue;
+                text-align: center;
+                border-radius: 15px;
+                padding: 5px;
+                width: 100px;
             }
+          }
+         
 
         }
     }
