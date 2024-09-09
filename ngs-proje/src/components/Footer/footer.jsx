@@ -55,13 +55,13 @@ const Footer = () => {
                     <div className="footer__bottom">
                         <div className="footer__icon">
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                                <img src={facebook} alt="Facebook" />
+                                <img  style={{width:"33px"}}src={facebook} alt="Facebook" />
                             </a>
                             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                                <img src={instagram} alt="Instagram" />
+                                <img style={{width:"33px"}} src={instagram} alt="Instagram" />
                             </a>
                             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                                <img src={linkedin} alt="LinkedIn" />
+                                <img style={{width:"30px"}} src={linkedin} alt="LinkedIn" />
                             </a>
                         </div>
                     </div>
