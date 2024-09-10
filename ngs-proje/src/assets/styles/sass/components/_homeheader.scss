@@ -13,7 +13,7 @@
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-
+top: 0;
     .hamburger__open {
       display: none;
       background-color: transparent;
@@ -514,6 +514,7 @@
       display: flex;
     justify-content: space-evenly;
     align-items: center;
+    top: 0;
   position: fixed;
   z-index: 9999;
   padding: 5px;
@@ -835,7 +836,7 @@
       background: rgba(35, 35, 35, 0.4);
       top: 0;
       position: fixed;
-      z-index: 3;
+      z-index: 9999;
       height: 100%;
       animation: slide-in-top 0.3s ease;
       -webkit-backdrop-filter: blur(12px);
@@ -887,6 +888,11 @@
               width: 30px;
               height: 30px;
               cursor: pointer;
+            }
+          }
+          .search{
+            .search__icon{
+              display: none !important;
             }
           }
         }
@@ -1008,6 +1014,7 @@
 @media only screen and (max-width: 1000px) {
   .container {
     .header {
+      top: 0;
       .header__right {
         display: none;
       }

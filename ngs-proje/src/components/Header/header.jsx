@@ -247,7 +247,7 @@ const Header = () => {
           <img ref={logoRemover} src={logo} alt="logo" />
           <div className="hamburger__right">
             <input type="search" ref={searchInp} className="hamburger__search" />
-            <button onClick={openSearch}>
+            <button className="search" onClick={openSearch}>
               <img src={search} ref={searchRemove} className="search__icon" alt="icon" />
             </button>
             <button onClick={closeSearch}>
