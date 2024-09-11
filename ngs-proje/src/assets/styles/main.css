@@ -3060,7 +3060,7 @@
 @media (max-width: 320px) {
   .banner {
     margin-top: 53px !important;
-    height: 44px !important;
+    height: 100px !important;
   }
   .banner .banner__content {
     top: 50% !important;
