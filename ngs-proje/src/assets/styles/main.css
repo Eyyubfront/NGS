@@ -2913,65 +2913,57 @@
   width: 50%;
 }
 
-#banner {
+.banner {
   position: relative;
-  height: 750px;
+  margin-top: 70px; /* Header yüksekliği kadar boşluk bırak */
+  padding-bottom: 56.25%; /* Dinamik yüksekliği, width:height oranına göre ayarlayın (16:9 için %56.25) */
+  overflow: hidden; /* İçeriğin dışarı taşmasını önle */
 }
-#banner .swiper {
-  width: 100%;
-  height: 100%;
-}
-#banner .swiper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#banner .swiper .swiper-slide .swiper-slide img {
-  display: block;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-#banner .swiper .swiper-slide .slide__content {
-  position: relative;
-}
-#banner .swiper .swiper-slide .slide__content::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: rgba(35, 35, 35, 0.4);
+.banner .banner__image-container {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.banner .banner__image {
+  display: block;
+  width: 100%;
+  height: 100%; /* Tam genişlik ve yüksekliği kapla */
+  object-fit: cover; /* Oranları koruyarak örtme */
+}
+.banner .banner__content {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 0;
+  top: 60%;
+  /* Okunabilirlik için yarı saydam arka plan */
   z-index: 1;
 }
-#banner .swiper .swiper-slide .slide__content .slide__description {
-  position: absolute;
-  top: 47%;
-  left: 4%;
-  right: 35px;
-  text-align: left;
+.banner .banner__content .banner__description {
   color: #fff;
-  z-index: 2;
   font-size: 24px;
-  font-family: "Impact, Haettenschweiler, " Arial Narrow Bold ", sans-serif";
+  font-family: "Impact", "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+  text-align: left;
+  transform: translateY(-50%); /* Yüksekliği ortalamak için */
 }
-#banner .swiper .swiper-slide .slide__content .slide__description h2 {
+.banner .banner__content .banner__description .banner__title {
   font-size: 48px;
   font-weight: 700;
   line-height: 58.09px;
+  margin: 0;
 }
-#banner .swiper .swiper-slide .slide__content .slide__description p {
+.banner .banner__content .banner__description .banner__text {
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
   margin: 20px 0;
-  width: 52%;
+  width: 70%;
 }
-#banner .swiper .swiper-slide .slide__content .slide__description button {
-  padding: 12px 48px 12px 48px;
+.banner .banner__content .banner__description .banner__button {
+  padding: 12px 48px;
   border-radius: 24px;
   background-color: #009ee2;
   border: 0;
@@ -2979,261 +2971,114 @@
   color: #fff;
   font-size: 20px;
   font-weight: 600;
-  line-height: 24.2px;
   text-align: center;
-}
-#banner .swiper .swiper-pagination-bullet {
-  width: 8px;
-  height: 28px;
-  border-radius: 3px;
-  background: #fafafa;
-  opacity: 1;
-}
-#banner .swiper .swiper-pagination-bullet-active {
-  background-color: #009ee2;
+  border: none;
+  outline: none;
 }
 
 @media (max-width: 1200px) {
-  #banner {
-    position: relative;
-    height: 750px;
+  .banner {
+    margin-top: 53px !important;
   }
-  #banner .swiper {
-    width: 100%;
-    height: 100%;
+  .banner .banner__content {
+    top: 50%; /* İçeriği daha ortada göstermek için */
   }
-  #banner .swiper .swiper-slide {
-    text-align: center;
+  .banner .banner__content .banner__description {
+    font-size: 18px; /* Küçük ekranlarda font boyutunu küçült */
+    text-align: center; /* Metni ortala */
+    padding: 0 10px; /* Sağ ve sol boşluk ekle */
+  }
+  .banner .banner__content .banner__description .banner__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .banner .banner__content .banner__description .banner__text {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%; /* Genişliği artır */
+    margin: 10px 0; /* Margin değerini azalt */
+  }
+  .banner .banner__content .banner__description .banner__button {
     font-size: 18px;
-    background: #fff;
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px 30px;
   }
-  #banner .swiper .swiper-slide .swiper-slide img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+}
+@media (max-width: 768px) {
+  .banner {
+    margin-top: 53px !important;
   }
-  #banner .swiper .swiper-slide .slide__content {
-    position: relative;
+  .banner .banner__content {
+    top: 50%; /* İçeriği daha ortada göstermek için */
   }
-  #banner .swiper .swiper-slide .slide__content::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: rgba(35, 35, 35, 0.4);
-    position: absolute;
-    z-index: 1;
+  .banner .banner__content .banner__description {
+    font-size: 18px; /* Küçük ekranlarda font boyutunu küçült */
+    text-align: center; /* Metni ortala */
+    padding: 0 10px; /* Sağ ve sol boşluk ekle */
   }
-  #banner .swiper .swiper-slide .slide__content .slide__description {
-    position: absolute;
-    top: 47%;
-    left: 24%;
-    text-align: left;
-    color: #fff;
-    z-index: 2;
-    font-size: 24px;
-    font-family: "Impact, Haettenschweiler, " Arial Narrow Bold ", sans-serif";
+  .banner .banner__content .banner__description .banner__title {
+    font-size: 36px;
+    line-height: 42px;
   }
-  #banner .swiper .swiper-slide .slide__content .slide__description h2 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 58.09px;
+  .banner .banner__content .banner__description .banner__text {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%; /* Genişliği artır */
+    margin: 10px 0; /* Margin değerini azalt */
   }
-  #banner .swiper .swiper-slide .slide__content .slide__description p {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 28px;
-    margin: 20px 0;
-    width: 52%;
-  }
-  #banner .swiper .swiper-slide .slide__content .slide__description button {
-    padding: 12px 48px 12px 48px;
-    border-radius: 24px;
-    background-color: #009ee2;
-    border: 0;
-    cursor: pointer;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 24.2px;
-    text-align: center;
-  }
-  #banner .swiper .swiper-pagination-bullet {
-    width: 8px;
-    height: 28px;
-    border-radius: 3px;
-    background: #fafafa;
-    opacity: 1;
-  }
-  #banner .swiper .swiper-pagination-bullet-active {
-    background-color: #009ee2;
+  .banner .banner__content .banner__description .banner__button {
+    font-size: 18px;
+    padding: 10px 30px;
   }
 }
 @media (max-width: 576px) {
-  #banner {
-    position: relative;
-    height: 445px;
+  .banner {
+    margin-top: 53px !important;
   }
-  #banner .swiper {
-    width: 100%;
-    height: 100%;
+  .banner .banner__content {
+    top: 50%; /* İçeriği daha ortada göstermek için */
   }
-  #banner .swiper .swiper-slide {
-    text-align: center;
+  .banner .banner__content .banner__description {
+    font-size: 18px; /* Küçük ekranlarda font boyutunu küçült */
+    text-align: center; /* Metni ortala */
+    padding: 0 10px; /* Sağ ve sol boşluk ekle */
+  }
+  .banner .banner__content .banner__description .banner__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .banner .banner__content .banner__description .banner__text {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%; /* Genişliği artır */
+    margin: 10px 0; /* Margin değerini azalt */
+  }
+  .banner .banner__content .banner__description .banner__button {
     font-size: 18px;
-    background: #fff;
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #banner .swiper .swiper-slide .swiper-slide img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  #banner .swiper .swiper-slide .slide__content {
-    position: relative;
-  }
-  #banner .swiper .swiper-slide .slide__content::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: rgba(35, 35, 35, 0.4);
-    position: absolute;
-    z-index: 1;
-  }
-  #banner .swiper .swiper-slide .slide__content .slide__description {
-    position: absolute;
-    top: 33%;
-    right: 35%;
-    left: 35%;
-    text-align: center;
-    color: #fff;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 24px;
-    font-family: "Impact, Haettenschweiler, " Arial Narrow Bold ", sans-serif";
-  }
-  #banner .swiper .swiper-slide .slide__content .slide__description h2 {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 58.09px;
-  }
-  #banner .swiper .swiper-slide .slide__content .slide__description p {
-    font-weight: 500;
-    line-height: 28px;
-    margin: 20px 0;
-    width: 320px;
-  }
-  #banner .swiper .swiper-slide .slide__content .slide__description button {
-    padding: 12px 48px 12px 48px;
-    border-radius: 24px;
-    background-color: #009ee2;
-    border: 0;
-    cursor: pointer;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 24.2px;
-    text-align: center;
-  }
-  #banner .swiper .swiper-pagination-bullet {
-    width: 8px;
-    height: 28px;
-    border-radius: 3px;
-    background: #fafafa;
-    opacity: 1;
-  }
-  #banner .swiper .swiper-pagination-bullet-active {
-    background-color: #009ee2;
+    padding: 10px 30px;
   }
 }
 @media (max-width: 320px) {
-  #banner {
-    position: relative;
-    height: 445px;
+  .banner {
+    margin-top: 53px !important;
+    height: 44px !important;
   }
-  #banner .swiper {
-    width: 100%;
-    height: 100%;
+  .banner .banner__content {
+    top: 50% !important;
   }
-  #banner .swiper .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .banner .banner__content .banner__description {
+    font-size: 16px; /* Çok küçük ekranlarda font boyutunu daha da küçült */
   }
-  #banner .swiper .swiper-slide .swiper-slide img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  .banner .banner__content .banner__description .banner__title {
+    font-size: 16px !important;
+    line-height: 34px;
   }
-  #banner .swiper .swiper-slide .slide__content {
-    position: relative;
-  }
-  #banner .swiper .swiper-slide .slide__content::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: rgba(35, 35, 35, 0.4);
-    position: absolute;
-    z-index: 1;
-  }
-  #banner .swiper .swiper-slide .slide__content .slide__description {
-    position: absolute;
-    top: 33%;
-    right: 39%;
-    left: 39%;
-    text-align: center;
-    color: #fff;
-    z-index: 2;
-    font-size: 24px;
-    font-family: "Impact, Haettenschweiler, " Arial Narrow Bold ", sans-serif";
-  }
-  #banner .swiper .swiper-slide .slide__content .slide__description h2 {
-    font-size: 29px;
-    font-weight: 700;
-    line-height: 58.09px;
-  }
-  #banner .swiper .swiper-slide .slide__content .slide__description p {
-    font-weight: 500;
+  .banner .banner__content .banner__description .banner__text {
+    font-size: 14px;
     line-height: 20px;
-    margin: 20px 0;
-    width: 320px;
   }
-  #banner .swiper .swiper-slide .slide__content .slide__description button {
-    padding: 12px 48px 12px 48px;
-    border-radius: 24px;
-    background-color: #009ee2;
-    border: 0;
-    cursor: pointer;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 24.2px;
-    text-align: center;
-  }
-  #banner .swiper .swiper-pagination-bullet {
-    width: 8px;
-    height: 28px;
-    border-radius: 3px;
-    background: #fafafa;
-    opacity: 1;
-  }
-  #banner .swiper .swiper-pagination-bullet-active {
-    background-color: #009ee2;
+  .banner .banner__content .banner__description .banner__button {
+    font-size: 16px;
+    padding: 8px 20px;
   }
 }
 #traning__allcontainers .traning_listallcards {
@@ -4355,6 +4200,7 @@
   width: 100% !important;
   height: 300px;
   position: relative;
+  margin-top: 57px;
 }
 #traningpages .traning__top .traningphoots__text {
   position: absolute;
@@ -4387,6 +4233,7 @@
     width: 100%;
     height: 300px;
     position: relative;
+    margin-top: 69px;
   }
   #traningpages .traning__top .traningphoots__text {
     position: absolute;
@@ -4475,11 +4322,12 @@
     border: 1px solid #ccc;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
   #traningpages .traning__top .framesphoto {
     width: 100%;
     height: 300px;
     position: relative;
+    margin-top: 45px;
   }
   #traningpages .traning__top .traningphoots__text {
     position: absolute;
@@ -4568,11 +4416,12 @@
     border: 1px solid #ccc;
   }
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 576px) {
   #traningpages .traning__top .framesphoto {
     width: 100%;
     height: 300px;
     position: relative;
+    margin-top: 50px !important;
   }
   #traningpages .traning__top .traningphoots__text {
     position: absolute;
@@ -4673,6 +4522,7 @@
     width: 100%;
     height: 300px;
     position: relative;
+    margin-top: 51px !important;
   }
   #traningpages .traning__top .traningphoots__text {
     position: absolute;
